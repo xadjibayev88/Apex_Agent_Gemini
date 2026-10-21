@@ -1,30 +1,22 @@
 name: Apex Trader Agent
-
 on:
   schedule:
-    - cron: \'0 4 * * *\'   # 09:00 Toshkent vaqti
-    - cron: \'0 9 * * *\'   # 14:00 Toshkent vaqti
-    - cron: \'0 14 * * *\'  # 19:00 Toshkent vaqti
+    - cron: \'0 4 * * *\'
+    - cron: \'0 9 * * *\'
+    - cron: \'0 14 * * *\'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   post:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: \'3.11\'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Run agent
-        env:
+      - run: pip install requests
+      - env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
@@ -32,9 +24,7 @@ jobs:
           TIMEZONE: ${{ secrets.TIMEZONE }}
           MODEL: ${{ secrets.MODEL }}
         run: python gemini_agent.py
-
-      - name: Save history
-        run: |
+      - run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add posted_history.json || true
