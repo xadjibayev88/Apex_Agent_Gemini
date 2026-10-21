@@ -1,15 +1,12 @@
 name: Apex Trader Agent
-
 on:
   schedule:
     - cron: "0 4 * * *"
     - cron: "0 9 * * *"
     - cron: "0 14 * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   post:
     runs-on: ubuntu-latest
