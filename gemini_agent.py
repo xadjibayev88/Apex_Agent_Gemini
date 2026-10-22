@@ -61,7 +61,7 @@ def call_gemini(prompt):
     body = {
         "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-        "tools": [{"google_search": {}}],
+      
         "generationConfig": {"maxOutputTokens": 4000},
     }
     headers = {"x-goog-api-key": GEMINI_API_KEY, "Content-Type": "application/json"}
