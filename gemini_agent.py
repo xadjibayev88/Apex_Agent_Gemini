@@ -27,7 +27,7 @@ BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHANNEL = os.environ["TELEGRAM_CHANNEL"]
 TOPIC = os.environ.get("CHANNEL_TOPIC", "dunyo yangiliklari")
 TZ = ZoneInfo(os.environ.get("TIMEZONE", "Asia/Tashkent"))
-MODEL = os.environ.get("MODEL", "gemini-2.5-flash")
+MODEL = os.environ.get("MODEL", "gemini-3.8-flash")
 HISTORY_FILE = "posted_history.json"
 
 SYSTEM_PROMPT = f"""Sen Telegram kanal muharririsan. Kanal mavzusi: {TOPIC}.
