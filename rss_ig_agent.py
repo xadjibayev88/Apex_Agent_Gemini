@@ -186,13 +186,13 @@ def call_gemini(prompt):
     }
     headers = {"x-goog-api-key": GEMINI_API_KEY, "Content-Type": "application/json"}
     last = None
-    for attempt in range(3):
+    for attempt in range(5):
         r = requests.post(url, headers=headers, json=body, timeout=90)
         if r.ok:
             return r.json()
         last = r
         if r.status_code in (429, 500, 503):
-            time.sleep(10 * (attempt + 1))
+            time.sleep(20 * (attempt + 1))
             continue
         break
     raise RuntimeError(f"Gemini xatosi: {last.status_code} {last.text[:500]}")
