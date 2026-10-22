@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests
-      - run: python gemini_agent.py
+      - run: python rss_agent.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
