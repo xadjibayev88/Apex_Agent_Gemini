@@ -1,6 +1,6 @@
 name: Post to Telegram
 on:
- schedule:
+  schedule:
     - cron: "0 3,5,7,9,11,13,15,17 * * *"
   workflow_dispatch:
 permissions:
@@ -19,7 +19,6 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
-          CHANNEL_TOPIC: ${{ secrets.CHANNEL_TOPIC }}
           TIMEZONE: Asia/Tashkent
       - name: Save history
         run: |
