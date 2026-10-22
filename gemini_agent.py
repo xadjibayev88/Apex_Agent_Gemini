@@ -77,7 +77,7 @@ def call_gemini(prompt):
     raise RuntimeError(f"Hamma modellar ishlamadi. Oxirgi xato: {last_error}")
 
 def generate_post(history):
-    recent = "\n".join(f"- {h[\'summary\']}" for h in history[-20:]) or "(hali yo\'q)"
+    recent = "\n".join("- " + h["summary"] for h in history[-20:]) or "hali yoq"
     prompt = (
         f"Bugun: {datetime.now(TZ):%Y-%m-%d}.\n"
         f"Allaqachon joylangan mavzular:\n{recent}\n\nYangi post yoz."
