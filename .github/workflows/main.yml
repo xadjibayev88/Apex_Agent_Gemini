@@ -1,13 +1,17 @@
 name: Post to Telegram
 on:
   schedule:
-    - cron: "7 3,5,7,9,11,13,15,17 * * *"
+    - cron: "7 4-15 * * *"
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: post-agent
+  cancel-in-progress: false
 jobs:
   post:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -20,6 +24,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_EVERY: "3"
           TIMEZONE: Asia/Tashkent
       - name: Save history
         run: |
