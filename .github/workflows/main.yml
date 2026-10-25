@@ -1,7 +1,7 @@
 name: Post to Telegram
 on:
   schedule:
-    - cron: "7 4-15 * * *"
+    - cron: "7,37 4-15 * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -24,7 +24,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          IG_EVERY: "3"
+          MIN_GAP_MINUTES: "55"
+          IG_GAP_HOURS: "3"
           TIMEZONE: Asia/Tashkent
       - name: Save history
         run: |
