@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "ecc": { "source": { "source": "github", "repo": "affaan-m/ECC" } }
+  },
+  "enabledPlugins": { "ecc@ecc": true },
+  "pluginConfigs": {
+    "ecc@ecc": { "options": { "hooks_enabled": true, "hook_profile": "strict" } }
+  },
+  "env": {
+    "ECC_HOOK_PROFILE": "strict",
+    "ECC_DISABLED_HOOKS": "pre:bash:tmux-reminder,pre:bash:auto-tmux-dev"
+  }
+}
