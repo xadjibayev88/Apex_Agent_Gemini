@@ -42,6 +42,7 @@ jobs:
           sparse-checkout: |
             .claude/agents
             .claude/agents-library
+            .claude/skills
             brain
             CLAUDE.md
       - name: Ofis agentlarini ulash
@@ -49,6 +50,7 @@ jobs:
           mkdir -p .claude
           cp -rn .office/.claude/agents .claude/ 2>/dev/null || cp -r .office/.claude/agents .claude/
           cp -r .office/.claude/agents-library .claude/
+          cp -r .office/.claude/skills .claude/
           cp .office/brain/memory.jsonl .claude/office-memory.jsonl
           rm -rf .office
           cat > .claude/CLAUDE.md <<'MD'
