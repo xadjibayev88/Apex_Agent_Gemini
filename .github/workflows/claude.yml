@@ -41,18 +41,21 @@ jobs:
           path: .office
           sparse-checkout: |
             .claude/agents
+            .claude/agents-library
             brain
             CLAUDE.md
       - name: Ofis agentlarini ulash
         run: |
           mkdir -p .claude
           cp -rn .office/.claude/agents .claude/ 2>/dev/null || cp -r .office/.claude/agents .claude/
+          cp -r .office/.claude/agents-library .claude/
           cp .office/brain/memory.jsonl .claude/office-memory.jsonl
           rm -rf .office
           cat > .claude/CLAUDE.md <<'MD'
           You work for the owner's AI office (GitHub user xadjibayev88). The office agents are in .claude/agents:
           use them as sub-agents. The shared memory (company facts, brand rules, channel rules) is in
-          .claude/office-memory.jsonl: read it before working and follow it. Answer the owner in Uzbek (Latin script).
+          .claude/office-memory.jsonl: read it before working and follow it. If the task needs a skill no
+          office agent has, pick one from .claude/agents-library/INDEX.md and copy it into .claude/agents. Answer the owner in Uzbek (Latin script).
           MD
       - uses: anthropics/claude-code-action@v1
         with:
