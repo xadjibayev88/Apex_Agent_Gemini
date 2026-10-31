@@ -203,14 +203,14 @@ def build_layers(tmp, title, source, brand, font_paths, style=None):
 
 
 # ---------------- fon ----------------
-def _procedural_bg(tmp, accent=(0, 214, 160)):
+def _procedural_bg(tmp, accent=(0, 214, 160), navy=NAVY):
     """Harakatlanuvchi 'terminal' foni: sekin suriluvchi to'r + yorug'lik dog'lari (ffmpeg uchun PNG'lar)."""
     from PIL import Image, ImageDraw, ImageFilter
-    base = Image.new("RGB", (W, H), NAVY)
+    base = Image.new("RGB", (W, H), navy)
     d = ImageDraw.Draw(base)
     for y in range(H):  # vertikal gradient
         t = y / H
-        d.line([(0, y), (W, y)], fill=(int(8 + 10 * t), int(14 + 18 * t), int(28 + 30 * t)))
+        d.line([(0, y), (W, y)], fill=(int(navy[0] + 10 * t), int(navy[1] + 18 * t), int(navy[2] + 30 * t)))
     glow = Image.new("RGB", (W, H), (0, 0, 0))
     g = ImageDraw.Draw(glow)
     for _ in range(5):
@@ -282,7 +282,7 @@ def make_reel(title, source, brand, out_path, ffmpeg, font_paths, music=None, st
               f"{move},setsar=1[bg]")
         n_bg = 1
     else:
-        base_p, grid_p = _procedural_bg(tmp, accent)
+        base_p, grid_p = _procedural_bg(tmp, accent, style["palette"]["navy"])
         cmd += ["-loop", "1", "-framerate", str(FPS), "-t", d, "-i", base_p,
                 "-loop", "1", "-framerate", str(FPS), "-t", d, "-i", grid_p]
         bg = ("[0:v]format=rgba,zoompan=z='1+0.0004*on':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
