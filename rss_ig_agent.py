@@ -41,7 +41,8 @@ BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHANNEL = os.environ["TELEGRAM_CHANNEL"]
 TZ = ZoneInfo(os.environ.get("TIMEZONE", "Asia/Tashkent"))
 MODEL = os.environ.get("MODEL", "gemini-3.8-flash")
-FALLBACK_MODELS = ["gemini-3.7-flash", "gemini-3.5-flash"]
+# Zaxira modellar: Flash-Lite va Gemma'ning kunlik kvotasi alohida, Flash band yoki kvota tugaganda ham ishlaydi
+FALLBACK_MODELS = ["gemini-3.7-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemma-4-31b-it"]
 HISTORY_FILE = "posted_history.json"
 IG_TOKEN = os.environ.get("IG_ACCESS_TOKEN", "").strip()
 IG_USER_ID = os.environ.get("IG_USER_ID", "").strip()
@@ -197,6 +198,9 @@ def call_gemini(prompt):
     last_error = "noma'lum xato"
     for model in models:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+        if model.startswith("gemma"):  # Gemma tizim ko'rsatmasini qabul qilmaydi: uni so'rovga qo'shamiz
+            body = {"contents": [{"role": "user", "parts": [{"text": SYSTEM_PROMPT + "\n\n" + prompt}]}],
+                    "generationConfig": {"maxOutputTokens": 4000}}
         for attempt in range(3):
             try:
                 r = requests.post(url, headers=headers, json=body, timeout=75)
@@ -211,6 +215,8 @@ def call_gemini(prompt):
                 return r.json()
             last_error = f"{r.status_code} {r.text[:300]}"
             print(f"Gemini ({model}) xato {r.status_code}, urinish {attempt + 1}/3")
+            if r.status_code == 429 and "quota" in r.text.lower():
+                break  # kunlik kvota tugagan: kutish foyda bermaydi, keyingi modelga o'tamiz
             if r.status_code in (429, 500, 503):
                 time.sleep(10 * (attempt + 1))
                 continue
