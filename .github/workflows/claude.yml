@@ -1,0 +1,60 @@
+name: Claude (@claude)
+
+# Issue yoki PR izohida "@claude ..." deb yozilsa, Claude shu repoda ishga tushadi.
+# Faqat repoga yozish huquqi bor odamlar (egasi) chaqira oladi.
+# Kalit (bittasi kifoya): CLAUDE_CODE_OAUTH_TOKEN (Claude obunasi, `claude setup-token`)
+# yoki ANTHROPIC_API_KEY (console.anthropic.com).
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  pull_request_review:
+    types: [submitted]
+  issues:
+    types: [opened, assigned]
+
+jobs:
+  claude:
+    if: |
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
+      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      # Ofisning 32 ta agenti va umumiy xotirasi status-videos reposida: ularni shu yerga olib kelamiz
+      - uses: actions/checkout@v4
+        with:
+          repository: xadjibayev88/status-videos
+          path: .office
+          sparse-checkout: |
+            .claude/agents
+            brain
+            CLAUDE.md
+      - name: Ofis agentlarini ulash
+        run: |
+          mkdir -p .claude
+          cp -rn .office/.claude/agents .claude/ 2>/dev/null || cp -r .office/.claude/agents .claude/
+          cp .office/brain/memory.jsonl .claude/office-memory.jsonl
+          rm -rf .office
+          cat > .claude/CLAUDE.md <<'MD'
+          You work for the owner's AI office (GitHub user xadjibayev88). The office agents are in .claude/agents:
+          use them as sub-agents. The shared memory (company facts, brand rules, channel rules) is in
+          .claude/office-memory.jsonl: read it before working and follow it. Answer the owner in Uzbek (Latin script).
+          MD
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
