@@ -58,6 +58,26 @@ def key_number(text: str) -> str | None:
     return None
 
 
+# ---------------- uslub: har Reels boshqacha ----------------
+# Rang aksenti, matn joylashuvi, paydo bo'lish yo'nalishi va fon harakati har safar tasodifan tanlanadi,
+# shuning uchun ketma-ket Reels bir xil qolipda chiqmaydi (4 x 3 x 3 x 3 = 108 xil ko'rinish).
+PALETTES = [
+    {"name": "teal", "accent": (0, 214, 160), "navy": (8, 14, 28)},
+    {"name": "gold", "accent": (255, 196, 0), "navy": (14, 12, 22)},
+    {"name": "blue", "accent": (64, 156, 255), "navy": (6, 12, 30)},
+    {"name": "violet", "accent": (150, 110, 255), "navy": (12, 10, 28)},
+]
+LAYOUTS = ["left", "center", "lower"]
+ENTRANCES = ["rise", "slide", "drop"]
+MOTIONS = ["drift", "zoom", "pan"]
+
+
+def pick_style(rng=None):
+    rng = rng or random.Random()
+    return {"palette": rng.choice(PALETTES), "layout": rng.choice(LAYOUTS),
+            "entrance": rng.choice(ENTRANCES), "motion": rng.choice(MOTIONS)}
+
+
 # ---------------- rasm qatlamlari ----------------
 def _font(size, font_paths):
     from PIL import ImageFont
@@ -93,9 +113,17 @@ def _layer(path, draw_fn, h=H):
     Image.alpha_composite(shadow, img).save(path)
 
 
-def build_layers(tmp, title, source, brand, font_paths):
+def build_layers(tmp, title, source, brand, font_paths, style=None):
     """[(png, start, fade_in)] qatlamlar ro'yxati."""
     from PIL import Image, ImageDraw
+    style = style or {"palette": PALETTES[0], "layout": "left"}
+    ACCENT, NAVY = style["palette"]["accent"], style["palette"]["navy"]
+    center = style["layout"] == "center"
+
+    def lx(d, txt, f):
+        """Matnning x nuqtasi: chapdan 90 px yoki markazda."""
+        return (W - d.textlength(txt, font=f)) / 2 if center else 90
+
     layers = []
     cat = category(title)
     num = key_number(title)
@@ -106,8 +134,9 @@ def build_layers(tmp, title, source, brand, font_paths):
         f = bold(40)
         txt = f"● {cat}"
         tw = d.textlength(txt, font=f)
-        d.rounded_rectangle([80, 300, 80 + tw + 56, 372], radius=36, fill=ACCENT + (255,))
-        d.text((108, 312), txt, font=f, fill=NAVY + (255,))
+        x0 = (W - tw - 56) / 2 if center else 80
+        d.rounded_rectangle([x0, 300, x0 + tw + 56, 372], radius=36, fill=ACCENT + (255,))
+        d.text((x0 + 28, 312), txt, font=f, fill=NAVY + (255,))
     p = os.path.join(tmp, "l_badge.png"); _layer(p, badge); layers.append((p, 0.3, 0.4))
 
     # 2) sarlavha qatorlari
@@ -119,17 +148,19 @@ def build_layers(tmp, title, source, brand, font_paths):
             break
     lines = lines[:6]
     lh = int(fs * 1.22)
-    y0 = 430
+    y0 = 430 if style["layout"] != "lower" else 640
     for i, ln in enumerate(lines):
         def line(d, sd, ln=ln, y=y0 + i * lh, f=f):
-            sd.text((92, y + 4), ln, font=f, fill=(0, 0, 0, 230))
-            d.text((90, y), ln, font=f, fill=WHITE + (255,))
+            x = lx(d, ln, f)
+            sd.text((x + 2, y + 4), ln, font=f, fill=(0, 0, 0, 230))
+            d.text((x, y), ln, font=f, fill=WHITE + (255,))
         p = os.path.join(tmp, f"l_line{i}.png"); _layer(p, line); layers.append((p, 0.9 + i * 0.45, 0.35))
     y_after = y0 + len(lines) * lh + 30
 
     # 3) aksent chiziq
     def bar(d, sd, y=y_after):
-        d.rectangle([90, y, 300, y + 10], fill=ACCENT + (255,))
+        x0 = (W - 210) / 2 if center else 90
+        d.rectangle([x0, y, x0 + 210, y + 10], fill=ACCENT + (255,))
     p = os.path.join(tmp, "l_bar.png"); _layer(p, bar); t_lines = 0.9 + len(lines) * 0.45
     layers.append((p, t_lines, 0.3))
 
@@ -138,21 +169,27 @@ def build_layers(tmp, title, source, brand, font_paths):
         def big(d, sd, y=y_after + 60):
             f = bold(150 if len(num) <= 7 else 112)
             tw = d.textlength(num, font=f)
-            d.rounded_rectangle([80, y, 80 + tw + 80, y + 210], radius=28, fill=(255, 255, 255, 235))
-            d.text((120, y + 22), num, font=f, fill=NAVY + (255,))
+            x0 = (W - tw - 80) / 2 if center else 80
+            d.rounded_rectangle([x0, y, x0 + tw + 80, y + 210], radius=28, fill=(255, 255, 255, 235))
+            d.text((x0 + 40, y + 22), num, font=f, fill=NAVY + (255,))
         p = os.path.join(tmp, "l_num.png"); _layer(p, big); layers.append((p, t_lines + 0.5, 0.3))
 
     # 5) manba va brend
     def foot(d, sd):
         f1, f2 = bold(36), bold(44)
         if source:
-            d.text((90, H - 470), f"Manba: {source}", font=f1, fill=MUTED + (255,))
-        d.text((90, H - 400), "@" + brand, font=f2, fill=ACCENT + (255,))
+            t1 = f"Manba: {source}"
+            d.text((lx(d, t1, f1), H - 470), t1, font=f1, fill=MUTED + (255,))
+        t2 = "@" + brand
+        d.text((lx(d, t2, f2), H - 400), t2, font=f2, fill=ACCENT + (255,))
     p = os.path.join(tmp, "l_foot.png"); _layer(p, foot); layers.append((p, 1.2, 0.5))
 
     # 6) yakuniy chaqiriq (raqam kartasi bilan ustma-ust tushmasin)
     card_bottom = y_after + (60 + 210 if num else 0)
     cta_y = min(max(H - 640, card_bottom + 40), H - 590)
+    # "lower" joylashuvda raqam kartasi pastga tushadi: CTA va manba bilan to'qnashsa, karta oldingi joyga qaytadi
+    if style["layout"] == "lower" and card_bottom + 40 > H - 640:
+        return build_layers(tmp, title, source, brand, font_paths, {**style, "layout": "left"})
 
     def cta(d, sd, top=cta_y):
         f = bold(52)
@@ -166,19 +203,19 @@ def build_layers(tmp, title, source, brand, font_paths):
 
 
 # ---------------- fon ----------------
-def _procedural_bg(tmp):
+def _procedural_bg(tmp, accent=(0, 214, 160), navy=NAVY):
     """Harakatlanuvchi 'terminal' foni: sekin suriluvchi to'r + yorug'lik dog'lari (ffmpeg uchun PNG'lar)."""
     from PIL import Image, ImageDraw, ImageFilter
-    base = Image.new("RGB", (W, H), NAVY)
+    base = Image.new("RGB", (W, H), navy)
     d = ImageDraw.Draw(base)
     for y in range(H):  # vertikal gradient
         t = y / H
-        d.line([(0, y), (W, y)], fill=(int(8 + 10 * t), int(14 + 18 * t), int(28 + 30 * t)))
+        d.line([(0, y), (W, y)], fill=(int(navy[0] + 10 * t), int(navy[1] + 18 * t), int(navy[2] + 30 * t)))
     glow = Image.new("RGB", (W, H), (0, 0, 0))
     g = ImageDraw.Draw(glow)
     for _ in range(5):
         cx, cy, r = random.randint(0, W), random.randint(0, H), random.randint(220, 420)
-        col = random.choice([(0, 120, 95), (20, 60, 140), (0, 90, 120)])
+        col = random.choice([tuple(int(c * 0.55) for c in accent), (20, 60, 140), (0, 90, 120)])
         g.ellipse([cx - r, cy - r, cx + r, cy + r], fill=col)
     glow = glow.filter(ImageFilter.GaussianBlur(160))
     base = Image.blend(base, glow, 0.45)
@@ -222,20 +259,30 @@ def _pixabay_bg(tmp, cat):
 
 
 # ---------------- yig'ish ----------------
-def make_reel(title, source, brand, out_path, ffmpeg, font_paths, music=None):
+def make_reel(title, source, brand, out_path, ffmpeg, font_paths, music=None, style=None):
     tmp = tempfile.mkdtemp(prefix="reel_")
-    layers, cat = build_layers(tmp, title, source, brand, font_paths)
+    style = style or pick_style()
+    accent = style["palette"]["accent"]
+    acc_hex = "0x%02X%02X%02X" % accent
+    print(f"Reels uslubi: {style['palette']['name']}, {style['layout']}, {style['entrance']}, {style['motion']}")
+    layers, cat = build_layers(tmp, title, source, brand, font_paths, style)
     bg_video = _pixabay_bg(tmp, cat)
     d = f"{DUR:.1f}"
     cmd = [ffmpeg, "-y", "-loglevel", "error"]
     if bg_video:
         cmd += ["-stream_loop", "-1", "-t", d, "-i", bg_video]
+        move = {
+            "drift": f"scale={W + 80}:{H + 140},crop={W}:{H}:x='40+30*sin(t/3)':y='70*(t/{DUR})'",
+            "pan": f"scale={W + 80}:{H + 220},crop={W}:{H}:x=40:y='220*(1-t/{DUR})'",
+            "zoom": (f"scale=w='trunc({W}*(1.04+0.10*t/{DUR})/2)*2':h='trunc({H}*(1.04+0.10*t/{DUR})/2)*2'"
+                     f":eval=frame,crop={W}:{H}"),
+        }[style["motion"]]
         bg = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
               "eq=brightness=-0.22:saturation=0.85,gblur=sigma=3,"
-              f"scale={W + 80}:{H + 140},crop={W}:{H}:x='40+30*sin(t/3)':y='70*(t/{DUR})',setsar=1[bg]")
+              f"{move},setsar=1[bg]")
         n_bg = 1
     else:
-        base_p, grid_p = _procedural_bg(tmp)
+        base_p, grid_p = _procedural_bg(tmp, accent, style["palette"]["navy"])
         cmd += ["-loop", "1", "-framerate", str(FPS), "-t", d, "-i", base_p,
                 "-loop", "1", "-framerate", str(FPS), "-t", d, "-i", grid_p]
         bg = ("[0:v]format=rgba,zoompan=z='1+0.0004*on':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
@@ -252,11 +299,13 @@ def make_reel(title, source, brand, out_path, ffmpeg, font_paths, music=None):
     f = [bg, "[bg]vignette=PI/4.8[v0]"]
     for i, (p, st, fin) in enumerate(layers):
         idx = n_bg + i
-        # paydo bo'lish + pastdan 40px ko'tarilish
+        # paydo bo'lish + uslubga qarab pastdan / chapdan / yuqoridan surilish
         f.append(f"[{idx}:v]format=rgba,fade=t=in:st={st:.2f}:d={fin:.2f}:alpha=1[s{i}]")
-        f.append(f"[v{i}][s{i}]overlay=0:'max(0,40*(1-(t-{st:.2f})/{fin:.2f}))':format=auto[v{i + 1}]")
+        k = f"max(0,1-(t-{st:.2f})/{fin:.2f})"
+        xy = {"rise": f"0:'40*{k}'", "slide": f"'-60*{k}':0", "drop": f"0:'-40*{k}'"}[style["entrance"]]
+        f.append(f"[v{i}][s{i}]overlay={xy}:format=auto[v{i + 1}]")
     n = len(layers)
-    f.append(f"[v{n}]drawbox=x=0:y={H - 12}:w='iw*t/{DUR}':h=12:color=0x00D6A0@1:t=fill,"
+    f.append(f"[v{n}]drawbox=x=0:y={H - 12}:w='iw*t/{DUR}':h=12:color={acc_hex}@1:t=fill,"
              f"fade=t=in:st=0:d=0.4,fade=t=out:st={DUR - 0.6:.2f}:d=0.6,format=yuv420p[v]")
     cmd += ["-filter_complex", ";".join(f), "-map", "[v]", "-map", f"{ai}:a",
             "-af", f"afade=t=in:d=0.8,afade=t=out:st={DUR - 1.5:.1f}:d=1.5", "-t", d,
