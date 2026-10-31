@@ -543,13 +543,19 @@ def ig_publish_reel_url(video_url, caption):
     ig_publish(uid, cid)
 
 
-def post_reel(title, caption, stamp):
-    frame = f"/tmp/frame_{stamp}.jpg"
+def post_reel(title, caption, stamp, source=""):
     repo_path = f"images/reel_{stamp}.mp4"
-    make_reel_frame(title, frame)
     music = find_music()
     print("Musiqa:", music or "topilmadi (video ovozsiz bo'ladi)")
-    make_video(frame, repo_path, music)
+    try:
+        # Animatsion Reels: harakatlanuvchi fon, qatorma-qator sarlavha, asosiy raqam, manba, CTA
+        from reel_fx import make_reel
+        make_reel(title, source, BRAND, repo_path, ffmpeg_exe(), FONT_PATHS, music)
+    except Exception as e:  # noqa: BLE001 - animatsiya buzilsa, eski oddiy video baribir chiqsin
+        print("Animatsion Reels yasalmadi, oddiy variant:", e)
+        frame = f"/tmp/frame_{stamp}.jpg"
+        make_reel_frame(title, frame)
+        make_video(frame, repo_path, music)
     print("Video tayyor:", os.path.getsize(repo_path) // 1024, "KB")
     url = publish_to_repo(repo_path, "images/reel_*.mp4", 6)
     print("Video havolasi tayyor, Instagramga yuborilmoqda...")
@@ -579,7 +585,7 @@ def post_to_instagram(post, item):
     reel_done = False
     if fmt in ("reel", "both"):
         try:
-            post_reel(title, caption, stamp)
+            post_reel(title, caption, stamp, item.get("source", ""))
             reel_done = True
         except Exception as e:
             print("Reels joylanmadi:", e)
