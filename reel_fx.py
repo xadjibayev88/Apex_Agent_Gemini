@@ -498,7 +498,7 @@ def _render(tmp, title, source, brand, out_path, ffmpeg, font_paths, music, styl
     if fx:
         chain(f"{{IN}}[{i_sweep}:v]overlay=x='-{fxp['sweep_w']}+({W}+{fxp['sweep_w']})*(t-0.9)/0.9':y=0:"
               "enable='between(t,0.9,1.8)':format=auto", "vw")
-    f.append(f"[{cur}]fade=t=in:st=0:d=0.4,fade=t=out:st={DUR - 0.6:.2f}:d=0.6,format=yuv420p[v]")
+    f.append(f"[{cur}]fade=t=out:st={DUR - 0.6:.2f}:d=0.6,format=yuv420p[v]")  # boshida qora kadr bo'lmasin (muqova)
     cmd += ["-filter_complex", ";".join(f), "-map", "[v]", "-map", f"{ai}:a",
             "-af", f"afade=t=in:d=0.8,afade=t=out:st={DUR - 1.5:.1f}:d=1.5", "-t", d,
             "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-c:a", "aac", "-b:a", "128k",
@@ -508,6 +508,8 @@ def _render(tmp, title, source, brand, out_path, ffmpeg, font_paths, music, styl
 
 
 def make_reel(title, source, brand, out_path, ffmpeg, font_paths, music=None, style=None):
+    # shrift chiza olmaydigan emoji va belgilar kvadrat bo'lib chiqmasin
+    title = re.sub(r"[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F\u200D]", "", title).strip()
     auto_style = style is None
     style = style or pick_style(title=title)
     print(f"Reels uslubi: {style['palette']['name']}, {style['layout']}, {style['entrance']}, {style['motion']}")

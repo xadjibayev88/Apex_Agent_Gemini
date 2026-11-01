@@ -534,6 +534,7 @@ def ig_publish_reel_url(video_url, caption):
         data={
             "media_type": "REELS",
             "video_url": video_url,
+            "thumb_offset": "4000",  # muqova: 4-soniya (sarlavha va raqam ko'ringan payt), qora birinchi kadr emas
             "caption": caption,
             "share_to_feed": "true",
         },
