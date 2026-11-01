@@ -58,7 +58,6 @@ DEFAULT_FEEDS = [
     "https://feeds.marketwatch.com/marketwatch/topstories/",
     "https://www.cnbc.com/id/10000664/device/rss/rss.html",
     "https://www.investing.com/rss/news.rss",
-    "https://finance.yahoo.com/news/rssindex",
     "https://www.coindesk.com/arc/outboundfeeds/rss/",
     "http://feeds.bbci.co.uk/news/business/rss.xml",
 ]

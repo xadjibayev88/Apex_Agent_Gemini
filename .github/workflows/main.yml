@@ -1,7 +1,20 @@
 name: Post to Telegram
 on:
   schedule:
-    - cron: "7,37 4-15 * * *"
+    # GitHub ko'p qiymatli "7,37 4-15" jadvalni kuniga ~2 marta ishga tushirardi.
+    # Har soat alohida qator (Toshkent 09:xx-20:xx), daqiqalar :00 dan uzoq.
+    - cron: "11 4 * * *"
+    - cron: "41 5 * * *"
+    - cron: "13 6 * * *"
+    - cron: "43 7 * * *"
+    - cron: "17 8 * * *"
+    - cron: "47 9 * * *"
+    - cron: "19 10 * * *"
+    - cron: "49 11 * * *"
+    - cron: "23 12 * * *"
+    - cron: "53 13 * * *"
+    - cron: "29 14 * * *"
+    - cron: "59 15 * * *"
   workflow_dispatch:
 permissions:
   contents: write
