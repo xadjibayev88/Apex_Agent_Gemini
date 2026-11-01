@@ -78,8 +78,8 @@ LAST_STYLE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "last
 # vaqt va o'lchamlar (px). Xavfsiz zona: tepada 250, pastda 420, yonlarda 80 px bo'sh.
 END_AT = DUR - 3.6           # shu paytda asosiy matn o'chib, yakuniy karta chiqadi
 SAFE_X, SAFE_TOP, SAFE_BOTTOM = 80, 250, H - 420
-TICKER_Y, TICKER_H, TICKER_SPEED = 262, 56, 130
-BADGE_Y = 340
+TICKER_Y, TICKER_H, TICKER_SPEED = 258, 66, 120
+BADGE_Y = 346
 HEAD_Y = {"lower": 640, "split": 470}
 SPLIT_CARD_BOTTOM, CARD_H = SAFE_BOTTOM - 150, 210
 
@@ -288,6 +288,9 @@ def build_layers(tmp, title, source, brand, font_paths, style=None):
         x = (W - cw_) / 2
         d.rounded_rectangle([x - 40, 960, x + cw_ + 40, 1070], radius=55, fill=ACCENT + (255,))
         d.text((x, 960 + (110 - fc.size * 1.2) / 2), txt, font=fc, fill=NAVY + (255,))
+        note = "Moliyaviy maslahat emas"
+        fn = bold(30)
+        d.text(((W - d.textlength(note, font=fn)) / 2, 1100), note, font=fn, fill=MUTED + (255,))
     add("end", end, END_AT + 0.25, 0.5, kind="end")
     return layers, cat, meta
 
@@ -324,7 +327,7 @@ def _procedural_bg(tmp, accent=(0, 214, 160), navy=NAVY):
 def _fx_pngs(tmp, accent, navy, cat, brand, alert, font_paths):
     """Ticker lentasi + maskasi, yorug'lik chizig'i va supurish PNG'i. Ticker matni: faqat kategoriya va brend."""
     from PIL import Image, ImageDraw
-    f = _font(30, font_paths)
+    f = _font(36, font_paths)
     parts = (["MUHIM"] if alert else []) + [cat, "@" + brand, "BOZOR YANGILIGI"]
     seg = "".join(f"{p}   ●   " for p in parts)
     probe = ImageDraw.Draw(Image.new("RGBA", (W, H)))
@@ -333,14 +336,14 @@ def _fx_pngs(tmp, accent, navy, cat, brand, alert, font_paths):
     strip = Image.new("RGBA", (period * reps, TICKER_H), (0, 0, 0, 0))
     sd = ImageDraw.Draw(strip)
     for i in range(reps):
-        sd.text((i * period, 10), seg, font=f, fill=WHITE + (255,))
+        sd.text((i * period, 12), seg, font=f, fill=WHITE + (255,))
     sd.rectangle([0, 0, strip.width, 2], fill=accent + (255,))
     sd.rectangle([0, TICKER_H - 3, strip.width, TICKER_H], fill=accent + (255,))
     strip_p = os.path.join(tmp, "fx_strip.png"); strip.save(strip_p)
     mask = Image.new("L", (W, TICKER_H), 0)  # chetlarda so'nadi: matn yon xavfsiz zonasidan chiqmaydi
     md = ImageDraw.Draw(mask)
     for x in range(W):
-        a = min(1.0, max(0.0, (min(x, W - 1 - x) - SAFE_X) / 90))
+        a = min(1.0, max(0.0, (min(x, W - 1 - x) - SAFE_X) / 130))
         md.line([(x, 0), (x, TICKER_H)], fill=int(215 * a))
     mask_p = os.path.join(tmp, "fx_mask.png"); mask.save(mask_p)
     scan = Image.new("RGBA", (W, 260), (0, 0, 0, 0))
@@ -477,7 +480,11 @@ def _render(tmp, title, source, brand, out_path, ffmpeg, font_paths, music, styl
             chain(f"{{IN}}[s{i}]overlay=x='{c['cx']:.1f}-overlay_w/2':y='{c['cy']:.1f}-overlay_h/2':format=auto", f"v{i + 1}")
             continue
         f.append(sig + f"[s{i}]")
-        xy = "0:0" if kind in ("end", "card") else {
+        if kind == "card":  # oddiy rejim: pop'siz, lekin o'z joyida
+            c = meta["card"]
+            chain(f"{{IN}}[s{i}]overlay=x={c['cx'] - c['w'] / 2:.1f}:y={c['cy'] - c['h'] / 2:.1f}:format=auto", f"v{i + 1}")
+            continue
+        xy = "0:0" if kind == "end" else {
             "rise": f"0:'40*{k}'", "slide": f"'-60*{k}':0", "drop": f"0:'-40*{k}'"}[style["entrance"]]
         chain(f"{{IN}}[s{i}]overlay={xy}:format=auto", f"v{i + 1}")
 
@@ -507,9 +514,9 @@ def make_reel(title, source, brand, out_path, ffmpeg, font_paths, music=None, st
     tmp = tempfile.mkdtemp(prefix="reel_")
     try:
         _render(tmp, title, source, brand, out_path, ffmpeg, font_paths, music, style, fx=True)
-    except subprocess.CalledProcessError as e:
-        # yangi effekt filtri ishlamasa: oddiy (effektsiz) variantda qayta yasaymiz
-        print("Premium effektlar ishlamadi, oddiy uslub:", (e.stderr or "")[-400:])
+    except Exception as e:  # noqa: BLE001 - istalgan effekt xatosida oddiy variant
+        tail = (e.stderr or "")[-400:] if isinstance(e, subprocess.CalledProcessError) else repr(e)
+        print("Premium effektlar ishlamadi, oddiy uslub:", tail)
         _render(tmp, title, source, brand, out_path, ffmpeg, font_paths, music, style, fx=False)
     if auto_style:
         save_last_style(style)
