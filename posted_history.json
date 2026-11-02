@@ -286,5 +286,11 @@
   "summary": "Live updates: Bitcoin posts small rise as Binance records $6 billion outflows after starting withdrawals",
   "link": "https://www.coindesk.com/markets/2026/11/02/live-updates-binance-records-usd6-billion-outflows-after-starting-withdrawals-less-then-4-of-total-holdings",
   "ig": false
+ },
+ {
+  "time": "2026-11-02T20:40:15.088103+05:00",
+  "summary": "Binance users withdraw $3.6bn after largest-ever crypto hack",
+  "link": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o?at_medium=RSS&at_campaign=rss",
+  "ig": true
  }
 ]
