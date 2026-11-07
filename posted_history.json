@@ -418,5 +418,12 @@
   "link": "https://www.coindesk.com/markets/2026/11/06/u-s-added-165-000-jobs-in-october-blowing-past-65-000-estimate",
   "ig": true,
   "tg": true
+ },
+ {
+  "time": "2026-11-07T20:55:44.264061+05:00",
+  "summary": "Bitcoin recovers $76,000 level as ETFs shed $430 million after tech rout",
+  "link": "https://www.coindesk.com/markets/2026/11/06/bitcoin-recovers-usd76-000-level-as-etfs-shed-usd430-million-after-tech-rout",
+  "ig": false,
+  "tg": true
  }
 ]
