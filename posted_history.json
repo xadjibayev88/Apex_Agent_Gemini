@@ -376,5 +376,12 @@
   "summary": "CFTC clears stock perpetual futures for trading on US exchanges",
   "link": "https://cointelegraph.com/news/cftc-equity-perpetual-futures-trading-us-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false
+ },
+ {
+  "time": "2026-11-07T09:33:44.141606+05:00",
+  "summary": "Bitcoin price dips under $75K as crypto markets miss tech-stock rebound",
+  "link": "https://cointelegraph.com/markets/bitcoin-price-under-75k-crypto-markets-tech-stock?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
+  "tg": false
  }
 ]
