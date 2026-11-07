@@ -635,17 +635,23 @@ def run_once():
     if not item or not post:
         print("Model post yozmadi (SKIP yoki xato format).")
         return
-    send_to_channel(post, item)
+    tg_ok = True
+    try:
+        send_to_channel(post, item)
+    except Exception as e:  # Telegram ishlamasa ham Instagram Reels chiqaversin
+        tg_ok = False
+        print("Telegram'ga joylanmadi:", e)
     history.append(
         {
             "time": now.isoformat(),
             "summary": item["title"],
             "link": item["link"],
             "ig": False,
+            "tg": tg_ok,
         }
     )
     save_history(history)
-    print("Post joylandi:", item["title"])
+    print("Telegram post joylandi:" if tg_ok else "Telegram o'tkazib yuborildi:", item["title"])
 
     if not IG_TOKEN:
         print("IG_ACCESS_TOKEN yo'q, Instagram o'tkazib yuborildi.")
