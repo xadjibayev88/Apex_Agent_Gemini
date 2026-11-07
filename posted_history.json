@@ -439,5 +439,12 @@
   "link": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
   "ig": true,
   "tg": true
+ },
+ {
+  "time": "2026-11-08T00:50:47.260224+05:00",
+  "summary": "Greece approves 10% tax on crypto gains and 15% levy on DeFi income",
+  "link": "https://www.coindesk.com/policy/2026/11/06/greece-approves-10-tax-on-crypto-gains-and-15-levy-on-defi-income",
+  "ig": false,
+  "tg": true
  }
 ]
