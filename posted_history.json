@@ -397,5 +397,12 @@
   "link": "https://www.coindesk.com/markets/2026/11/06/bitcoin-steadies-near-usd76-000-after-ai-led-selloff",
   "ig": true,
   "tg": true
+ },
+ {
+  "time": "2026-11-07T16:55:35.986216+05:00",
+  "summary": "US Treasury cuts off MEXC over alleged $16B in illicit transactions",
+  "link": "https://cointelegraph.com/news/us-treasury-bans-mexc-over-alleged-16b-illicit-transactions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
  }
 ]
