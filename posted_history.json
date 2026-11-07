@@ -432,5 +432,12 @@
   "link": "https://www.coindesk.com/daybook-us/2026/11/06/over-usd1-billion-in-bullish-bets-liquidated-while-etf-flows-suggest-no-help-in-spot-market",
   "ig": false,
   "tg": true
+ },
+ {
+  "time": "2026-11-07T23:21:36.505109+05:00",
+  "summary": "U.S. Treasury moves to cut off crypto exchange MEXC over $16 billion in alleged illicit flows",
+  "link": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
+  "ig": true,
+  "tg": true
  }
 ]
