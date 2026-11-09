@@ -544,5 +544,12 @@
   "link": "https://www.bbc.co.uk/news/articles/c6zxjx01vyleo?at_medium=RSS&at_campaign=rss",
   "ig": true,
   "tg": true
+ },
+ {
+  "time": "2026-11-10T02:39:07.087285+05:00",
+  "summary": "Nvidia-led tech selloff weighs on crypto majors",
+  "link": "https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors",
+  "ig": false,
+  "tg": true
  }
 ]
