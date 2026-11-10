@@ -152,8 +152,13 @@ def encode(frames, out_path, ffmpeg, music, dur):
 
 
 # ---------------------------------------------------------------- signal reel
-def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg: str, font_paths, music=None, when: str = ""):
-    """sig: {symbol, side, entry, targets[list], stop}. Davomiyligi 10 s."""
+def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg: str, font_paths, music=None, when: str = "",
+                     result: dict | None = None):
+    """sig: {symbol, side, entry, targets[list], stop}. Davomiyligi 10 s.
+
+    result berilsa natija videosi bo'ladi: {"target": bajarilgan target raqami yoki None, "pct": kanal yozgan foiz yoki None}.
+    Foiz faqat narx o'zgarishi sifatida (leveragesiz) hisoblanadi yoki kanal xabaridan olingani aniq yoziladi.
+    """
     fonts = Fonts(font_paths)
     dur = 10.0
     long_ = sig["side"] == "LONG"
@@ -176,6 +181,9 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
     label_y = {k: v - shift for k, v in label_y.items()}
 
     rr = abs(targets[-1] - entry) / abs(entry - stop)
+    hit = result.get("target") if result else None
+    hit = hit if hit and 1 <= hit <= len(targets) else None
+    path_end = targets[hit - 1] if hit else (None if result else targets[-1])
     ticker = sig["symbol"].replace("USDT", "")
     order = sorted(levels, key=lambda l: abs(l[1] - entry))  # entry birinchi, keyin yaqinidan uzog'iga
     order = [l for l in order if l[0] == "KIRISH"] + [l for l in order if l[0] == "STOP"] + [l for l in order if l[0].startswith("TARGET")]
@@ -193,7 +201,7 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
             if k > 0 and fade > 0:
                 bx = int(-500 + 560 * k)
                 d.rounded_rectangle([bx, 190, bx + 420, 262], radius=36, fill=mix(NAVY, GOLD, fade))
-                d.text((bx + 34, 204), "YANGI SIGNAL", font=fonts(40), fill=NAVY)
+                d.text((bx + 34, 204), "NATIJA" if result else "YANGI SIGNAL", font=fonts(40), fill=NAVY)
             k = ease_back(prog(t, 0.35, 0.6))
             if k > 0 and fade > 0:
                 f = fit(d, "$" + ticker, fonts, int(170 * k), 640)
@@ -203,7 +211,7 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
                 d.rounded_rectangle([px, 330, px + pw, 440], radius=55, fill=mix(NAVY, accent, fade))
                 text_c(d, px + pw / 2, 348, sig["side"], fonts(64), NAVY)
                 if when:
-                    d.text((64, 500), "Telegram'da berildi: " + when, font=fonts(34), fill=mix(NAVY, MUTED, fade * ease_out(prog(t, 0.9, 0.4))))
+                    d.text((64, 500), ("Signal berilgan vaqt: " if result else "Telegram'da berildi: ") + when, font=fonts(34), fill=mix(NAVY, MUTED, fade * ease_out(prog(t, 0.9, 0.4))))
             # --- narx zinapoyasi
             if fade > 0:
                 for n, (name, price, color) in enumerate(order):
@@ -219,7 +227,8 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
                         ly = label_y[name]
                         if abs(ly - y) > 4:  # yorliq surilgan bo'lsa, chiziq uchidan yorliqqa ingichka bog'lovchi
                             d.line([x2, y, W - 372, ly], fill=mix(NAVY, color, a * 0.6), width=2)
-                        d.text((W - 360, ly - 52), name, font=fonts(30), fill=mix(NAVY, MUTED, a))
+                        done = hit and name.startswith("TARGET") and int(name.split()[1]) <= hit
+                        d.text((W - 360, ly - 52), name + (" ✓" if done else ""), font=fonts(30), fill=mix(NAVY, GOLD if done else MUTED, a))
                         d.text((W - 360, ly - 18), fmt_price(price), font=fonts(46), fill=mix(NAVY, color, a))
                         if name != "KIRISH":
                             pct = (price - entry) / entry * 100
@@ -227,8 +236,8 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
                 # --- reja yo'li: kirishdan oxirgi targetgacha yuradigan nuqta (reja, natija emas)
                 t_path = 1.3 + len(order) * 0.55
                 k = ease_out(prog(t, t_path, 1.6))
-                if k > 0:
-                    pts = [(140 + (W - 560) * j / 40, y_of(entry + (targets[-1] - entry) * (j / 40) + (hi - lo) * 0.035 * math.sin(j * 1.3) * (1 - j / 40)))
+                if k > 0 and path_end is not None:
+                    pts = [(140 + (W - 560) * j / 40, y_of(entry + (path_end - entry) * (j / 40) + (hi - lo) * 0.035 * math.sin(j * 1.3) * (1 - j / 40)))
                            for j in range(int(40 * k) + 1)]
                     if len(pts) > 1:
                         d.line(pts, fill=mix(NAVY, accent, fade), width=7, joint="curve")
@@ -237,7 +246,19 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
                     d.ellipse([x - r, y - r, x + r, y + r], fill=mix(NAVY, WHITE, fade))
                 # --- R/R hisoblagich
                 k = ease_out(prog(t, t_path + 0.4, 1.0))
-                if k > 0:
+                if k > 0 and result:
+                    d.rounded_rectangle([60, 1440, W - 60, 1620], radius=36, fill=mix(NAVY, PANEL, fade), outline=mix(NAVY, GOLD, fade), width=3)
+                    left = f"Target {hit} bajarildi" if hit else "Foyda bilan yopildi"
+                    d.text((100, 1470), "Natija", font=fonts(36), fill=mix(NAVY, MUTED, fade))
+                    d.text((100, 1524), left, font=fit(d, left, fonts, 60, 500), fill=mix(NAVY, GOLD, fade))
+                    if hit:
+                        move = abs(targets[hit - 1] - entry) / entry * 100
+                        d.text((650, 1470), "Narx o'zgarishi", font=fonts(36), fill=mix(NAVY, MUTED, fade))
+                        d.text((650, 1520), f"+{move * k:.1f}%", font=fonts(76), fill=mix(NAVY, GREEN, fade))
+                    elif result.get("pct"):
+                        d.text((650, 1470), "Kanal xabarida", font=fonts(36), fill=mix(NAVY, MUTED, fade))
+                        d.text((650, 1520), result["pct"], font=fit(d, result["pct"], fonts, 76, 330), fill=mix(NAVY, GREEN, fade))
+                elif k > 0:
                     d.rounded_rectangle([60, 1440, W - 60, 1620], radius=36, fill=mix(NAVY, PANEL, fade))
                     d.text((100, 1470), "Risk / Reward", font=fonts(36), fill=mix(NAVY, MUTED, fade))
                     d.text((100, 1520), f"1 : {rr * k:.2f}", font=fonts(76), fill=mix(NAVY, GOLD, fade))

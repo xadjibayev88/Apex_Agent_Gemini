@@ -26,8 +26,8 @@ def test_parse_channel_html_handles_br_and_entities():
     assert msgs[0]["id"] == 7 and sr.parse_signal(msgs[0]["text"])["side"] == "LONG"
 
 
-def msg(i, text, age_h=0.5):
-    return {"id": i, "text": text, "time": NOW - timedelta(hours=age_h)}
+def msg(i, text, age_h=0.5, reply_to=None):
+    return {"id": i, "text": text, "time": NOW - timedelta(hours=age_h), "reply_to": reply_to}
 
 
 def test_pick_newest_signal_and_marks_news_seen():
@@ -58,3 +58,46 @@ def test_market_entry_numbered_targets_format():
     s = sr.parse_signal(JTO)
     assert s == {"symbol": "JTOUSDT", "side": "LONG", "entry": 0.3388, "stop": 0.3202, "targets": [0.3423, 0.3474, 0.362]}
     assert sr.parse_signal("Открыл сделку в лонг с 20 плечом по GRASS и JTO") is None
+
+
+def test_parse_result_profit_only():
+    assert sr.parse_result("JTO: взят тейк 2 ✅ +51% с плечом") == {"target": 2, "pct": "+51%"}
+    assert sr.parse_result("Первый таргет достигнут")["target"] == 1
+    assert sr.parse_result("Закрыл в плюс, профит зафиксирован") == {"target": None, "pct": None}
+    assert sr.parse_result("Выбило по стопу -5% ❌") is None
+    assert sr.parse_result("Всем привет") is None and sr.parse_result(JTO) is None
+
+
+def tracked():
+    return {"seen": [], "posts": [], "promo_day": "", "signals": {"189": {"sig": sr.parse_signal(JTO), "media_id": "1", "results": []}}}
+
+
+def test_result_matched_by_reply_or_ticker_and_not_repeated():
+    st = tracked()
+    m, key, res = sr.find_result([msg(200, "Тейк 1 взят ✅", reply_to=189)], st)
+    assert (key, res["target"]) == ("189", 1)
+    st["signals"]["189"]["results"].append(1)
+    assert sr.find_result([msg(200, "Тейк 1 взят ✅", reply_to=189)], st) is None and 200 in st["seen"]
+    m, key, res = sr.find_result([msg(201, "JTO таргет 2 достигнут")], tracked())
+    assert key == "189" and res["target"] == 2
+    assert sr.find_result([msg(202, "ETH тейк 1 взят")], tracked()) is None  # kuzatilmagan ticker
+
+
+def test_result_message_is_held_while_signal_posts():
+    st = tracked()
+    msgs = [msg(210, "Тейк 1 взят ✅", reply_to=189), msg(211, MASK)]
+    res = sr.find_result(msgs, st)
+    choice = sr.pick_signal(msgs, st, NOW, frozenset({res[0]["id"]}))
+    assert choice[0]["id"] == 211 and 210 not in st["seen"]
+
+
+def test_reply_id_parsed_from_html():
+    html_ = ('<div class="tgme_widget_message" data-post="Apex_Trader_Uz/9"><a class="tgme_widget_message_reply user-select" '
+             'href="https://t.me/Apex_Trader_Uz/189"><div class="tgme_widget_message_metatext js-message_reply_text">x</div></a>'
+             f'<div class="tgme_widget_message_text js-message_text" dir="auto">Тейк 1 взят</div><time datetime="{NOW.isoformat()}"></time></div>')
+    assert sr.parse_channel_html(html_)[0]["reply_to"] == 189
+
+
+def test_result_caption_is_unleveraged_and_balanced():
+    c = sr.result_caption(sr.parse_signal(JTO), {"target": 1, "pct": "+25%"})
+    assert "+1.0%" in c and "leveragesiz" in c and "zarar bilan yopilgan" in c and "+25%" not in c

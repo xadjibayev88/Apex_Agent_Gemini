@@ -27,5 +27,23 @@
    "kind": "signal"
   }
  ],
- "promo_day": ""
+ "promo_day": "",
+ "signals": {
+  "189": {
+   "sig": {
+    "symbol": "JTOUSDT",
+    "side": "LONG",
+    "entry": 0.3388,
+    "stop": 0.3202,
+    "targets": [
+     0.3423,
+     0.3474,
+     0.362
+    ]
+   },
+   "media_id": null,
+   "when": "16:50",
+   "results": []
+  }
+ }
 }

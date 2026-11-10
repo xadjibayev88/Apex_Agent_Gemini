@@ -71,8 +71,63 @@ def parse_channel_html(page: str) -> list[dict]:
             ts = datetime.fromisoformat(when.group(1))
         except ValueError:
             continue
-        out.append({"id": int(m.group(1)), "text": text, "time": ts})
+        reply = re.search(r'<a class="tgme_widget_message_reply[^"]*"[^>]*href="[^"]*/(\d+)"', block)
+        out.append({"id": int(m.group(1)), "text": text, "time": ts, "reply_to": int(reply.group(1)) if reply else None})
     return out
+
+
+PROFIT_RE = re.compile(r"тейк|таргет|цел[ьи]\b|взят|достиг|профит|прибыл|в плюс|\+\s*\d+(?:[.,]\d+)?\s*%|✅|\btp\s*\d", re.I)
+LOSS_RE = re.compile(r"стоп|убыт|в минус|-\s*\d+(?:[.,]\d+)?\s*%|❌|ликвид", re.I)
+TARGET_NO_RE = re.compile(r"(?:тейк|таргет|цель|tp)\s*№?\s*(\d)|(\d)\s*(?:-?[йи]|-?ый|-?ой)?\s*(?:тейк|таргет|цель)", re.I)
+ORDINALS = {"перв": 1, "втор": 2, "трет": 3, "четв": 4}
+
+
+def parse_result(text: str) -> dict | None:
+    """Foyda bilan yopilganini bildiruvchi xabar bo'lsa {"target": raqam|None, "pct": "+35%"|None}; aks holda None.
+
+    Zarar/stop haqidagi yoki yangi signal bo'lgan xabar natija hisoblanmaydi.
+    """
+    if not text or parse_signal(text) or not PROFIT_RE.search(text) or LOSS_RE.search(text):
+        return None
+    target = None
+    m = TARGET_NO_RE.search(text)
+    if m:
+        target = int(m.group(1) or m.group(2))
+    else:
+        for stem, n in ORDINALS.items():
+            if re.search(stem + r"\w*\s+(?:тейк|таргет|цель)", text, re.I):
+                target = n
+    pct = re.search(r"\+\s*(\d+(?:[.,]\d+)?)\s*%", text)
+    return {"target": target, "pct": f"+{pct.group(1)}%" if pct else None}
+
+
+def find_result(messages: list[dict], state: dict) -> tuple[dict, str, dict] | None:
+    """Kuzatilayotgan signalga tegishli yangi natija xabari: (xabar, signal kaliti, natija).
+
+    Bog'lash: xabar signalga javob (reply) bo'lsa — aniq; bo'lmasa matnda signal tickeri bo'lishi kerak.
+    Bir signalning bir targeti uchun faqat bitta natija videosi.
+    """
+    signals = state.get("signals", {})
+    for m in sorted((m for m in messages if m["id"] not in state["seen"]), key=lambda x: x["id"]):
+        res = parse_result(m["text"])
+        if not res:
+            continue
+        key = str(m["reply_to"]) if m.get("reply_to") and str(m["reply_to"]) in signals else None
+        if key is None:
+            for k in sorted(signals, key=int, reverse=True):
+                ticker = signals[k]["sig"]["symbol"].replace("USDT", "")
+                if re.search(r"(?<![A-Z0-9])\$?" + re.escape(ticker) + r"(?![A-Z0-9])", m["text"], re.I):
+                    key = k
+                    break
+        if key is None:
+            continue
+        done = signals[key].setdefault("results", [])
+        mark = res["target"] or 0
+        if mark in done or (mark == 0 and done):
+            state["seen"].append(m["id"])  # shu natija allaqachon chiqqan
+            continue
+        return m, key, res
+    return None
 
 
 def fetch_messages() -> list[dict]:
@@ -87,17 +142,20 @@ def load_state() -> dict:
         with open(STATE_FILE, encoding="utf-8") as fh:
             return json.load(fh)
     except (OSError, ValueError):
-        return {"seen": [], "posts": [], "promo_day": ""}
+        return {"seen": [], "posts": [], "promo_day": "", "signals": {}}
 
 
 def save_state(state: dict) -> None:
     state["seen"] = state["seen"][-500:]
     state["posts"] = state["posts"][-100:]
+    sigs = state.setdefault("signals", {})
+    for k in sorted(sigs, key=int)[:-30]:  # faqat oxirgi 30 ta signal kuzatiladi
+        del sigs[k]
     with open(STATE_FILE, "w", encoding="utf-8") as fh:
         json.dump(state, fh, ensure_ascii=False, indent=1)
 
 
-def pick_signal(messages: list[dict], state: dict, now: datetime) -> tuple[dict, dict] | None:
+def pick_signal(messages: list[dict], state: dict, now: datetime, hold: frozenset = frozenset()) -> tuple[dict, dict] | None:
     """Joylanadigan eng yangi signal (limitlar ichida). Ko'rilgan xabarlar state['seen'] ga qo'shiladi."""
     today = [p for p in state["posts"] if p["time"][:10] == now.date().isoformat() and p["kind"] == "signal"]
     recent = [p for p in state["posts"] if p["kind"] == "signal" and datetime.fromisoformat(p["time"]) > now - timedelta(minutes=GAP_MINUTES)]
@@ -110,6 +168,8 @@ def pick_signal(messages: list[dict], state: dict, now: datetime) -> tuple[dict,
             chosen = (m, sig)
         elif sig and not too_old and chosen is None:
             continue  # limit sabab hozir joylanmaydi: keyingi safar uchun "ko'rilmagan" qoladi
+        if m["id"] in hold:
+            continue  # natija xabari: keyingi ishga tushishda natija videosi bo'ladi
         if not sig or too_old or (chosen and chosen[0] is m):
             state["seen"].append(m["id"])
     return chosen
@@ -123,6 +183,40 @@ def caption_for(sig: dict) -> str:
             f"Risk/Reward: 1:{rr:.2f}\n\n"
             f"Signallar birinchi bo'lib Telegram kanalimizda chiqadi: t.me/{CHANNEL} (havola profilda)\n\n"
             f"{DISCLAIMER}\n\n{HASHTAGS}")
+
+
+def result_caption(sig: dict, res: dict) -> str:
+    fmt = lambda p: f"{p:.8f}".rstrip("0").rstrip(".")  # noqa: E731
+    name = sig["symbol"].replace("USDT", "")
+    if res.get("target") and res["target"] <= len(sig["targets"]):
+        tp = sig["targets"][res["target"] - 1]
+        move = abs(tp - sig["entry"]) / sig["entry"] * 100
+        line = f"Target {res['target']} bajarildi: {fmt(sig['entry'])} → {fmt(tp)} (narx o'zgarishi +{move:.1f}%, leveragesiz)"
+    else:
+        line = "Savdo foyda bilan yopildi" + (f" (kanal xabarida: {res['pct']})" if res.get("pct") else "")
+    return (f"${name} {sig['side']} signali natijasi\n\n{line}\n\n"
+            f"Har bir signal ham foyda bermaydi: zarar bilan yopilgan savdolar ham bo'ladi.\n"
+            f"Signallar va natijalar: t.me/{CHANNEL} (havola profilda)\n\n{DISCLAIMER}\n\n{HASHTAGS}")
+
+
+def publish_reel(base, url: str, caption: str) -> str | None:
+    """Reels joylaydi va media ID ni qaytaradi (asl signalga izoh yozish uchun)."""
+    uid = base.ig_user_id()
+    cid = base.ig_call("POST", f"{uid}/media", data={"media_type": "REELS", "video_url": url, "thumb_offset": "6000",
+                                                    "caption": caption, "share_to_feed": "true"})["id"]
+    base.ig_wait(cid, tries=30, delay=5)
+    return base.ig_call("POST", f"{uid}/media_publish", data={"creation_id": cid}).get("id")
+
+
+def comment_on(base, media_id: str | None, text: str) -> None:
+    """Asl signal Reels'i ostiga natija haqida izoh (ruxsat bo'lmasa jim o'tadi)."""
+    if not media_id:
+        return
+    try:
+        base.ig_call("POST", f"{media_id}/comments", data={"message": text})
+        print("Asl signal videosiga izoh yozildi")
+    except Exception as e:  # noqa: BLE001 — izoh yozilmasa ham natija videosi chiqqan
+        print("Izoh yozilmadi:", str(e)[:120])
 
 
 PROMO_CAPTION = (f"Kunlik savdo signallari, kripto va oltin tahlili, bozor yangiliklari — o'zbek tilida.\n\n"
@@ -145,27 +239,45 @@ def main() -> int:
     for m in messages[-8:]:  # tashxis: oxirgi xabarlar signal deb tanildimi (kanal ochiq, birinchi satr ko'rsatiladi)
         age = (now - m["time"]).total_seconds() / 3600
         first = m["text"].strip().splitlines()[0][:40] if m["text"].strip() else "(matn yo'q)"
-        print(f"  xabar {m['id']}: {age:.1f} soat oldin, signal={'ha' if parse_signal(m['text']) else 'yoq'} | {first}")
-        if DRY_RUN and not parse_signal(m["text"]) and re.search(r"long|short|лонг|шорт", m["text"], re.I):
+        print(f"  xabar {m['id']}: {age:.1f} soat oldin, signal={'ha' if parse_signal(m['text']) else 'yoq'}, natija={'ha' if parse_result(m['text']) else 'yoq'}, javob={m.get('reply_to')} | {first}")
+        if DRY_RUN and not parse_signal(m["text"]) and (m.get("reply_to") or re.search(r"long|short|лонг|шорт|тейк|таргет|профит|%", m["text"], re.I)):
             print("    --- to'liq matn (format tashxisi) ---")
             for line in m["text"].splitlines():
                 print("    | " + line[:120])
     stamp = now.strftime("%Y%m%d_%H%M%S")
     path = f"images/reel_sig_{stamp}.mp4"
-    choice = pick_signal(messages, state, now)
+    state.setdefault("signals", {})
+    result = find_result(messages, state)
+    hold = frozenset({result[0]["id"]}) if result else frozenset()
+    choice = pick_signal(messages, state, now, hold)
+    after = None  # joylangandan keyin holatga yoziladigan o'zgarish
     if choice:
         m, sig = choice
         kind, caption = "signal", caption_for(sig)
+        when = m["time"].astimezone(base.TZ).strftime("%H:%M")
         print(f"Signal: {sig['symbol']} {sig['side']} (xabar {m['id']})")
+        signal_fx.make_signal_reel(sig, base.BRAND, CHANNEL, path, base.ffmpeg_exe(), base.FONT_PATHS, base.find_music(), when)
+        after = lambda media_id: state["signals"].update({str(m["id"]): {"sig": sig, "media_id": media_id, "when": when, "results": []}})  # noqa: E731
+    elif result:
+        m, key, res = result
+        entry = state["signals"][key]
+        sig = entry["sig"]
+        kind, caption = "result", result_caption(sig, res)
+        print(f"Natija: {sig['symbol']} (signal xabari {key}, natija xabari {m['id']}, target={res['target']}, foiz={res['pct']})")
         signal_fx.make_signal_reel(sig, base.BRAND, CHANNEL, path, base.ffmpeg_exe(), base.FONT_PATHS, base.find_music(),
-                                   m["time"].astimezone(base.TZ).strftime("%H:%M"))
+                                   entry.get("when", ""), result=res)
+
+        def after(_media_id, m=m, entry=entry, res=res, caption=caption):
+            entry.setdefault("results", []).append(res["target"] or 0)
+            state["seen"].append(m["id"])
+            comment_on(base, entry.get("media_id"), caption.split("\n\n")[1] + " Natija videosi profilda.")
     elif state.get("promo_day") != now.date().isoformat() and now.hour >= PROMO_HOUR:
         kind, caption = "promo", PROMO_CAPTION
         print("Bugungi chorlov Reels")
         signal_fx.make_promo_reel(base.BRAND, CHANNEL, path, base.ffmpeg_exe(), base.FONT_PATHS, base.find_music(), seed=now.toordinal())
         state["promo_day"] = now.date().isoformat()
     else:
-        print("Yangi signal yo'q (yoki limit), chorlov ham bugun chiqqan/vaqti kelmagan")
+        print("Yangi signal/natija yo'q (yoki limit), chorlov ham bugun chiqqan/vaqti kelmagan")
         save_state(state)
         return 0
     print("Video tayyor:", os.path.getsize(path) // 1024, "KB")
@@ -173,8 +285,10 @@ def main() -> int:
         print("DRY_RUN: Instagramga joylanmadi")
         return 0  # holat saqlanmaydi: sinov navbatni sarflamaydi
     url = base.publish_to_repo(path, "images/reel_*.mp4", 6)
-    base.ig_publish_reel_url(url, caption)
+    media_id = publish_reel(base, url, caption)
     print("Instagram Reels joylandi:", kind)
+    if after:
+        after(media_id)
     state["posts"].append({"time": now.isoformat(timespec="seconds"), "kind": kind})
     save_state(state)
     return 0
