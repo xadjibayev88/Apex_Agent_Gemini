@@ -83,18 +83,28 @@ PROFIT_RE = re.compile(
     r"|(?:взят|достигнут|выполнен)\w*\s+(?:\S{1,12}\s+)?(?:тейк|таргет|цель)"
     r"|\+\s*\d+(?:[.,]\d+)?\s*%"
     r"|(?:закры\w+|зафиксир\w+)[^.\n]{0,40}(?:плюс|профит|прибыл)|профит\w*\s+зафиксир", re.I)
-LOSS_RE = re.compile(r"стоп|убыт|в минус|-\s*\d+(?:[.,]\d+)?\s*%|❌|ликвид", re.I)
+# Zarar ham faqat aniq ibora bo'lsa: "выбило по стопу", "стоп сработал", "закрыл в минус", "убыток".
+# "Ставим стоп" yoki signal ichidagi "Стоп: 0.32" zarar emas.
+LOSS_RE = re.compile(
+    r"по\s+стопу|(?:выбил\w*|сработал\w*|словил\w*|задел\w*)[^.\n]{0,25}стоп|стоп(?:[- ]?лосс)?\w*\s+(?:сработал|выбил|задет)"
+    r"|(?:закры\w+|зафиксир\w+)[^.\n]{0,40}(?:минус|(?<!без)убыт)|(?<!без)убыт(?:ок|ка|ку|ком)\b|ликвидир|-\s*\d+(?:[.,]\d+)?\s*%\s*❌", re.I)
 TARGET_NO_RE = re.compile(r"(?:тейк|таргет|цель|tp)\s*№?\s*(\d)|(\d)\s*(?:-?[йи]|-?ый|-?ой)?\s*(?:тейк|таргет|цель)", re.I)
 ORDINALS = {"перв": 1, "втор": 2, "трет": 3, "четв": 4}
 
 
 def parse_result(text: str) -> dict | None:
-    """Foyda bilan yopilganini bildiruvchi xabar bo'lsa {"target": raqam|None, "pct": "+35%"|None}; aks holda None.
+    """Savdo yopilgani haqidagi xabar: {"outcome": "profit"|"loss", "target": raqam|None, "pct": "+35%"|None}.
 
-    Zarar/stop haqidagi yoki yangi signal bo'lgan xabar natija hisoblanmaydi.
+    Foyda ham, stop bilan yopilgan zarar ham natija hisoblanadi (ikkalasi ham videoga chiqadi).
+    Yangi signal, umumiy gap yoki bir vaqtda foyda va zarar aytilgan noaniq xabar — None.
     """
-    if not text or parse_signal(text) or not PROFIT_RE.search(text) or LOSS_RE.search(text):
+    if not text or parse_signal(text):
         return None
+    profit, loss = bool(PROFIT_RE.search(text)), bool(LOSS_RE.search(text))
+    if profit == loss:  # hech biri yo'q yoki ikkalasi bor (noaniq)
+        return None
+    if loss:
+        return {"outcome": "loss", "target": None, "pct": None}
     target = None
     m = TARGET_NO_RE.search(text)
     if m:
@@ -104,7 +114,12 @@ def parse_result(text: str) -> dict | None:
             if re.search(stem + r"\w*\s+(?:тейк|таргет|цель)", text, re.I):
                 target = n
     pct = re.search(r"\+\s*(\d+(?:[.,]\d+)?)\s*%", text)
-    return {"target": target, "pct": f"+{pct.group(1)}%" if pct else None}
+    return {"outcome": "profit", "target": target, "pct": f"+{pct.group(1)}%" if pct else None}
+
+
+def result_mark(res: dict) -> int:
+    """Takrorlanmaslik belgisi: stop = -1, target N = N, targetsiz foyda = 0."""
+    return -1 if res["outcome"] == "loss" else (res["target"] or 0)
 
 
 def find_result(messages: list[dict], state: dict) -> tuple[dict, str, dict] | None:
@@ -128,8 +143,8 @@ def find_result(messages: list[dict], state: dict) -> tuple[dict, str, dict] | N
         if key is None:
             continue
         done = signals[key].setdefault("results", [])
-        mark = res["target"] or 0
-        if mark in done or (mark == 0 and done):
+        mark = result_mark(res)
+        if mark in done or -1 in done or (mark == 0 and done):  # stopdan keyin shu signal yopilgan
             state["seen"].append(m["id"])  # shu natija allaqachon chiqqan
             continue
         return m, key, res
@@ -194,6 +209,12 @@ def caption_for(sig: dict) -> str:
 def result_caption(sig: dict, res: dict) -> str:
     fmt = lambda p: f"{p:.8f}".rstrip("0").rstrip(".")  # noqa: E731
     name = sig["symbol"].replace("USDT", "")
+    if res.get("outcome") == "loss":
+        move = abs(sig["stop"] - sig["entry"]) / sig["entry"] * 100
+        return (f"${name} {sig['side']} signali natijasi\n\n"
+                f"Stop-loss ishladi: {fmt(sig['entry'])} → {fmt(sig['stop'])} (narx o'zgarishi -{move:.1f}%, leveragesiz)\n\n"
+                f"Zarar bilan yopilgan savdolar ham bo'ladi, shuning uchun har bir savdoda stop-loss va kichik hajm muhim.\n"
+                f"Biz foydali va zararli natijalarni birdek ko'rsatamiz: t.me/{CHANNEL} (havola profilda)\n\n{DISCLAIMER}\n\n{HASHTAGS}")
     if res.get("target") and res["target"] <= len(sig["targets"]):
         tp = sig["targets"][res["target"] - 1]
         move = abs(tp - sig["entry"]) / sig["entry"] * 100
@@ -269,12 +290,12 @@ def main() -> int:
         entry = state["signals"][key]
         sig = entry["sig"]
         kind, caption = "result", result_caption(sig, res)
-        print(f"Natija: {sig['symbol']} (signal xabari {key}, natija xabari {m['id']}, target={res['target']}, foiz={res['pct']})")
+        print(f"Natija: {sig['symbol']} {res['outcome']} (signal xabari {key}, natija xabari {m['id']}, target={res['target']}, foiz={res['pct']})")
         signal_fx.make_signal_reel(sig, base.BRAND, CHANNEL, path, base.ffmpeg_exe(), base.FONT_PATHS, base.find_music(),
                                    entry.get("when", ""), result=res)
 
         def after(_media_id, m=m, entry=entry, res=res, caption=caption):
-            entry.setdefault("results", []).append(res["target"] or 0)
+            entry.setdefault("results", []).append(result_mark(res))
             state["seen"].append(m["id"])
             comment_on(base, entry.get("media_id"), caption.split("\n\n")[1] + " Natija videosi profilda.")
     elif state.get("promo_day") != now.date().isoformat() and now.hour >= PROMO_HOUR:

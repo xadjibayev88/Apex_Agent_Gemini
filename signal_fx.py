@@ -183,7 +183,9 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
     rr = abs(targets[-1] - entry) / abs(entry - stop)
     hit = result.get("target") if result else None
     hit = hit if hit and 1 <= hit <= len(targets) else None
-    path_end = targets[hit - 1] if hit else (None if result else targets[-1])
+    lost = bool(result) and result.get("outcome") == "loss"
+    hit = None if lost else hit
+    path_end = stop if lost else targets[hit - 1] if hit else (None if result else targets[-1])
     ticker = sig["symbol"].replace("USDT", "")
     order = sorted(levels, key=lambda l: abs(l[1] - entry))  # entry birinchi, keyin yaqinidan uzog'iga
     order = [l for l in order if l[0] == "KIRISH"] + [l for l in order if l[0] == "STOP"] + [l for l in order if l[0].startswith("TARGET")]
@@ -228,7 +230,8 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
                         if abs(ly - y) > 4:  # yorliq surilgan bo'lsa, chiziq uchidan yorliqqa ingichka bog'lovchi
                             d.line([x2, y, W - 372, ly], fill=mix(NAVY, color, a * 0.6), width=2)
                         done = hit and name.startswith("TARGET") and int(name.split()[1]) <= hit
-                        d.text((W - 360, ly - 52), name + (" ✓" if done else ""), font=fonts(30), fill=mix(NAVY, GOLD if done else MUTED, a))
+                        mark = " ✓" if done else " ✕" if lost and name == "STOP" else ""
+                        d.text((W - 360, ly - 52), name + mark, font=fonts(30), fill=mix(NAVY, GOLD if done else RED if mark else MUTED, a))
                         d.text((W - 360, ly - 18), fmt_price(price), font=fonts(46), fill=mix(NAVY, color, a))
                         if name != "KIRISH":
                             pct = (price - entry) / entry * 100
@@ -240,18 +243,23 @@ def make_signal_reel(sig: dict, brand: str, channel: str, out_path: str, ffmpeg:
                     pts = [(140 + (W - 560) * j / 40, y_of(entry + (path_end - entry) * (j / 40) + (hi - lo) * 0.035 * math.sin(j * 1.3) * (1 - j / 40)))
                            for j in range(int(40 * k) + 1)]
                     if len(pts) > 1:
-                        d.line(pts, fill=mix(NAVY, accent, fade), width=7, joint="curve")
+                        d.line(pts, fill=mix(NAVY, RED if lost else accent, fade), width=7, joint="curve")
                     x, y = pts[-1]
                     r = 16 + 5 * math.sin(t * 9)
                     d.ellipse([x - r, y - r, x + r, y + r], fill=mix(NAVY, WHITE, fade))
                 # --- R/R hisoblagich
                 k = ease_out(prog(t, t_path + 0.4, 1.0))
                 if k > 0 and result:
-                    d.rounded_rectangle([60, 1440, W - 60, 1620], radius=36, fill=mix(NAVY, PANEL, fade), outline=mix(NAVY, GOLD, fade), width=3)
-                    left = f"Target {hit} bajarildi" if hit else "Foyda bilan yopildi"
+                    tone = RED if lost else GOLD
+                    d.rounded_rectangle([60, 1440, W - 60, 1620], radius=36, fill=mix(NAVY, PANEL, fade), outline=mix(NAVY, tone, fade), width=3)
+                    left = "Stop-loss ishladi" if lost else f"Target {hit} bajarildi" if hit else "Foyda bilan yopildi"
                     d.text((100, 1470), "Natija", font=fonts(36), fill=mix(NAVY, MUTED, fade))
-                    d.text((100, 1524), left, font=fit(d, left, fonts, 60, 500), fill=mix(NAVY, GOLD, fade))
-                    if hit:
+                    d.text((100, 1524), left, font=fit(d, left, fonts, 60, 500), fill=mix(NAVY, tone, fade))
+                    if lost:
+                        move = abs(stop - entry) / entry * 100
+                        d.text((650, 1470), "Narx o'zgarishi", font=fonts(36), fill=mix(NAVY, MUTED, fade))
+                        d.text((650, 1520), f"-{move * k:.1f}%", font=fonts(76), fill=mix(NAVY, RED, fade))
+                    elif hit:
                         move = abs(targets[hit - 1] - entry) / entry * 100
                         d.text((650, 1470), "Narx o'zgarishi", font=fonts(36), fill=mix(NAVY, MUTED, fade))
                         d.text((650, 1520), f"+{move * k:.1f}%", font=fonts(76), fill=mix(NAVY, GREEN, fade))

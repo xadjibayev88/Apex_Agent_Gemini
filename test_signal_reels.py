@@ -61,10 +61,9 @@ def test_market_entry_numbered_targets_format():
 
 
 def test_parse_result_profit_only():
-    assert sr.parse_result("JTO: взят тейк 2 ✅ +51% с плечом") == {"target": 2, "pct": "+51%"}
+    assert sr.parse_result("JTO: взят тейк 2 ✅ +51% с плечом") == {"outcome": "profit", "target": 2, "pct": "+51%"}
     assert sr.parse_result("Первый таргет достигнут")["target"] == 1
-    assert sr.parse_result("Закрыл в плюс, профит зафиксирован") == {"target": None, "pct": None}
-    assert sr.parse_result("Выбило по стопу -5% ❌") is None
+    assert sr.parse_result("Закрыл в плюс, профит зафиксирован") == {"outcome": "profit", "target": None, "pct": None}
     assert sr.parse_result("Всем привет") is None and sr.parse_result(JTO) is None
 
 
@@ -99,7 +98,7 @@ def test_reply_id_parsed_from_html():
 
 
 def test_result_caption_is_unleveraged_and_balanced():
-    c = sr.result_caption(sr.parse_signal(JTO), {"target": 1, "pct": "+25%"})
+    c = sr.result_caption(sr.parse_signal(JTO), {"outcome": "profit", "target": 1, "pct": "+25%"})
     assert "+1.0%" in c and "leveragesiz" in c and "zarar bilan yopilgan" in c and "+25%" not in c
 
 
@@ -107,3 +106,20 @@ def test_chatter_is_not_a_result():
     for text in ["Начали день сразу со сделки, так как открытых позиций у нас не было. Кто заходит со мной? Отмечаемся 🔥",
                  "Хорошей прибыли всем, идем к цели ✅", "Сегодня будем в плюсе", "Ставим тейк и ждем таргет"]:
         assert sr.parse_result(text) is None, text
+
+
+def test_stop_results_are_detected_and_reported():
+    for text in ["Выбило по стопу -5% ❌", "JTO: стоп сработал", "Закрыл сделку в минус", "Словили стоп, убыток небольшой", "Сделка закрыта, небольшой убыток"]:
+        assert sr.parse_result(text) == {"outcome": "loss", "target": None, "pct": None}, text
+    for text in ["Ставим стоп в безубыток", "Не забывайте про стоп-лосс", "Стоп переносим выше"]:
+        assert sr.parse_result(text) is None, text
+    c = sr.result_caption(sr.parse_signal(JTO), {"outcome": "loss", "target": None, "pct": None})
+    assert "Stop-loss ishladi" in c and "-5.5%" in c and "leveragesiz" in c
+
+
+def test_loss_closes_signal_and_is_not_repeated():
+    st = tracked()
+    m, key, res = sr.find_result([msg(300, "Выбило по стопу", reply_to=189)], st)
+    assert res["outcome"] == "loss" and sr.result_mark(res) == -1
+    st["signals"]["189"]["results"].append(-1)
+    assert sr.find_result([msg(301, "Тейк 1 взят ✅", reply_to=189)], st) is None  # stopdan keyin boshqa natija yo'q
