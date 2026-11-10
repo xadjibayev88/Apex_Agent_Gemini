@@ -1,0 +1,68 @@
+name: Signal va chorlov Reels (Instagram)
+
+# Telegram kanalidagi signallardan Instagram Reels (kuniga ko'pi bilan 3 ta) va kuniga 1 ta chorlov Reels.
+# Signal manbai: ochiq kanal sahifasi (t.me/s/...), login kerak emas.
+on:
+  schedule:
+    # Toshkent 09:xx-21:xx, har soat alohida qator (GitHub ko'p qiymatli jadvalni tashlab yuboradi)
+    - cron: "34 4 * * *"
+    - cron: "36 5 * * *"
+    - cron: "34 6 * * *"
+    - cron: "36 7 * * *"
+    - cron: "34 8 * * *"
+    - cron: "36 9 * * *"
+    - cron: "34 10 * * *"
+    - cron: "36 11 * * *"
+    - cron: "34 12 * * *"
+    - cron: "36 13 * * *"
+    - cron: "34 14 * * *"
+    - cron: "36 15 * * *"
+    - cron: "34 16 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "1 = video yasaladi, lekin Instagramga joylanmaydi"
+        default: "0"
+permissions:
+  contents: write
+concurrency:
+  group: post-agent   # yangiliklar avtomati bilan bir vaqtda repoga yozmasin
+  cancel-in-progress: false
+jobs:
+  reels:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pillow imageio-ffmpeg pytest
+      - run: python -m pytest -q test_signal_reels.py
+        env:
+          GEMINI_API_KEY: x
+          TELEGRAM_BOT_TOKEN: x
+          TELEGRAM_CHANNEL: x
+      - run: python signal_reels.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TIMEZONE: Asia/Tashkent
+          DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
+      - name: Sinov videosini saqlash
+        if: ${{ github.event.inputs.dry_run == '1' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: signal-reel
+          path: images/reel_sig_*.mp4
+          if-no-files-found: ignore
+          retention-days: 3
+      - name: Holatni saqlash
+        if: ${{ github.event.inputs.dry_run != '1' }}
+        run: |
+          git config user.name "agent-bot"
+          git config user.email "agent-bot@users.noreply.github.com"
+          git add signal_reels_state.json || true
+          git diff --staged --quiet || (git commit -m "signal reels state" && git pull --rebase -q && git push)
