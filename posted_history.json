@@ -579,5 +579,12 @@
   "link": "https://www.coindesk.com/markets/2026/11/10/u-s-cpi-rose-stronger-than-expected-0-4-in-october-core-rate-rose-0-3",
   "ig": false,
   "tg": true
+ },
+ {
+  "time": "2026-11-10T20:48:21.995625+05:00",
+  "summary": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
+  "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
+  "ig": true,
+  "tg": true
  }
 ]
