@@ -137,6 +137,10 @@ def main() -> int:
         print("Kanal sahifasi ochilmadi:", type(e).__name__)
         return 1
     print(f"Kanaldan {len(messages)} ta xabar o'qildi")
+    for m in messages[-8:]:  # tashxis: oxirgi xabarlar signal deb tanildimi (kanal ochiq, birinchi satr ko'rsatiladi)
+        age = (now - m["time"]).total_seconds() / 3600
+        first = m["text"].strip().splitlines()[0][:40] if m["text"].strip() else "(matn yo'q)"
+        print(f"  xabar {m['id']}: {age:.1f} soat oldin, signal={'ha' if parse_signal(m['text']) else 'yoq'} | {first}")
     stamp = now.strftime("%Y%m%d_%H%M%S")
     path = f"images/reel_sig_{stamp}.mp4"
     choice = pick_signal(messages, state, now)
