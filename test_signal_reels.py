@@ -49,3 +49,12 @@ def test_old_signals_and_limits():
 def test_caption_has_disclaimer_and_no_promises():
     c = sr.caption_for(sr.parse_signal(MASK))
     assert "moliyaviy maslahat emas" in c and "kafolat" not in c.lower() and "t.me/Apex_Trader_Uz" in c
+
+
+JTO = "📈 JTO LONG плечо x25\n\nТочка входа: рынок (0.3388)\n\nТаргет 1: 0.3423\nТаргет 2: 0.3474\nТаргет 3: 0.3620\n\nСтоп: 0.3202\n\nМоя маржа: 700$\nБанк марафона: 7545.14$"
+
+
+def test_market_entry_numbered_targets_format():
+    s = sr.parse_signal(JTO)
+    assert s == {"symbol": "JTOUSDT", "side": "LONG", "entry": 0.3388, "stop": 0.3202, "targets": [0.3423, 0.3474, 0.362]}
+    assert sr.parse_signal("Открыл сделку в лонг с 20 плечом по GRASS и JTO") is None

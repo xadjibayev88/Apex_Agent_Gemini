@@ -30,10 +30,15 @@ DISCLAIMER = "Bu moliyaviy maslahat emas. Savdo yuqori xavf bilan bog'liq, mabla
 # ---------------------------------------------------------------- signalni o'qish
 def parse_signal(text: str) -> dict | None:
     """Apex formati: $TICKER -> LONG/SHORT, Точка входа, Таргеты, Стоп. Mantiqan xato bo'lsa None."""
-    head = re.search(r"\$([A-Z0-9]{2,15})\s*(?:->|→|—|-|:)?\s*(LONG|SHORT)\b", text or "", re.I)
-    entry = re.search(r"Точка\s+входа\s*:\s*" + NUM, text or "", re.I)
-    targets = re.search(r"Таргеты?\s*:\s*([\d.,\s]+)", text or "", re.I)
-    stop = re.search(r"Стоп\s*:\s*" + NUM, text or "", re.I)
+    text = text or ""
+    # sarlavha: "$MASK -> LONG" yoki "📈 JTO LONG плечо x25" (leverage ataylab o'qilmaydi)
+    head = re.search(r"^\W*\$?([A-Z0-9]{2,15})\s*(?:->|→|—|-|:)?\s*(LONG|SHORT)\b", text, re.I | re.M)
+    entry = re.search(r"Точка\s+входа\s*:[^\d\n]*" + NUM, text, re.I)   # "0.3743" yoki "рынок (0.3388)"
+    numbered = re.findall(r"Таргет\s*\d+\s*:\s*" + NUM, text, re.I)      # "Таргет 1: 0.3423" qatorlari
+    targets = re.search(r"Таргеты?\s*:\s*([\d.,\s]+)", text, re.I)
+    stop = re.search(r"Стоп\s*:\s*" + NUM, text, re.I)
+    if numbered:
+        targets = re.match(r"(.*)", ", ".join(numbered))
     if not (head and entry and targets and stop):
         return None
     f = lambda s: float(s.strip(" ,").replace(",", "."))  # noqa: E731
