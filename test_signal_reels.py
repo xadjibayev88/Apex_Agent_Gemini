@@ -101,3 +101,9 @@ def test_reply_id_parsed_from_html():
 def test_result_caption_is_unleveraged_and_balanced():
     c = sr.result_caption(sr.parse_signal(JTO), {"target": 1, "pct": "+25%"})
     assert "+1.0%" in c and "leveragesiz" in c and "zarar bilan yopilgan" in c and "+25%" not in c
+
+
+def test_chatter_is_not_a_result():
+    for text in ["Начали день сразу со сделки, так как открытых позиций у нас не было. Кто заходит со мной? Отмечаемся 🔥",
+                 "Хорошей прибыли всем, идем к цели ✅", "Сегодня будем в плюсе", "Ставим тейк и ждем таргет"]:
+        assert sr.parse_result(text) is None, text
