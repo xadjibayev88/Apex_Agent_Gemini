@@ -1,9 +1,5 @@
 [
  {
-  "time": "2026-10-22T11:50:50.090538+05:00",
-  "summary": "<b>Oltin narxi yangi rekord sari intilmoqda</b> 📈  Xalqaro birjalarda oltin narxi markaziy banklarning faol xaridlari ha"
- },
- {
   "time": "2026-10-22T12:01:06.425497+05:00",
   "summary": "Tesla’s stock falls as Elon Musk leaves investors wanting more",
   "link": "https://www.marketwatch.com/story/teslas-stock-falls-as-elon-musk-leaves-investors-wanting-more-eb347f38?mod=mw_rss_topstories"
@@ -605,6 +601,13 @@
   "time": "2026-11-11T00:52:47.654313+05:00",
   "summary": "Bitcoin may benefit as global tightening slows, Binance Research says",
   "link": "https://cointelegraph.com/markets/bitcoin-price-global-tightening-binance-research?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-11T01:57:58.140389+05:00",
+  "summary": "October CPI sparks December Fed hike fears as yields surge and tech stocks slide",
+  "link": "https://www.investing.com/news/economy-news/october-cpi-sparks-december-fed-hike-fears-as-yields-surge-and-tech-stocks-slide-93CH-5016723",
   "ig": false,
   "tg": true
  }
