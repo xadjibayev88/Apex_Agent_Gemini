@@ -1,0 +1,272 @@
+[
+ {
+  "id": 1,
+  "text": "📘 Forex nima?\n\nForex — dunyodagi valyutalar bozori. Bu yerda EUR/USD kabi valyuta juftliklarining narxi o'zgaradi va savdogarlar shu o'zgarishdan foyda yoki zarar ko'radi.\n\nBu «oson pul» emas: o'rganish, intizom va sabr talab qiladi.\n\nForexda savdogarlarning katta qismi pul yo'qotadi. Faqat yo'qotishga tayyor mablag' bilan ishlang.",
+  "quiz": {
+   "question": "Forex bozorida nima savdo qilinadi?",
+   "options": [
+    "Valyuta juftliklari",
+    "Faqat aksiyalar",
+    "Ko'chmas mulk",
+    "Faqat oltin buyumlar"
+   ],
+   "explanation": "Forex — valyutalar bozori: EUR/USD kabi juftliklar narxi o'zgaradi."
+  }
+ },
+ {
+  "id": 2,
+  "text": "🎮 Avval demo hisob!\n\nHaqiqiy pul qo'yishdan oldin kamida 2-4 hafta demo hisobda mashq qiling. Demo — haqiqiy bozor sharoitida soxta pul bilan mashq.\n\nDemo hisobda o'rganing: buyurtma ochish, stop-loss qo'yish, savdo jurnalini yuritish.\n\nHisob ochish: {LINK}\n(Bu hamkorlik havolasi: siz ro'yxatdan o'tsangiz, men komissiya olishim mumkin.)",
+  "quiz": {
+   "question": "Haqiqiy pulga o'tishdan oldin demo hisobda kamida qancha mashq qilish tavsiya etiladi?",
+   "options": [
+    "2-4 hafta",
+    "1 kun",
+    "Shart emas",
+    "1 yil"
+   ],
+   "explanation": "Demo — haqiqiy bozor sharoitida soxta pul bilan mashq. Kamida 2-4 hafta."
+  }
+ },
+ {
+  "id": 3,
+  "text": "💱 Spred nima?\n\nSpred — sotib olish (Ask) va sotish (Bid) narxi orasidagi farq. Bu sizning savdo xarajatingiz.\n\nMisol: EUR/USD Bid 1.1000, Ask 1.1002 bo'lsa, spred 2 pip. Savdoga kirishingiz bilan shu xarajatni «to'laysiz», narx avval shuncha yursagina nolga chiqasiz.\n\nKo'p savdo = ko'p xarajat.",
+  "quiz": {
+   "question": "Spred nima?",
+   "options": [
+    "Ask va Bid narxi orasidagi farq",
+    "Brokerning oylik to'lovi",
+    "Savdodan olingan foyda",
+    "Yelka hajmi"
+   ],
+   "explanation": "Spred — sotib olish va sotish narxi orasidagi farq, ya'ni savdo xarajati."
+  }
+ },
+ {
+  "id": 4,
+  "text": "📏 Pip va lot\n\nPip — narxning eng kichik standart o'zgarishi (EUR/USD uchun odatda 0.0001).\nLot — savdo hajmi. Standart lot odatda 100 000 birlik asosiy valyuta, mini lot 0.1, mikro lot 0.01.\n\nBoshlovchilar uchun mikro lot (0.01) ma'qul: xato qimmatga tushmaydi.",
+  "quiz": {
+   "question": "Boshlovchilar uchun qaysi savdo hajmi ma'qul?",
+   "options": [
+    "Mikro lot (0.01)",
+    "Standart lot (1.0)",
+    "Mini lot (0.1)",
+    "Farqi yo'q"
+   ],
+   "explanation": "Mikro lotda xato qimmatga tushmaydi."
+  }
+ },
+ {
+  "id": 5,
+  "text": "⚖️ Leverage (yelka)\n\nLeverage kichik depozit bilan katta hajmda savdo qilish imkonini beradi. Masalan, 1:100 yelkada 100$ bilan 10 000$lik pozitsiya ochish mumkin.\n\nLekin leverage foydani ham, zararni ham kattalashtiradi. Yuqori yelka — boshlovchilar hisobini tez nolga tushiradigan asosiy sabablardan biri.\n\nMaslahat: yelkani to'liq ishlatmang.",
+  "quiz": {
+   "question": "Leverage (yelka) nimani kattalashtiradi?",
+   "options": [
+    "Foydani ham, zararni ham",
+    "Faqat foydani",
+    "Faqat zararni",
+    "Hech narsani"
+   ],
+   "explanation": "Yelka ikkala tomonga ishlaydi: yuqori yelka hisobni tez nolga tushirishi mumkin."
+  }
+ },
+ {
+  "id": 6,
+  "text": "🛑 Stop-loss — himoya\n\nStop-loss — narx siz belgilagan darajaga yetsa, pozitsiyani avtomatik yopadigan buyurtma. U zararni cheklaydi.\n\nStop-loss'siz savdo — tormozsiz mashinada tog' yo'lida yurish bilan barobar.\n\nHar bir savdoga kirishdan OLDIN stop-loss darajasini belgilang.",
+  "quiz": {
+   "question": "Stop-loss darajasi qachon belgilanadi?",
+   "options": [
+    "Savdoga kirishdan oldin",
+    "Zarar boshlanganda",
+    "Savdo yopilgach",
+    "Belgilash shart emas"
+   ],
+   "explanation": "Stop-loss har bir savdoga kirishdan OLDIN belgilanadi."
+  }
+ },
+ {
+  "id": 7,
+  "text": "🎯 1-2% qoidasi\n\nBitta savdoda hisobingizning 1-2 foizidan ortig'ini xavf ostiga qo'ymang.\n\nMisol: hisobda 500$ bo'lsa, bitta savdodagi maksimal zarar 5-10$ bo'lsin. Shunda ketma-ket bir necha xato ham hisobni yo'q qilmaydi.\n\nOmon qolish — birinchi maqsad, foyda — ikkinchisi.",
+  "quiz": {
+   "question": "Hisobda 500$ bor. 1-2% qoidasiga ko'ra bitta savdodagi maksimal zarar qancha?",
+   "options": [
+    "5-10$",
+    "50-100$",
+    "100-200$",
+    "250$"
+   ],
+   "explanation": "500$ ning 1-2 foizi = 5-10$."
+  }
+ },
+ {
+  "id": 8,
+  "text": "❌ Boshlovchilarning 5 ta xatosi\n\n1. Demo'siz haqiqiy pulga o'tish\n2. Stop-loss qo'ymaslik\n3. Haddan tashqari yuqori leverage\n4. Yo'qotganni darhol qaytarishga urinish (revenge trading)\n5. Reja va jurnalsiz savdo\n\nQaysi biri sizda bor? Izohlarda yozing 👇",
+  "quiz": {
+   "question": "«Revenge trading» nima?",
+   "options": [
+    "Yo'qotganni darhol qaytarishga urinish",
+    "Demo hisobda savdo qilish",
+    "Stop-loss qo'yish",
+    "Savdo jurnali yuritish"
+   ],
+   "explanation": "Bu boshlovchilarning eng ko'p uchraydigan 5 xatosidan biri."
+  }
+ },
+ {
+  "id": 9,
+  "text": "💻 MetaTrader 4 va 5\n\nMT4 va MT5 — eng keng tarqalgan savdo platformalari, ikkalasi ham telefon va kompyuterda ishlaydi. MT4 soddaroq; MT5 ko'proq vaqt oraliqlari va asboblar beradi.\n\nBoshlovchi uchun ikkalasi ham yetarli. Asosiysi — bitta platformaga puxta o'rganib olish.\n\nHisob ochish: {LINK} (hamkorlik havolasi)",
+  "quiz": {
+   "question": "Boshlovchi uchun platformada eng muhimi nima?",
+   "options": [
+    "Bitta platformani puxta o'rganish",
+    "Barcha platformalarni birdan ishlatish",
+    "Eng qimmatini tanlash",
+    "Faqat kompyuterda ishlash"
+   ],
+   "explanation": "MT4 ham, MT5 ham yetarli; asosiysi bittasini puxta o'rganish."
+  }
+ },
+ {
+  "id": 10,
+  "text": "📅 Iqtisodiy kalendar\n\nFoiz stavkalari, inflyatsiya, bandlik (NFP) kabi yangiliklar narxni keskin harakatlantiradi. Muhim yangilik paytida spred kengayishi va narx sakrashi mumkin.\n\nHar kuni ertalab kalendarni ko'rib chiqing. Yuqori ta'sirli (qizil) yangiliklar paytida ehtiyot bo'ling yoki savdo qilmang.",
+  "quiz": {
+   "question": "Yuqori ta'sirli (qizil) yangiliklar paytida nima qilish tavsiya etiladi?",
+   "options": [
+    "Ehtiyot bo'lish yoki savdo qilmaslik",
+    "Hajmni oshirish",
+    "Stop-loss'ni olib tashlash",
+    "Yelkani oshirish"
+   ],
+   "explanation": "Muhim yangilik paytida spred kengayishi va narx sakrashi mumkin."
+  }
+ },
+ {
+  "id": 11,
+  "text": "📉 Margin va Margin Call\n\nMargin — pozitsiyani ochish uchun hisobingizda band qilinadigan mablag'. Zarar oshib, bo'sh mablag' kamayib ketsa, broker pozitsiyalaringizni majburan yopishi mumkin (stop out).\n\nOldini olish: kichik hajm, stop-loss, hisobda bo'sh mablag' qoldirish.",
+  "quiz": {
+   "question": "Bo'sh mablag' juda kamayib ketsa, broker nima qilishi mumkin?",
+   "options": [
+    "Pozitsiyalarni majburan yopishi",
+    "Hisobga pul qo'shib berishi",
+    "Zararni kechib yuborishi",
+    "Hech narsa qilmaydi"
+   ],
+   "explanation": "Bu stop out deyiladi. Oldini olish: kichik hajm, stop-loss, bo'sh mablag'."
+  }
+ },
+ {
+  "id": 12,
+  "text": "📓 Savdo jurnali\n\nHar bir savdoni yozib boring: sana, juftlik, kirish sababi, stop-loss, natija va o'sha paytdagi hissiyotingiz. Haftada bir marta tahlil qiling.\n\nJurnal ko'rsatadi: qaysi usul ishlayapti, qaysi paytda xato qilyapsiz. Jurnalsiz o'sish deyarli yo'q.",
+  "quiz": {
+   "question": "Savdo jurnalini qanchalik tez-tez tahlil qilish tavsiya etiladi?",
+   "options": [
+    "Haftada bir marta",
+    "Yilda bir marta",
+    "Hech qachon",
+    "Faqat foyda bo'lganda"
+   ],
+   "explanation": "Jurnal qaysi usul ishlayotganini va qayerda xato qilayotganingizni ko'rsatadi."
+  }
+ },
+ {
+  "id": 13,
+  "text": "🚩 Ogohlantirish: aldovchilar\n\nQuyidagilarni ko'rsangiz, uzoqlashing:\n• «Kafolatlangan foiz»\n• «Kuniga 100$ — hech qanday bilimsiz»\n• «Pulingni menga ber, men savdo qilaman»\n• Shaxsiy xabarda pul so'rovchilar\n\nHech kim Forexda foyda kafolatlamaydi. Hisob parolingizni hech kimga bermang.",
+  "quiz": {
+   "question": "Qaysi biri aldov belgisi?",
+   "options": [
+    "«Kafolatlangan foiz» va'dasi",
+    "Xavf haqida ogohlantirish",
+    "Demo hisob taklifi",
+    "Litsenziya ko'rsatilishi"
+   ],
+   "explanation": "Hech kim Forexda foyda kafolatlamaydi."
+  }
+ },
+ {
+  "id": 14,
+  "text": "🧠 Savdo psixologiyasi\n\nBozor ko'pincha texnikadan ko'ra hissiyotlarni sinaydi: ochko'zlik, qo'rquv, sabrsizlik.\n\nQoidalar:\n1) Rejadan chiqmang\n2) Ketma-ket zarardan so'ng tanaffus qiling\n3) Charchagan yoki asabiy paytda savdo qilmang",
+  "quiz": {
+   "question": "Ketma-ket zarardan keyin nima qilish kerak?",
+   "options": [
+    "Tanaffus qilish",
+    "Hajmni ikki barobar oshirish",
+    "Darhol qaytarishga urinish",
+    "Rejani tashlab yuborish"
+   ],
+   "explanation": "Charchagan yoki asabiy paytda savdo qilinmaydi."
+  }
+ },
+ {
+  "id": 15,
+  "text": "💳 Depozit va yechish xavfsizligi\n\n• Hisobni faqat o'z nomingizga va haqiqiy ma'lumotlar bilan oching\n• Verifikatsiyadan (hujjat tasdiqlash) o'ting\n• To'lovni faqat brokerning rasmiy shaxsiy kabineti orqali qiling\n• Parolni murakkab qiling va 2 bosqichli himoyani yoqing\n\nKichik summada depozit va yechishni sinab ko'rish yaxshi odat.\n\nRo'yxatdan o'tish: {LINK} (hamkorlik havolasi)",
+  "quiz": {
+   "question": "To'lovni qayerdan qilish xavfsiz?",
+   "options": [
+    "Brokerning rasmiy shaxsiy kabineti orqali",
+    "Notanish odamning kartasiga",
+    "Telegramdagi shaxsiy xabar orqali",
+    "Farqi yo'q"
+   ],
+   "explanation": "To'lov faqat rasmiy kabinet orqali; parolni hech kimga bermang."
+  }
+ },
+ {
+  "id": 16,
+  "text": "🔍 Broker tanlashda nimaga qarash kerak?\n\n1. Litsenziya va tartibga soluvchi organ\n2. Spred va komissiyalar\n3. Pul yechish tezligi va shartlari\n4. Qo'llab-quvvatlash xizmati (o'zingiz tushunadigan tilda)\n5. Mamlakatingiz qonunchiligida ruxsat etilganligi\n\nBitta manbaga ishonmang: brokerlarni o'zingiz solishtiring.",
+  "quiz": {
+   "question": "Broker tanlashda birinchi navbatda nimaga qaraladi?",
+   "options": [
+    "Litsenziya va tartibga soluvchi organ",
+    "Reklamasining chiroyiga",
+    "Bonus hajmiga",
+    "Tanishlar maslahatiga"
+   ],
+   "explanation": "Keyin spred, pul yechish shartlari va qo'llab-quvvatlash solishtiriladi."
+  }
+ },
+ {
+  "id": 17,
+  "text": "📈 Trend va darajalar\n\nTrend — narxning asosiy yo'nalishi (yuqoriga, pastga yoki yon). Support — narx pastdan qaytib turadigan daraja, Resistance — yuqoridan qaytadigan daraja.\n\nBoshlovchi uchun oddiy qoida: trend yo'nalishida savdo qiling va stop-loss'ni daraja orqasiga qo'ying.",
+  "quiz": {
+   "question": "Support nima?",
+   "options": [
+    "Narx pastdan qaytib turadigan daraja",
+    "Narx yuqoridan qaytadigan daraja",
+    "Savdo hajmi",
+    "Broker komissiyasi"
+   ],
+   "explanation": "Resistance esa narx yuqoridan qaytadigan daraja."
+  }
+ },
+ {
+  "id": 18,
+  "text": "🗓 Boshlovchi uchun haftalik reja\n\nDushanba: kalendar va asosiy darajalarni belgilash\nSeshanba-Payshanba: demo yoki kichik hajmda mashq\nJuma: jurnalni tahlil qilish, hafta xulosasi\nShanba-Yakshanba: dam olish + bitta o'quv mavzusi\n\nTartib foydadan muhimroq.",
+  "quiz": {
+   "question": "Haftalik rejada juma kuni nima qilinadi?",
+   "options": [
+    "Jurnal tahlili va hafta xulosasi",
+    "Eng katta savdoni ochish",
+    "Yangi broker tanlash",
+    "Yelkani oshirish"
+   ],
+   "explanation": "Tartib foydadan muhimroq."
+  }
+ },
+ {
+  "id": 19,
+  "text": "🤝 Ochiq gapiray\n\nBu kanalda men Forex asoslarini o'rgataman. Men XM hamkorlik dasturi ishtirokchisiman: mening havolam orqali ro'yxatdan o'tsangiz, men komissiya olishim mumkin.\n\nBu moliyaviy maslahat emas. Qaror — sizniki. Avval demo, keyin kichik summa.\n\nHavola: {LINK}"
+ },
+ {
+  "id": 20,
+  "text": "❓ Ko'p so'raladigan savollar\n\n• Qancha pul bilan boshlasa bo'ladi? Brokerning minimal depoziti turlicha; lekin yo'qotishga tayyor summadan boshlang.\n• Foyda kafolatlanadimi? Yo'q.\n• Demo kerakmi? Ha, kamida bir necha hafta.\n• Daromad soliqqa tortiladimi? Mamlakatingiz qonunchiligini tekshiring.\n\nSavolingiz bo'lsa, izohda yozing — keyingi postlarda javob beraman.",
+  "quiz": {
+   "question": "Forexda foyda kafolatlanadimi?",
+   "options": [
+    "Yo'q",
+    "Ha, har doim",
+    "Faqat katta depozitda",
+    "Faqat tajribali treyderlarga"
+   ],
+   "explanation": "Foyda kafolatlanmaydi; yo'qotishga tayyor summadan boshlang."
+  }
+ }
+]

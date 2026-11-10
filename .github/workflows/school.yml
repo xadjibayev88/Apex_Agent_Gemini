@@ -1,0 +1,44 @@
+name: Forex maktabi (kunlik dars + viktorina)
+
+# Har kuni bitta dars Telegram kanalga: rasm-kartochka, matn, tugmalar (hamkorlik havolasi + kanalga taklif) va viktorina.
+on:
+  schedule:
+    - cron: "17 5 * * *"   # ~10:17 Toshkent (GitHub kechiktirishi mumkin)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "1 = yubormasdan sinash"
+        default: "0"
+      lesson_index:
+        description: "Dars raqami (0 dan). Bo'sh = navbatdagi"
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: post-agent
+  cancel-in-progress: false
+jobs:
+  lesson:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pillow pytest
+      - run: python -m pytest -q test_forex_school.py
+      - run: python forex_school.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
+          TIMEZONE: Asia/Tashkent
+          DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
+          LESSON_INDEX: ${{ github.event.inputs.lesson_index }}
+      - name: Holatni saqlash
+        if: ${{ github.event.inputs.dry_run != '1' }}
+        run: |
+          git config user.name "agent-bot"
+          git config user.email "agent-bot@users.noreply.github.com"
+          git add school_state.json || true
+          git diff --staged --quiet || (git commit -m "forex school state" && git pull --rebase -q && git push)
