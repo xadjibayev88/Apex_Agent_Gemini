@@ -75,6 +75,9 @@ def parse_channel_html(page: str) -> list[dict]:
         except ValueError:
             continue
         reply = re.search(r'<a class="tgme_widget_message_reply[^"]*"[^>]*href="[^"]*/(\d+)"', block)
+        if DRY_RUN and not reply and "reply" in block:  # tashxis: javob belgisi bor, lekin o'qilmadi
+            i = block.find("reply")
+            print(f"  [javob o'qilmadi] xabar {m.group(1)}: ...{block[max(0, i - 60):i + 160]!r}")
         out.append({"id": int(m.group(1)), "text": text, "time": ts, "reply_to": int(reply.group(1)) if reply else None})
     return out
 
@@ -271,7 +274,7 @@ def main() -> int:
         print("Kanal sahifasi ochilmadi:", type(e).__name__)
         return 1
     print(f"Kanaldan {len(messages)} ta xabar o'qildi")
-    for m in messages[-8:]:  # tashxis: oxirgi xabarlar signal deb tanildimi (kanal ochiq, birinchi satr ko'rsatiladi)
+    for m in (messages if DRY_RUN else messages[-8:]):  # tashxis: oxirgi xabarlar signal deb tanildimi (kanal ochiq, birinchi satr ko'rsatiladi)
         age = (now - m["time"]).total_seconds() / 3600
         first = m["text"].strip().splitlines()[0][:40] if m["text"].strip() else "(matn yo'q)"
         print(f"  xabar {m['id']}: {age:.1f} soat oldin, signal={'ha' if parse_signal(m['text']) else 'yoq'}, natija={'ha' if parse_result(m['text']) else 'yoq'}, javob={m.get('reply_to')} | {first}")
