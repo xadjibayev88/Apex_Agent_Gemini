@@ -123,3 +123,16 @@ def test_loss_closes_signal_and_is_not_repeated():
     assert res["outcome"] == "loss" and sr.result_mark(res) == -1
     st["signals"]["189"]["results"].append(-1)
     assert sr.find_result([msg(301, "Тейк 1 взят ✅", reply_to=189)], st) is None  # stopdan keyin boshqa natija yo'q
+
+
+APT_RESULT = "1я цель тут 🔻\n\nЧуть ли не моментально отработали! Забрали первый тейк, закрыл 50% позиции и стоп кинул на точку входа!\n\n+91.84$\nБанк: 7768.81$"
+
+
+def test_real_channel_result_post_is_profit_target_1():
+    assert sr.parse_result(APT_RESULT) == {"outcome": "profit", "target": 1, "pct": None}
+    assert sr.parse_result("Стоп кинул на точку входа") is None
+
+
+def test_duplicate_signal_in_channel_is_posted_once():
+    st = tracked()
+    assert sr.pick_signal([msg(400, JTO)], st, NOW) is None and 400 in st["seen"]

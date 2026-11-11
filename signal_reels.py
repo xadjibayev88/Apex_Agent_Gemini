@@ -81,14 +81,16 @@ def parse_channel_html(page: str) -> list[dict]:
 PROFIT_RE = re.compile(
     r"(?:тейк|таргет|цель|\btp)\s*№?\s*\d?\s*\S{0,12}\s*(?:взят|достигнут|выполнен|закрыт|✅)"
     r"|(?:взят|достигнут|выполнен)\w*\s+(?:\S{1,12}\s+)?(?:тейк|таргет|цель)"
-    r"|\+\s*\d+(?:[.,]\d+)?\s*%"
+    r"|\+\s*\d+(?:[.,]\d+)?\s*[%$]"                                                   # "+26%" yoki "+91.84$"
+    r"|(?:забра\w+|взя\w+|сня\w+|зафиксир\w+)[^.\n]{0,25}(?:тейк|таргет|цел[ьи]|профит|прибыл)"  # "забрали первый тейк"
+    r"|(?:\d\s*-?(?:я|ая|й|ый|ой)?|перв\w+|втор\w+|трет\w+)\s*(?:цель|тейк|таргет)\s+(?:тут|есть|взят\w*|достигнут\w*)"  # "1я цель тут"
     r"|(?:закры\w+|зафиксир\w+)[^.\n]{0,40}(?:плюс|профит|прибыл)|профит\w*\s+зафиксир", re.I)
 # Zarar ham faqat aniq ibora bo'lsa: "выбило по стопу", "стоп сработал", "закрыл в минус", "убыток".
 # "Ставим стоп" yoki signal ichidagi "Стоп: 0.32" zarar emas.
 LOSS_RE = re.compile(
     r"по\s+стопу|(?:выбил\w*|сработал\w*|словил\w*|задел\w*)[^.\n]{0,25}стоп|стоп(?:[- ]?лосс)?\w*\s+(?:сработал|выбил|задет)"
     r"|(?:закры\w+|зафиксир\w+)[^.\n]{0,40}(?:минус|(?<!без)убыт)|(?<!без)убыт(?:ок|ка|ку|ком)\b|ликвидир|-\s*\d+(?:[.,]\d+)?\s*%\s*❌", re.I)
-TARGET_NO_RE = re.compile(r"(?:тейк|таргет|цель|tp)\s*№?\s*(\d)|(\d)\s*(?:-?[йи]|-?ый|-?ой)?\s*(?:тейк|таргет|цель)", re.I)
+TARGET_NO_RE = re.compile(r"(?:тейк|таргет|цель|tp)\s*№?\s*(\d)|(\d)\s*-?(?:я|ая|й|и|ый|ой)?\s*(?:тейк|таргет|цель)", re.I)
 ORDINALS = {"перв": 1, "втор": 2, "трет": 3, "четв": 4}
 
 
@@ -184,6 +186,9 @@ def pick_signal(messages: list[dict], state: dict, now: datetime, hold: frozense
     chosen = None
     for m in sorted(fresh, key=lambda x: -x["id"]):
         sig = parse_signal(m["text"])
+        if sig and any((v["sig"]["symbol"], v["sig"]["side"], v["sig"]["entry"]) == (sig["symbol"], sig["side"], sig["entry"])
+                       for v in state.get("signals", {}).values()):
+            sig = None  # shu signal allaqachon joylangan (kanalda ikki marta chiqqan nusxa)
         too_old = m["time"] < now - timedelta(hours=MAX_AGE_HOURS)
         if sig and not too_old and chosen is None and len(today) < MAX_SIGNAL_REELS and not recent:
             chosen = (m, sig)
