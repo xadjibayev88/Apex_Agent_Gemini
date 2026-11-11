@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-22T14:13:15.335536+05:00",
-  "summary": "Why a JPMorgan strategist says the stock market’s tailspin might have run its course",
-  "link": "https://www.marketwatch.com/story/why-a-jpmorgan-strategist-says-the-stock-markets-tailspin-might-have-run-its-course-71571335?mod=mw_rss_topstories"
- },
- {
   "time": "2026-10-22T14:23:21.254168+05:00",
   "summary": "American Bankers Association: OCC’s GENIUS rules ‘undermine’ US Congress",
   "link": "https://cointelegraph.com/news/american-bankers-association-occ-genius-rules-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
@@ -615,6 +610,13 @@
   "summary": "Deutsche Bank launches crypto custody for companies and institutions",
   "link": "https://cointelegraph.com/news/deutsche-bank-debuts-digital-asset-custody-services-eu?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-11T20:37:43.451457+05:00",
+  "summary": "Bitcoin sits out stock rebound as ETF outflows extend to fourth day",
+  "link": "https://www.coindesk.com/markets/2026/11/11/bitcoin-sits-out-stock-rebound-as-etf-outflows-extend-to-fourth-day",
+  "ig": true,
   "tg": true
  }
 ]
