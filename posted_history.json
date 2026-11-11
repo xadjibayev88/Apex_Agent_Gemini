@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-22T20:47:09.570917+05:00",
-  "summary": "CryptoQuant CEO calls rising Bitcoin hashrate ‘indirect bullish signal’ from institutions",
-  "link": "https://cointelegraph.com/markets/cryptoquant-rising-bitcoin-hashrate-indirect-bullish-signal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
- },
- {
   "time": "2026-10-23T02:23:21.105660+05:00",
   "summary": "Bitcoin hashrate hits seven-month high as AI shift fails to ease mining competition",
   "link": "https://cointelegraph.com/news/bitcoin-mining-difficulty-hashrate-recovery-ai-shift?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
@@ -621,6 +616,13 @@
   "summary": "Bitcoin hovers near $74K as stocks rise despite US bond yield rebound",
   "link": "https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-12T02:30:08.029744+05:00",
+  "summary": "Alibaba announces plans to list T-Head, its Nvidia chip rival",
+  "link": "https://www.cnbc.com/2026/11/11/alibaba-pr.html",
+  "ig": false,
   "tg": true
  }
 ]
