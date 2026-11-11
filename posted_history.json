@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-22T17:32:28.011020+05:00",
-  "summary": "Bitcoin corrects below $82K after Tesla Q3 results, KOSPI falls",
-  "link": "https://cointelegraph.com/markets/bitcoin-corrects-below-82k-after-tesla-q3-results-kospi-falls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
- },
- {
   "time": "2026-10-22T20:47:09.570917+05:00",
   "summary": "CryptoQuant CEO calls rising Bitcoin hashrate ‘indirect bullish signal’ from institutions",
   "link": "https://cointelegraph.com/markets/cryptoquant-rising-bitcoin-hashrate-indirect-bullish-signal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
@@ -619,6 +614,13 @@
   "summary": "Fed's Goolsbee calls inflation report 'borderline disturbing' as central bank weighs more hikes",
   "link": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-11T23:53:16.727308+05:00",
+  "summary": "Bitcoin hovers near $74K as stocks rise despite US bond yield rebound",
+  "link": "https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
