@@ -149,6 +149,12 @@ def find_result(messages: list[dict], state: dict) -> tuple[dict, str, dict] | N
                     key = k
                     break
         if key is None:
+            # javob ham, ticker ham yo'q: oxirgi 12 soatda natijasi chiqmagan YAGONA signal bo'lsa, o'shanga bog'laymiz
+            open_recent = [k for k, v in signals.items() if not v.get("results") and v.get("time")
+                           and timedelta(0) <= m["time"] - datetime.fromisoformat(v["time"]) <= timedelta(hours=12)]
+            if len(open_recent) == 1:
+                key = open_recent[0]
+        if key is None:
             continue
         done = signals[key].setdefault("results", [])
         mark = result_mark(res)
@@ -295,7 +301,7 @@ def main() -> int:
         when = m["time"].astimezone(base.TZ).strftime("%H:%M")
         print(f"Signal: {sig['symbol']} {sig['side']} (xabar {m['id']})")
         signal_fx.make_signal_reel(sig, base.BRAND, CHANNEL, path, base.ffmpeg_exe(), base.FONT_PATHS, base.find_music(), when)
-        after = lambda media_id: state["signals"].update({str(m["id"]): {"sig": sig, "media_id": media_id, "when": when, "results": []}})  # noqa: E731
+        after = lambda media_id: state["signals"].update({str(m["id"]): {"sig": sig, "media_id": media_id, "when": when, "time": m["time"].isoformat(), "results": []}})  # noqa: E731
     elif result:
         m, key, res = result
         entry = state["signals"][key]

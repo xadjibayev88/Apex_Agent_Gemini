@@ -136,3 +136,12 @@ def test_real_channel_result_post_is_profit_target_1():
 def test_duplicate_signal_in_channel_is_posted_once():
     st = tracked()
     assert sr.pick_signal([msg(400, JTO)], st, NOW) is None and 400 in st["seen"]
+
+
+def test_unlinked_result_goes_to_the_only_recent_open_signal():
+    st = tracked()
+    st["signals"]["189"]["time"] = (NOW - timedelta(hours=2)).isoformat()
+    m, key, res = sr.find_result([msg(500, APT_RESULT)], st)
+    assert key == "189" and res["target"] == 1
+    st["signals"]["190"] = {"sig": sr.parse_signal(MASK), "media_id": "2", "results": [], "time": (NOW - timedelta(hours=1)).isoformat()}
+    assert sr.find_result([msg(501, APT_RESULT)], st) is None  # ikkita ochiq signal: taxmin qilinmaydi
