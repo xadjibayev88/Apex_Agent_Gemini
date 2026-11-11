@@ -64,6 +64,9 @@ def parse_channel_html(page: str) -> list[dict]:
         body = re.search(r'<div class="tgme_widget_message_text[^"]*"[^>]*>(.*?)</div>', block, re.S)
         when = re.search(r'<time datetime="([^"]+)"', block)
         if not (m and body and when):
+            if m and DRY_RUN:  # tashxis: xabar nega o'qilmadi
+                classes = sorted(set(re.findall(r'class="(tgme_widget_message_[a-z_]+)', block)))
+                print(f"  [o'qilmadi] xabar {m.group(1)}: matn={'bor' if body else 'yoq'}, vaqt={'bor' if when else 'yoq'}, bloklar={classes[:14]}")
             continue
         text = re.sub(r"<br\s*/?>", "\n", body.group(1))
         text = html.unescape(re.sub(r"<[^>]+>", "", text))
