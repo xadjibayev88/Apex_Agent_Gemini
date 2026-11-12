@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-24T01:44:42.663361+05:00",
-  "summary": "HSBC rolls out its first stablecoin to over 3 million everyday app users",
-  "link": "https://www.coindesk.com/business/2026/10/23/hsbc-rolls-out-its-first-stablecoin-to-over-3-million-everyday-app-users"
- },
- {
   "time": "2026-10-24T09:14:00.453762+05:00",
   "summary": "Initia halts blockchain after exploit reportedly drains over $2.6M",
   "link": "https://cointelegraph.com/news/initia-halts-blockchain-exploit-drained?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
@@ -638,6 +633,13 @@
   "time": "2026-11-13T01:09:17.024488+05:00",
   "summary": "Are Alt-L1s over? Security, costs drive smaller chains to Ethereum",
   "link": "https://cointelegraph.com/magazine/are-alt-l1s-over-security-costs-drive-smaller-chains-to-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-13T02:09:15.340003+05:00",
+  "summary": "Jensen Huang has resigned, what's next for Nvidia?",
+  "link": "https://www.bbc.co.uk/news/videos/c6wy9l859r94o?at_medium=RSS&at_campaign=rss",
   "ig": false,
   "tg": true
  }
