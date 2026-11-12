@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-23T09:26:22.584320+05:00",
-  "summary": "Treasury yields log biggest drop since the 2023 banking crisis. Here’s what’s going on.",
-  "link": "https://www.marketwatch.com/story/treasury-yields-see-extreme-plunge-why-investors-are-ducking-for-cover-60044c66?mod=mw_rss_topstories"
- },
- {
   "time": "2026-10-23T12:24:55.032471+05:00",
   "summary": "Ethereum delays Glamsterdam Hoodi testnet launch over security risks",
   "link": "https://cointelegraph.com/news/ethereum-delays-glamsterdam-testnet-fork-gas-security-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
@@ -628,6 +623,13 @@
   "time": "2026-11-12T18:58:58.828581+05:00",
   "summary": "Stablecoin supply falls $14.2B in biggest 30-day drop since June 2022",
   "link": "https://cointelegraph.com/markets/stablecoin-supply-drops-worst-slump-since-mid-2022?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-12T20:04:37.131783+05:00",
+  "summary": "Nvidia shares plunge 10% to June 2025 levels as Jensen Huang resigns",
+  "link": "https://www.coindesk.com/markets/2026/11/12/nvidia-shares-plunge-10-as-jensen-huang-resigns",
   "ig": false,
   "tg": true
  }
