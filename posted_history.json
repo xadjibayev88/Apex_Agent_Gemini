@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-23T15:10:30.111488+05:00",
-  "summary": "Bitcoin ETFs bleed $635M as October slides back into the red",
-  "link": "https://cointelegraph.com/markets/bitcoin-etfs-erase-october-gains-outflow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
- },
- {
   "time": "2026-10-23T18:28:00.122081+05:00",
   "summary": "Bybit secures first full Dubai license for spot trading services",
   "link": "https://cointelegraph.com/news/bybit-first-full-dubai-spot-trading-license?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
@@ -633,6 +628,13 @@
   "summary": "Bitcoin slides toward $71K as Nvidia stock tumbles after Huang steps down",
   "link": "https://cointelegraph.com/markets/bitcoin-price-drops-71k-stocks-nvidia-huang-resignation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-12T22:44:32.850412+05:00",
+  "summary": "Jensen Huang resigns as Nvidia CEO, exits board; shares plunge",
+  "link": "https://cointelegraph.com/news/jensen-huang-resigns-nvidia-ceo-board-member?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
