@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-23T18:28:00.122081+05:00",
-  "summary": "Bybit secures first full Dubai license for spot trading services",
-  "link": "https://cointelegraph.com/news/bybit-first-full-dubai-spot-trading-license?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
- },
- {
   "time": "2026-10-23T23:19:12.620443+05:00",
   "summary": "Bitcoin seeks support above $81K as Brent crude oil hits highest level since March",
   "link": "https://cointelegraph.com/markets/bitcoin-seeks-support-above-81k-as-brent-crude-oil-hits-highest-level-since-march?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
@@ -635,6 +630,13 @@
   "summary": "Jensen Huang resigns as Nvidia CEO, exits board; shares plunge",
   "link": "https://cointelegraph.com/news/jensen-huang-resigns-nvidia-ceo-board-member?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-13T00:11:40.385557+05:00",
+  "summary": "DTCC adds Solana to Wall Street tokenization plans, targeting 2027 rollout",
+  "link": "https://www.coindesk.com/business/2026/11/12/dtcc-adds-solana-to-wall-street-tokenization-plans-targeting-2027-rollout",
+  "ig": true,
   "tg": true
  }
 ]
