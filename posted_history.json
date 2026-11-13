@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-25T12:21:58.734699+05:00",
-  "summary": "Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report",
-  "link": "https://cointelegraph.com/news/nasdaq-companies-object-tokenized-stock-listings-okx-ice?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-10-25T14:02:53.852925+05:00",
   "summary": "Bitcoin tests $80K support in descending triangle: Live levels",
   "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-bull-flag-coils-at-81908-live-levels-93CH-4958174",
@@ -653,6 +647,13 @@
   "time": "2026-11-14T00:53:06.155953+05:00",
   "summary": "Bitcoin plunges to $68,000 as Anthropic IPO frenzy adds to market jitters",
   "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-slides-to-usd68k-as-nvidia-turmoil-anthropic-ipo-fuel-broader-market-sell-off",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-14T01:57:26.264715+05:00",
+  "summary": "Bitcoin ETFs are now down over $1.5 billion in net outflows for the year",
+  "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-etfs-are-now-down-over-usd1-5-billion-in-net-outflows-for-the-year",
   "ig": false,
   "tg": true
  }
