@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-24T18:16:22.692960+05:00",
-  "summary": "IRS plans lower tax disclosure penalties, including for crypto: Forbes",
-  "link": "https://cointelegraph.com/news/irs-plans-lower-penalties-for-crypto-tax-disclosures-forbes-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
- },
- {
   "time": "2026-10-24T22:27:41.335224+05:00",
   "summary": "Crypto under weekend pressure, bitcoin slides below $80,000 on U.S. Middle East evacuations",
   "link": "https://www.coindesk.com/markets/2026/10/24/crypto-under-weekend-pressure-bitcoin-slides-below-usd80-000-on-u-s-middle-east-evacuations"
@@ -647,6 +642,13 @@
   "summary": "Bitcoin returns to 200-week trend line as analyst sees risk of $57.7K next",
   "link": "https://cointelegraph.com/markets/bitcoin-returns-200-week-trend-line-analyst-sees-risk-57k-next?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-13T20:42:00.073204+05:00",
+  "summary": "Bitcoin dips below $70,000 as Dollar Index hits 19-month high",
+  "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-dips-below-usd70-000-as-selloff-gathers-pace",
+  "ig": true,
   "tg": true
  }
 ]
