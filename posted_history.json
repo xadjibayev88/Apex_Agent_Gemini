@@ -1,10 +1,5 @@
 [
  {
-  "time": "2026-10-24T12:40:38.340468+05:00",
-  "summary": "Franklin Templeton adds $150 million in fund shares to XRP Ledger, all in one wallet",
-  "link": "https://www.coindesk.com/markets/2026/10/24/franklin-templeton-adds-usd150-million-in-fund-shares-to-xrp-ledger-all-in-one-wallet"
- },
- {
   "time": "2026-10-24T13:54:49.148555+05:00",
   "summary": "SEC flags tokenization as high-risk area in 2027 market examinations",
   "link": "https://cointelegraph.com/news/sec-adds-tokenized-securities-to-2027-examination-priorities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
@@ -643,6 +638,13 @@
   "summary": "Bitcoin slides below $70K amid thin liquidity, ETF outflows",
   "link": "https://cointelegraph.com/markets/bitcoin-falls-below-70k-crypto-extreme-fear?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-13T18:25:49.467861+05:00",
+  "summary": "Bitcoin hits 12-week low as dollar rallies on interest-rate outlook, liquidations top $1.6 billion",
+  "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion",
+  "ig": false,
   "tg": true
  }
 ]
