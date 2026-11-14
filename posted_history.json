@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-25T14:02:53.852925+05:00",
-  "summary": "Bitcoin tests $80K support in descending triangle: Live levels",
-  "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-bull-flag-coils-at-81908-live-levels-93CH-4958174",
-  "ig": false
- },
- {
   "time": "2026-10-25T18:39:47.442653+05:00",
   "summary": "Earnings flood, Fed meeting will test rickety AI market rally",
   "link": "https://www.investing.com/news/economy-news/earnings-flood-fed-meeting-will-test-rickety-ai-market-rally-4971185",
@@ -655,6 +649,13 @@
   "summary": "Bitcoin ETFs are now down over $1.5 billion in net outflows for the year",
   "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-etfs-are-now-down-over-usd1-5-billion-in-net-outflows-for-the-year",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-14T14:57:05.528037+05:00",
+  "summary": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
+  "link": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
