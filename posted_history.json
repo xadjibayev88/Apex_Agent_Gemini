@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-26T21:41:10.069806+05:00",
-  "summary": "BTC price risks $80K loss into FOMC, earnings: Three things to know in Bitcoin this week",
-  "link": "https://cointelegraph.com/markets/btc-price-risks-80k-loss-into-fomc-earnings-three-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-10-27T14:42:56.528583+05:00",
   "summary": "Ripple wins final US approval for national trust bank",
   "link": "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -659,6 +653,13 @@
   "time": "2026-11-14T19:31:20.938539+05:00",
   "summary": "Chicago Fed's Goolsbee says central bank 'has definitely got work to do' on inflation",
   "link": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-14T21:07:23.765142+05:00",
+  "summary": "A behind the scenes force may amplify bitcoin and ether price volatility",
+  "link": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
   "ig": false,
   "tg": true
  }
