@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-25T22:32:12.191265+05:00",
-  "summary": "Bitcoin steadies near $80,400 after weekend selloff, Fed decision looms",
-  "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-btc-recovers-to-80800-ahead-of-fed-meeting-4971035",
-  "ig": false
- },
- {
   "time": "2026-10-26T12:26:43.142979+05:00",
   "summary": "Bitcoin slips under $80,000 as traders de-risk ahead of Fed meeting",
   "link": "https://www.coindesk.com/markets/2026/10/26/bitcoin-slips-under-usd80-000-as-traders-de-risk-ahead-of-fed-meeting",
@@ -656,6 +650,13 @@
   "time": "2026-11-14T16:25:26.142262+05:00",
   "summary": "Nvidia’s stock is on a losing streak not seen in 14 years. What comes next?",
   "link": "https://www.marketwatch.com/story/nvidias-stock-is-on-a-losing-streak-not-seen-in-14-years-what-comes-next-a07e801e?mod=mw_rss_topstories",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-14T17:30:24.603887+05:00",
+  "summary": "Bitcoin falls below $68,000 as ETF outflows extend to seventh straight day",
+  "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slides-below-68000-as-anthropic-ipo-frenzy-drains-market-liquidity-5027106",
   "ig": false,
   "tg": true
  }
