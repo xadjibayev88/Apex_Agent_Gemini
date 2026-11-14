@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-28T21:47:06.784692+05:00",
-  "summary": "Bitcoin price eyes $82K as Morgan Stanley strategist says most of correction is over",
-  "link": "https://cointelegraph.com/markets/bitcoin-price-eyes-82k-as-morgan-stanley-strategist-says-most-of-correction-is-over?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-10-29T15:48:16.789804+05:00",
   "summary": "Bitcoin ETFs add $137M, pushing October back into the green",
   "link": "https://cointelegraph.com/markets/bitcoin-etf-137-million-october-back-green?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -664,6 +658,13 @@
   "summary": "Bitcoin heads for sixth weekly loss as Anthropic’s blockbuster IPO looms",
   "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-heads-for-sixth-weekly-loss-as-anthropic-s-blockbuster-ipo-looms",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-15T01:21:48.882145+05:00",
+  "summary": "Metaplanet swings to $170M loss as Bitcoin sale hits earnings",
+  "link": "https://cointelegraph.com/news/metaplanet-swings-170m-loss-bitcoin-sale-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
