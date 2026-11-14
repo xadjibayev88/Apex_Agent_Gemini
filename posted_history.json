@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-27T14:42:56.528583+05:00",
-  "summary": "Ripple wins final US approval for national trust bank",
-  "link": "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-10-27T20:59:03.395917+05:00",
   "summary": "Bitcoin price analysis sees ‘strong rally’ as old coins become dormant",
   "link": "https://cointelegraph.com/markets/bitcoin-price-analysis-sees-strong-rally-as-old-coins-become-dormant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -661,6 +655,13 @@
   "summary": "A behind the scenes force may amplify bitcoin and ether price volatility",
   "link": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-14T22:19:56.571077+05:00",
+  "summary": "Bitcoin slides to 3-month low of $65,000 as analyst flags fourth capitulation wave",
+  "link": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
+  "ig": true,
   "tg": true
  }
 ]
