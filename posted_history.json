@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-25T18:39:47.442653+05:00",
-  "summary": "Earnings flood, Fed meeting will test rickety AI market rally",
-  "link": "https://www.investing.com/news/economy-news/earnings-flood-fed-meeting-will-test-rickety-ai-market-rally-4971185",
-  "ig": false
- },
- {
   "time": "2026-10-25T22:32:12.191265+05:00",
   "summary": "Bitcoin steadies near $80,400 after weekend selloff, Fed decision looms",
   "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-btc-recovers-to-80800-ahead-of-fed-meeting-4971035",
@@ -656,6 +650,13 @@
   "summary": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
   "link": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-14T16:25:26.142262+05:00",
+  "summary": "Nvidia’s stock is on a losing streak not seen in 14 years. What comes next?",
+  "link": "https://www.marketwatch.com/story/nvidias-stock-is-on-a-losing-streak-not-seen-in-14-years-what-comes-next-a07e801e?mod=mw_rss_topstories",
+  "ig": false,
   "tg": true
  }
 ]
