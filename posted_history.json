@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-28T15:38:21.973456+05:00",
-  "summary": "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K",
-  "link": "https://cointelegraph.com/markets/bitcoin-etf-176-million-inflow-sentiment-rebounds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-10-28T21:47:06.784692+05:00",
   "summary": "Bitcoin price eyes $82K as Morgan Stanley strategist says most of correction is over",
   "link": "https://cointelegraph.com/markets/bitcoin-price-eyes-82k-as-morgan-stanley-strategist-says-most-of-correction-is-over?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -662,6 +656,13 @@
   "time": "2026-11-14T23:19:12.198530+05:00",
   "summary": "OpenAI launches AI payments in ChatGPT with Visa, Mastercard and Amex",
   "link": "https://cointelegraph.com/news/openai-ai-payments-chatgpt-wallet-visa-mastercard-amex?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-15T00:24:33.500831+05:00",
+  "summary": "Bitcoin heads for sixth weekly loss as Anthropic’s blockbuster IPO looms",
+  "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-heads-for-sixth-weekly-loss-as-anthropic-s-blockbuster-ipo-looms",
   "ig": false,
   "tg": true
  }
