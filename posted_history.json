@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-31T14:40:47.118984+05:00",
-  "summary": "Binance arranges $6.34 billion to cover losses from record crypto hack",
-  "link": "https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack",
-  "ig": false
- },
- {
   "time": "2026-10-31T18:55:06.224627+05:00",
   "summary": "Tether’s excess reserves nearly double to $8B as Q3 profit hits $1.5B",
   "link": "https://cointelegraph.com/news/tethers-excess-reserves-nearly-double-to-8b-as-q3-profit-hits-15b?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -669,6 +663,13 @@
   "summary": "Nvidia is gearing up for one of Wall Street’s most anticipated earnings calls in years",
   "link": "https://www.marketwatch.com/story/nvidia-is-gearing-up-for-one-of-wall-streets-most-anticipated-earnings-calls-in-years-91855b1e?mod=mw_rss_topstories",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-15T23:00:22.139860+05:00",
+  "summary": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
+  "link": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
+  "ig": true,
   "tg": true
  }
 ]
