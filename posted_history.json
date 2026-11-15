@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-29T15:48:16.789804+05:00",
-  "summary": "Bitcoin ETFs add $137M, pushing October back into the green",
-  "link": "https://cointelegraph.com/markets/bitcoin-etf-137-million-october-back-green?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-10-29T22:32:20.728513+05:00",
   "summary": "Bitcoin price jumps to $81.5K as US GDP data beats expectations",
   "link": "https://cointelegraph.com/markets/bitcoin-reaction-to-pce-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -664,6 +658,13 @@
   "time": "2026-11-15T01:21:48.882145+05:00",
   "summary": "Metaplanet swings to $170M loss as Bitcoin sale hits earnings",
   "link": "https://cointelegraph.com/news/metaplanet-swings-170m-loss-bitcoin-sale-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-15T16:54:47.492074+05:00",
+  "summary": "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+  "link": "https://cointelegraph.com/markets/bitcoin-four-month-low-62k-crypto-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
   "tg": true
  }
