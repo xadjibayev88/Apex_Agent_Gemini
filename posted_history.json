@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-31T19:23:48.585218+05:00",
-  "summary": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
-  "link": "https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true
- },
- {
   "time": "2026-10-31T20:50:13.036111+05:00",
   "summary": "Binance says it has replaced 90% of stolen crypto after massive $6.3 billion breach",
   "link": "https://www.coindesk.com/business/2026/10/31/binance-says-it-has-replaced-90-of-stolen-crypto-after-massive-usd6-3-billion-breach",
@@ -670,6 +664,13 @@
   "time": "2026-11-15T23:58:40.557412+05:00",
   "summary": "UK, Singapore, and Thailand central banks test cross-border FX settlement as stablecoins gain ground",
   "link": "https://www.coindesk.com/policy/2026/11/14/uk-singapore-and-thailand-central-banks-test-cross-border-fx-settlement-as-stablecoins-gain-ground",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-16T00:54:58.924800+05:00",
+  "summary": "RWA protocol stUSDT winds down three years after $2.3B TVL peak",
+  "link": "https://cointelegraph.com/news/rwa-protocol-stusdt-winds-down-three-years-after-23b-tvl-peak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
   "tg": true
  }
