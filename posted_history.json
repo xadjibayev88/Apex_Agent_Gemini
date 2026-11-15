@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-30T21:58:35.019782+05:00",
-  "summary": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
-  "link": "https://cointelegraph.com/markets/bitcoin-price-metrics-hint-at-rebound-as-16b-liquidations-follow-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-10-31T14:40:47.118984+05:00",
   "summary": "Binance arranges $6.34 billion to cover losses from record crypto hack",
   "link": "https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack",
@@ -668,6 +662,13 @@
   "summary": "Gold and silver are supposed to protect against inflation. So why are both metals tumbling instead?",
   "link": "https://www.marketwatch.com/story/gold-and-silver-are-supposed-to-protect-against-inflation-so-why-are-both-metals-tumbling-instead-1735eca7?mod=mw_rss_topstories",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-15T21:36:33.534072+05:00",
+  "summary": "Nvidia is gearing up for one of Wall Street’s most anticipated earnings calls in years",
+  "link": "https://www.marketwatch.com/story/nvidia-is-gearing-up-for-one-of-wall-streets-most-anticipated-earnings-calls-in-years-91855b1e?mod=mw_rss_topstories",
+  "ig": false,
   "tg": true
  }
 ]
