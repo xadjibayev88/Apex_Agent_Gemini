@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-10-31T18:55:06.224627+05:00",
-  "summary": "Tether’s excess reserves nearly double to $8B as Q3 profit hits $1.5B",
-  "link": "https://cointelegraph.com/news/tethers-excess-reserves-nearly-double-to-8b-as-q3-profit-hits-15b?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true
- },
- {
   "time": "2026-10-31T19:23:48.585218+05:00",
   "summary": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
   "link": "https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -670,6 +664,13 @@
   "summary": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
   "link": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-15T23:58:40.557412+05:00",
+  "summary": "UK, Singapore, and Thailand central banks test cross-border FX settlement as stablecoins gain ground",
+  "link": "https://www.coindesk.com/policy/2026/11/14/uk-singapore-and-thailand-central-banks-test-cross-border-fx-settlement-as-stablecoins-gain-ground",
+  "ig": false,
   "tg": true
  }
 ]
