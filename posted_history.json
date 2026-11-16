@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-01T21:23:40.789335+05:00",
-  "summary": "Binance sees spike in customers pulling funds out after covering bulk of stolen $6.3 billion",
-  "link": "https://www.investing.com/news/stock-market-news/binance-to-resume-withdrawals-after-recovering-bulk-of-6-billion-in-stolen-funds-4989388",
-  "ig": true
- },
- {
   "time": "2026-11-01T22:59:24.405032+05:00",
   "summary": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
   "link": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
@@ -676,6 +670,13 @@
   "summary": "Bitcoin price fails to hold $65K as US stocks drop further on AI nerves",
   "link": "https://cointelegraph.com/markets/bitcoin-price-fails-to-hold-65k-us-stocks-drop-on-ai-nerves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-16T23:37:18.299950+05:00",
+  "summary": "Strategy buys $33M in Bitcoin, spends $228M on STRC buybacks",
+  "link": "https://cointelegraph.com/news/strategy-buy-485-bitcoin-228-million-strc-buyback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
