@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-02T00:04:51.273284+05:00",
-  "summary": "Bitcoin held up better than expected after Binance hack, Strive CEO says",
-  "link": "https://cointelegraph.com/markets/bitcoin-binance-hack-strive-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-11-02T01:06:59.246346+05:00",
   "summary": "FBI confirms North Korea's role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses",
   "link": "https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses",
@@ -677,6 +671,13 @@
   "time": "2026-11-17T00:52:31.867637+05:00",
   "summary": "Binance Pay Later offers credit backed by Bitcoin, Ether and BNB holdings",
   "link": "https://cointelegraph.com/news/binance-pay-later-crypto-backed-credit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-17T02:16:37.736727+05:00",
+  "summary": "Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off",
+  "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off",
   "ig": false,
   "tg": true
  }
