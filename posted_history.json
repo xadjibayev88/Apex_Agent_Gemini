@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-02T01:06:59.246346+05:00",
-  "summary": "FBI confirms North Korea's role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses",
-  "link": "https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses",
-  "ig": true
- },
- {
   "time": "2026-11-02T17:18:25.612013+05:00",
   "summary": "Bitcoin eases to $77,900 as Binance customers pull $3.6 billion after withdrawals reopen",
   "link": "https://www.coindesk.com/markets/2026/11/02/bitcoin-eases-to-usd77-900-as-binance-customers-pull-usd3-6-billion-after-withdrawals-reopen",
@@ -679,6 +673,13 @@
   "summary": "Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off",
   "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-17T03:21:37.465632+05:00",
+  "summary": "Bitmine edges toward 5% of ETH supply as treasuries report buys amid market slump",
+  "link": "https://cointelegraph.com/markets/bitmine-nears-5-eth-supply-treasuries-report-buys-amid-market-slump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
