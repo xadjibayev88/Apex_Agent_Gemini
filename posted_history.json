@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-01T17:01:57.605506+05:00",
-  "summary": "Binance says phase one of withdrawals opens after $6.3B hack",
-  "link": "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true
- },
- {
   "time": "2026-11-01T18:14:06.622843+05:00",
   "summary": "Binance opens crypto withdrawals in phases starting with bitcoin following $6.3 billion hack",
   "link": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
@@ -673,6 +667,13 @@
   "summary": "Bitcoin slips after rebounding from July 14 low that triggered $2 billion of liquidations",
   "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-slips-to-usd64-000-after-usd2-billion-weekend-flush",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-16T19:00:10.557494+05:00",
+  "summary": "BTC price tags 18-week low into Nvidia earnings: Three things to know in Bitcoin this week",
+  "link": "https://cointelegraph.com/markets/btc-price-18-week-low-nvidia-three-things-know-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
