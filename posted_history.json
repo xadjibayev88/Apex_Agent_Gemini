@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-02T17:18:25.612013+05:00",
-  "summary": "Bitcoin eases to $77,900 as Binance customers pull $3.6 billion after withdrawals reopen",
-  "link": "https://www.coindesk.com/markets/2026/11/02/bitcoin-eases-to-usd77-900-as-binance-customers-pull-usd3-6-billion-after-withdrawals-reopen",
-  "ig": true
- },
- {
   "time": "2026-11-02T18:50:49.842042+05:00",
   "summary": "Live updates: Bitcoin posts small rise as Binance records $6 billion outflows after starting withdrawals",
   "link": "https://www.coindesk.com/markets/2026/11/02/live-updates-binance-records-usd6-billion-outflows-after-starting-withdrawals-less-then-4-of-total-holdings",
@@ -680,6 +674,13 @@
   "summary": "Bitmine edges toward 5% of ETH supply as treasuries report buys amid market slump",
   "link": "https://cointelegraph.com/markets/bitmine-nears-5-eth-supply-treasuries-report-buys-amid-market-slump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-17T04:28:15.079748+05:00",
+  "summary": "Dollar hits 19-month high as hawkish Fed signals bolster rate hike bets",
+  "link": "https://www.investing.com/news/forex-news/asia-fx-muted-as-dollar-holds-near-19mth-high-yen-steady-after-weak-gdp-5028358",
+  "ig": false,
   "tg": true
  }
 ]
