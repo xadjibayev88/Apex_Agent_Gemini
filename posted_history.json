@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-01T22:59:24.405032+05:00",
-  "summary": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
-  "link": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
-  "ig": false
- },
- {
   "time": "2026-11-02T00:04:51.273284+05:00",
   "summary": "Bitcoin held up better than expected after Binance hack, Strive CEO says",
   "link": "https://cointelegraph.com/markets/bitcoin-binance-hack-strive-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -677,6 +671,13 @@
   "summary": "Strategy buys $33M in Bitcoin, spends $228M on STRC buybacks",
   "link": "https://cointelegraph.com/news/strategy-buy-485-bitcoin-228-million-strc-buyback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-17T00:52:31.867637+05:00",
+  "summary": "Binance Pay Later offers credit backed by Bitcoin, Ether and BNB holdings",
+  "link": "https://cointelegraph.com/news/binance-pay-later-crypto-backed-credit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
