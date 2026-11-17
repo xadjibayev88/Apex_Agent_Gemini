@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-03T00:47:57.064420+05:00",
-  "summary": "Bitcoin risks drop below $76K as 7% oil slide fails to spark BTC price rally",
-  "link": "https://cointelegraph.com/markets/bitcoin-risks-sub-76k-drop-as-7-fall-in-oil-fails-to-spark-btc-price-rally?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-11-03T01:53:57.182704+05:00",
   "summary": "Coinbase hit with 50% price target cut as post-earnings rout deepens",
   "link": "https://cointelegraph.com/news/morgan-stanley-cuts-coinbase-target-to-120-as-earnings-recovery-outlook-weakens?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -685,6 +679,13 @@
   "summary": "Solana Foundation takes majority stake in crypto data provider CoinGecko",
   "link": "https://www.coindesk.com/business/2026/11/17/solana-foundation-takes-majority-stake-in-crypto-data-provider-coingecko",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-17T23:45:26.304983+05:00",
+  "summary": "Bitcoin drops 2.5% as Nvidia stock risks new 5-month lows into Q3 earnings",
+  "link": "https://cointelegraph.com/markets/bitcoin-drops-25-nvidia-stock-risks-new-5-month-low-q3-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
