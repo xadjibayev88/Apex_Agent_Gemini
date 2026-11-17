@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-02T20:40:15.088103+05:00",
-  "summary": "Binance users withdraw $3.6bn after largest-ever crypto hack",
-  "link": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o?at_medium=RSS&at_campaign=rss",
-  "ig": true
- },
- {
   "time": "2026-11-02T22:27:12.411359+05:00",
   "summary": "Coinbase downgraded at Morgan Stanley; price target slashed 53% on weak earnings outlook",
   "link": "https://www.coindesk.com/markets/2026/11/02/morgan-stanley-downgrades-coinbase-slashes-price-target-53-on-weak-earnings-outlook",
@@ -682,6 +676,13 @@
   "summary": "BlackRock’s Bitcoin ETF snaps $2.35B outflow streak amid extreme fear",
   "link": "https://cointelegraph.com/markets/blackrock-ibit-outflow-streak-end-extreme-fear?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-17T19:54:22.959698+05:00",
+  "summary": "Bitcoin realized loss metric beats June high as open interest eyes 2-year low",
+  "link": "https://cointelegraph.com/markets/bitcoin-realized-loss-metric-beats-june-high-open-interest-eyes-2-year-low?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
