@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-02T22:27:12.411359+05:00",
-  "summary": "Coinbase downgraded at Morgan Stanley; price target slashed 53% on weak earnings outlook",
-  "link": "https://www.coindesk.com/markets/2026/11/02/morgan-stanley-downgrades-coinbase-slashes-price-target-53-on-weak-earnings-outlook",
-  "ig": false
- },
- {
   "time": "2026-11-02T23:26:55.857667+05:00",
   "summary": "Bitcoin traders eye post-election rally as exchange outflows point to supply squeeze",
   "link": "https://www.coindesk.com/markets/2026/11/02/bitcoin-traders-eye-post-election-rally-as-exchange-outflows-point-to-supply-squeeze",
@@ -682,6 +676,13 @@
   "time": "2026-11-17T19:54:22.959698+05:00",
   "summary": "Bitcoin realized loss metric beats June high as open interest eyes 2-year low",
   "link": "https://cointelegraph.com/markets/bitcoin-realized-loss-metric-beats-june-high-open-interest-eyes-2-year-low?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-17T20:54:28.172474+05:00",
+  "summary": "Bitcoin remains penned in near $64,000 even as ETF outflow streak ends",
+  "link": "https://www.coindesk.com/markets/2026/11/17/bitcoin-remains-penned-in-near-usd64-000-even-as-etf-outflow-streak-ends",
   "ig": false,
   "tg": true
  }
