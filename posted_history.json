@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-03T01:53:57.182704+05:00",
-  "summary": "Coinbase hit with 50% price target cut as post-earnings rout deepens",
-  "link": "https://cointelegraph.com/news/morgan-stanley-cuts-coinbase-target-to-120-as-earnings-recovery-outlook-weakens?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-11-03T02:49:11.087247+05:00",
   "summary": "NYSE tokenized stock plans take shape as four more transfer agents join",
   "link": "https://www.coindesk.com/business/2026/11/02/nyse-taps-wall-street-giant-broadridge-to-bring-shareholder-voting-onto-blockchain-rails",
@@ -686,6 +680,13 @@
   "summary": "Bitcoin drops 2.5% as Nvidia stock risks new 5-month lows into Q3 earnings",
   "link": "https://cointelegraph.com/markets/bitcoin-drops-25-nvidia-stock-risks-new-5-month-low-q3-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-18T01:03:56.833364+05:00",
+  "summary": "Ethereum's Glamsterdam upgrade risks breaking up to 15,000 automated apps",
+  "link": "https://www.coindesk.com/tech/2026/11/17/ethereum-s-glamsterdam-upgrade-risks-breaking-up-to-15-000-contracts",
+  "ig": true,
   "tg": true
  }
 ]
