@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-03T02:49:11.087247+05:00",
-  "summary": "NYSE tokenized stock plans take shape as four more transfer agents join",
-  "link": "https://www.coindesk.com/business/2026/11/02/nyse-taps-wall-street-giant-broadridge-to-bring-shareholder-voting-onto-blockchain-rails",
-  "ig": true
- },
- {
   "time": "2026-11-03T03:51:36.675303+05:00",
   "summary": "New Jersey drops Coinbase staking order ahead of crypto’s midterm test",
   "link": "https://cointelegraph.com/news/new-jersey-coinbase-staking?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -687,6 +681,13 @@
   "summary": "Ethereum's Glamsterdam upgrade risks breaking up to 15,000 automated apps",
   "link": "https://www.coindesk.com/tech/2026/11/17/ethereum-s-glamsterdam-upgrade-risks-breaking-up-to-15-000-contracts",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-18T02:06:18.454210+05:00",
+  "summary": "Coinbase CEO says AI agents will account for '99.9%' of transactions within a decade",
+  "link": "https://www.coindesk.com/markets/2026/11/17/coinbase-ceo-says-ai-agents-will-account-for-99-9-of-transactions-within-a-decade",
+  "ig": false,
   "tg": true
  }
 ]
