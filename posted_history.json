@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-02T18:50:49.842042+05:00",
-  "summary": "Live updates: Bitcoin posts small rise as Binance records $6 billion outflows after starting withdrawals",
-  "link": "https://www.coindesk.com/markets/2026/11/02/live-updates-binance-records-usd6-billion-outflows-after-starting-withdrawals-less-then-4-of-total-holdings",
-  "ig": false
- },
- {
   "time": "2026-11-02T20:40:15.088103+05:00",
   "summary": "Binance users withdraw $3.6bn after largest-ever crypto hack",
   "link": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o?at_medium=RSS&at_campaign=rss",
@@ -681,6 +675,13 @@
   "summary": "Dollar hits 19-month high as hawkish Fed signals bolster rate hike bets",
   "link": "https://www.investing.com/news/forex-news/asia-fx-muted-as-dollar-holds-near-19mth-high-yen-steady-after-weak-gdp-5028358",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-17T18:16:06.430991+05:00",
+  "summary": "BlackRock’s Bitcoin ETF snaps $2.35B outflow streak amid extreme fear",
+  "link": "https://cointelegraph.com/markets/blackrock-ibit-outflow-streak-end-extreme-fear?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
