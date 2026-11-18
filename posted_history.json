@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-04T01:35:49.913670+05:00",
-  "summary": "CFTC clears stock perpetual futures for trading on US exchanges",
-  "link": "https://cointelegraph.com/news/cftc-equity-perpetual-futures-trading-us-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-11-07T09:33:44.141606+05:00",
   "summary": "Bitcoin price dips under $75K as crypto markets miss tech-stock rebound",
   "link": "https://cointelegraph.com/markets/bitcoin-price-under-75k-crypto-markets-tech-stock?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -695,6 +689,13 @@
   "time": "2026-11-19T01:44:27.960251+05:00",
   "summary": "Fed minutes show growing unease about the outlook for inflation",
   "link": "https://www.marketwatch.com/story/fed-minutes-show-growing-unease-about-the-outlook-for-inflation-59e3c13d?mod=mw_rss_topstories",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-19T03:14:21.746334+05:00",
+  "summary": "Bain Capital Crypto leads $110M Variational round at $1.5B valuation",
+  "link": "https://cointelegraph.com/news/variational-series-b-bain-capital-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
   "tg": true
  }
