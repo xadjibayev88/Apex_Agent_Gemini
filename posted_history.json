@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-03T18:00:12.028172+05:00",
-  "summary": "BlackRock’s IBIT sees biggest Bitcoin ETF outflows since June",
-  "link": "https://cointelegraph.com/markets/blackrocks-ibit-biggest-bitcoin-etf-outflow-june?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-11-03T19:04:19.217356+05:00",
   "summary": "Moscow Exchange to launch Bitcoin, Ether and USDT trading in December",
   "link": "https://cointelegraph.com/news/moscow-exchange-bitcoin-ether-usdt-trading-december?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -690,6 +684,13 @@
   "summary": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
   "link": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-18T19:33:40.972077+05:00",
+  "summary": "Bitcoin steadies after Nvidia’s earnings beat as $60K bids stand out",
+  "link": "https://cointelegraph.com/markets/bitcoin-60k-liquidity-stocks-gain-nvidia-1158b-earnings-beat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
