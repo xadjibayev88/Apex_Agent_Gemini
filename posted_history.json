@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-03T20:29:21.113995+05:00",
-  "summary": "CFTC clears perpetual futures on stocks, bringing crypto trading model to Wall Street",
-  "link": "https://www.coindesk.com/policy/2026/11/03/cftc-clears-perpetual-futures-on-stocks-bringing-crypto-trading-model-to-wall-street",
-  "ig": true
- },
- {
   "time": "2026-11-03T22:21:15.854821+05:00",
   "summary": "NEAR token sinks 7% as proposal to cut annual token issuance passes",
   "link": "https://cointelegraph.com/markets/near-sinks-7-proposal-cut-annual-token-issuance-passes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -692,6 +686,13 @@
   "summary": "Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system",
   "link": "https://www.marketwatch.com/story/how-high-must-interest-rates-go-to-cool-inflation-possibly-100-basis-points-or-more-feds-waller-says-e7b41cf6?mod=mw_rss_topstories",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-18T21:43:27.531698+05:00",
+  "summary": "Bitcoin, stocks wobble as Fed’s Waller talks of ‘shock’ 50-point rate hike",
+  "link": "https://cointelegraph.com/markets/bitcoin-stocks-wobble-waller-talks-shock-50-point-rate-hike?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
