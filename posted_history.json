@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-03T16:53:05.290835+05:00",
-  "summary": "Bitcoin price threatens $77.7K support loss with recent buyers underwater",
-  "link": "https://cointelegraph.com/markets/bitcoin-price-support-loss-recent-buyers-underwater?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true
- },
- {
   "time": "2026-11-03T18:00:12.028172+05:00",
   "summary": "BlackRock’s IBIT sees biggest Bitcoin ETF outflows since June",
   "link": "https://cointelegraph.com/markets/blackrocks-ibit-biggest-bitcoin-etf-outflow-june?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -689,6 +683,13 @@
   "summary": "Nvidia tops estimates, issues strong guidance; shares rise",
   "link": "https://www.coindesk.com/markets/2026/11/17/nvidia-tops-estimates-issues-strong-guidance-adds-usd150-billion-to-buyback-authorization",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-18T17:58:44.087170+05:00",
+  "summary": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
+  "link": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html",
+  "ig": true,
   "tg": true
  }
 ]
