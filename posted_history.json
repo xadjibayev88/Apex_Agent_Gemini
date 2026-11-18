@@ -1,11 +1,5 @@
 [
  {
-  "time": "2026-11-03T19:04:19.217356+05:00",
-  "summary": "Moscow Exchange to launch Bitcoin, Ether and USDT trading in December",
-  "link": "https://cointelegraph.com/news/moscow-exchange-bitcoin-ether-usdt-trading-december?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false
- },
- {
   "time": "2026-11-03T20:29:21.113995+05:00",
   "summary": "CFTC clears perpetual futures on stocks, bringing crypto trading model to Wall Street",
   "link": "https://www.coindesk.com/policy/2026/11/03/cftc-clears-perpetual-futures-on-stocks-bringing-crypto-trading-model-to-wall-street",
@@ -690,6 +684,13 @@
   "time": "2026-11-18T19:33:40.972077+05:00",
   "summary": "Bitcoin steadies after Nvidia’s earnings beat as $60K bids stand out",
   "link": "https://cointelegraph.com/markets/bitcoin-60k-liquidity-stocks-gain-nvidia-1158b-earnings-beat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-18T20:33:25.353994+05:00",
+  "summary": "Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system",
+  "link": "https://www.marketwatch.com/story/how-high-must-interest-rates-go-to-cool-inflation-possibly-100-basis-points-or-more-feds-waller-says-e7b41cf6?mod=mw_rss_topstories",
   "ig": false,
   "tg": true
  }
