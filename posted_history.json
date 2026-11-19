@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-07T09:53:09.067224+05:00",
-  "summary": "Russia finalizes crypto trading rules ahead of Nov. 17 rollout",
-  "link": "https://cointelegraph.com/news/russia-finalizes-crypto-trading-rules-november-rollout?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-07T16:00:33.330065+05:00",
   "summary": "Bitcoin steadies after AI-led selloff as eyes turn to latest U.S. jobs figures",
   "link": "https://www.coindesk.com/markets/2026/11/06/bitcoin-steadies-near-usd76-000-after-ai-led-selloff",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin ETF assets fall to three-month low as 2026 net outflows top $2.5B",
   "link": "https://cointelegraph.com/markets/bitcoin-etf-assets-three-month-low-78-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-19T19:41:08.548735+05:00",
+  "summary": "Bitcoin holds above $63,750 but Fed rate-hike threats loom large",
+  "link": "https://www.coindesk.com/markets/2026/11/19/bitcoin-holds-above-usd63-750-but-fed-rate-hike-threats-loom-large",
+  "ig": false,
   "tg": true
  }
 ]
