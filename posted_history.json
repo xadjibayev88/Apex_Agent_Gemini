@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-07T20:55:44.264061+05:00",
-  "summary": "Bitcoin recovers $76,000 level as ETFs shed $430 million after tech rout",
-  "link": "https://www.coindesk.com/markets/2026/11/06/bitcoin-recovers-usd76-000-level-as-etfs-shed-usd430-million-after-tech-rout",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-07T22:00:09.933165+05:00",
   "summary": "Over $1 billion in bullish bets liquidated while ETF flows suggest no help in spot market",
   "link": "https://www.coindesk.com/daybook-us/2026/11/06/over-usd1-billion-in-bullish-bets-liquidated-while-etf-flows-suggest-no-help-in-spot-market",
@@ -697,6 +690,13 @@
   "summary": "Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft",
   "link": "https://www.coindesk.com/business/2026/11/19/binance-wins-usd6-5-billion-feezing-order-against-hackers-behind-crypto-s-largest-theft",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-20T01:49:32.958712+05:00",
+  "summary": "Nvidia’s stock falls further. It has lost $611 billion in six trading days.",
+  "link": "https://www.marketwatch.com/story/nvidias-stock-falls-further-it-has-lost-611-billion-in-six-trading-days-434af231?mod=mw_rss_topstories",
+  "ig": false,
   "tg": true
  }
 ]
