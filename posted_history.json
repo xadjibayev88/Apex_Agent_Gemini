@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-07T16:55:35.986216+05:00",
-  "summary": "US Treasury cuts off MEXC over alleged $16B in illicit transactions",
-  "link": "https://cointelegraph.com/news/us-treasury-bans-mexc-over-alleged-16b-illicit-transactions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-07T17:53:46.808624+05:00",
   "summary": "Strive buys 15,124 Bitcoin in October, closes in on top treasury holders",
   "link": "https://cointelegraph.com/news/strive-buys-bitcoin-october-top-btc-corporate-holders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Anthropic raises $81bn in record-breaking stock market debut",
   "link": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-19T21:48:51.050578+05:00",
+  "summary": "Anthropic shares expected to open at $110, 32.5% above $83 IPO price",
+  "link": "https://cointelegraph.com/markets/anthropic-shares-expected-to-open-above-83-ipo-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
