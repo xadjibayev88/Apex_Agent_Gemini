@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-07T23:21:36.505109+05:00",
-  "summary": "U.S. Treasury moves to cut off crypto exchange MEXC over $16 billion in alleged illicit flows",
-  "link": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-08T00:50:47.260224+05:00",
   "summary": "Greece approves 10% tax on crypto gains and 15% levy on DeFi income",
   "link": "https://www.coindesk.com/policy/2026/11/06/greece-approves-10-tax-on-crypto-gains-and-15-levy-on-defi-income",
@@ -697,6 +690,13 @@
   "summary": "Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns",
   "link": "https://cointelegraph.com/news/ethereum-glamsterdam-could-slip-to-may-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-20T03:52:42.676626+05:00",
+  "summary": "Anthropic becomes one of world's most valuable public companies in stock market debut",
+  "link": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
+  "ig": true,
   "tg": true
  }
 ]
