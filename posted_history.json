@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-07T22:00:09.933165+05:00",
-  "summary": "Over $1 billion in bullish bets liquidated while ETF flows suggest no help in spot market",
-  "link": "https://www.coindesk.com/daybook-us/2026/11/06/over-usd1-billion-in-bullish-bets-liquidated-while-etf-flows-suggest-no-help-in-spot-market",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-07T23:21:36.505109+05:00",
   "summary": "U.S. Treasury moves to cut off crypto exchange MEXC over $16 billion in alleged illicit flows",
   "link": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
@@ -696,6 +689,13 @@
   "time": "2026-11-20T01:49:32.958712+05:00",
   "summary": "Nvidia’s stock falls further. It has lost $611 billion in six trading days.",
   "link": "https://www.marketwatch.com/story/nvidias-stock-falls-further-it-has-lost-611-billion-in-six-trading-days-434af231?mod=mw_rss_topstories",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-20T02:51:49.024588+05:00",
+  "summary": "Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns",
+  "link": "https://cointelegraph.com/news/ethereum-glamsterdam-could-slip-to-may-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
   "tg": true
  }
