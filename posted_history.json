@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-07T17:53:46.808624+05:00",
-  "summary": "Strive buys 15,124 Bitcoin in October, closes in on top treasury holders",
-  "link": "https://cointelegraph.com/news/strive-buys-bitcoin-october-top-btc-corporate-holders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-07T19:21:36.846485+05:00",
   "summary": "U.S. added 165,000 jobs in October, blowing past 65,000 estimate",
   "link": "https://www.coindesk.com/markets/2026/11/06/u-s-added-165-000-jobs-in-october-blowing-past-65-000-estimate",
@@ -697,6 +690,13 @@
   "summary": "Anthropic shares expected to open at $110, 32.5% above $83 IPO price",
   "link": "https://cointelegraph.com/markets/anthropic-shares-expected-to-open-above-83-ipo-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-19T23:40:50.799538+05:00",
+  "summary": "Bitcoin price ignores Anthropic debut as ANT share price dips below $100",
+  "link": "https://cointelegraph.com/markets/bitcoin-price-ignores-anthropic-debut-ant-share-price-dips-below-100?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
