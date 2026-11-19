@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-07T16:00:33.330065+05:00",
-  "summary": "Bitcoin steadies after AI-led selloff as eyes turn to latest U.S. jobs figures",
-  "link": "https://www.coindesk.com/markets/2026/11/06/bitcoin-steadies-near-usd76-000-after-ai-led-selloff",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-07T16:55:35.986216+05:00",
   "summary": "US Treasury cuts off MEXC over alleged $16B in illicit transactions",
   "link": "https://cointelegraph.com/news/us-treasury-bans-mexc-over-alleged-16b-illicit-transactions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -696,6 +689,13 @@
   "time": "2026-11-19T19:41:08.548735+05:00",
   "summary": "Bitcoin holds above $63,750 but Fed rate-hike threats loom large",
   "link": "https://www.coindesk.com/markets/2026/11/19/bitcoin-holds-above-usd63-750-but-fed-rate-hike-threats-loom-large",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-19T20:39:37.943839+05:00",
+  "summary": "Anthropic raises $81bn in record-breaking stock market debut",
+  "link": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
   "ig": false,
   "tg": true
  }
