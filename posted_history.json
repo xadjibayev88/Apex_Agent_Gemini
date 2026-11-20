@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-08T21:20:44.993100+05:00",
-  "summary": "Corporate America’s profit numbers are just barely beating Wall Street’s expectations",
-  "link": "https://www.marketwatch.com/story/corporate-americas-profit-numbers-are-just-barely-beating-wall-streets-expectations-eaa67fe2?mod=mw_rss_topstories",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-08T22:59:04.423655+05:00",
   "summary": "Stocks are moving in sync again for the first time in a while. There’s just one problem.",
   "link": "https://www.marketwatch.com/story/stocks-are-moving-in-sync-again-for-the-first-time-in-a-while-theres-just-one-problem-c953bf72?mod=mw_rss_topstories",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin falls below $60K for first time since July amid broader market selloff",
   "link": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-21T00:16:15.703140+05:00",
+  "summary": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play",
+  "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-plunges-below-usd59-000-as-rush-to-cash-puts-new-bear-market-lows-back-in-play",
+  "ig": true,
   "tg": true
  }
 ]
