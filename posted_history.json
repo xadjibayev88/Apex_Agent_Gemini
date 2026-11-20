@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-08T22:59:04.423655+05:00",
-  "summary": "Stocks are moving in sync again for the first time in a while. There’s just one problem.",
-  "link": "https://www.marketwatch.com/story/stocks-are-moving-in-sync-again-for-the-first-time-in-a-while-theres-just-one-problem-c953bf72?mod=mw_rss_topstories",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-08T23:58:52.973788+05:00",
   "summary": "Apple, Meta reject OKX–ICE tokenized stock plans, leaving crypto firms as the ones to watch",
   "link": "https://www.coindesk.com/policy/2026/11/06/apple-meta-reject-okx-ice-tokenized-stock-plans-leaving-crypto-firms-as-the-ones-to-watch",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play",
   "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-plunges-below-usd59-000-as-rush-to-cash-puts-new-bear-market-lows-back-in-play",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-21T01:33:42.836693+05:00",
+  "summary": "Live news: Bitcoin slips to fresh lows below $60,000 as Anthropic slides after Nasdaq debut",
+  "link": "https://www.coindesk.com/tech/2026/11/20/live-news-bitcoin-hovers-just-above-usd61-000-as-anthropic-slides-13-after-nasdaq-debut",
+  "ig": false,
   "tg": true
  }
 ]
