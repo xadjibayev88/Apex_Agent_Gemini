@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-08T18:16:39.243029+05:00",
-  "summary": "Binance France emails announce closure of its users’ accounts on Dec. 31",
-  "link": "https://cointelegraph.com/news/binance-france-emails-announce-closure-of-its-users-accounts-on-dec-31?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-08T19:32:57.531277+05:00",
   "summary": "Americans are on a 'treadmill of high inflation' and more rate hikes are likely, Fed's Daly says",
   "link": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin drops for third straight day as Asian tech shares slide",
   "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-drops-for-third-straight-day-as-asian-tech-shares-slide",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-20T21:23:12.340710+05:00",
+  "summary": "Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest",
+  "link": "https://cointelegraph.com/markets/bitcoin-first-death-cross-repeat-2023-bottom-25k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
