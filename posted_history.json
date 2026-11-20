@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-08T00:50:47.260224+05:00",
-  "summary": "Greece approves 10% tax on crypto gains and 15% levy on DeFi income",
-  "link": "https://www.coindesk.com/policy/2026/11/06/greece-approves-10-tax-on-crypto-gains-and-15-levy-on-defi-income",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-08T16:14:32.532140+05:00",
   "summary": "Binance users in some European countries told to pull crypto before fees kick in, with accounts closing by year end",
   "link": "https://www.coindesk.com/business/2026/11/07/binance-users-in-some-european-countries-told-to-pull-crypto-before-fees-kick-in-with-accounts-closing-by-year-end",
@@ -696,6 +689,13 @@
   "time": "2026-11-20T03:52:42.676626+05:00",
   "summary": "Anthropic becomes one of world's most valuable public companies in stock market debut",
   "link": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
+  "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-20T17:49:15.037942+05:00",
+  "summary": "BlackRock’s IBIT loses record $541M amid Anthropic market debut",
+  "link": "https://cointelegraph.com/markets/blackrock-ibit-record-single-day-outflow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
   "tg": true
  }
