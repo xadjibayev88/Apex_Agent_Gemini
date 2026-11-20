@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-09T01:07:54.972677+05:00",
-  "summary": "This market signal called the tech selloff. Now it’s sending another warning.",
-  "link": "https://www.marketwatch.com/story/this-market-signal-called-the-tech-selloff-now-its-sending-another-warning-f7f8eb9b?mod=mw_rss_topstories",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-09T17:46:34.067079+05:00",
   "summary": "Bitcoin ETFs shed $1.3B in biggest weekly outflow since late June",
   "link": "https://cointelegraph.com/markets/bitcoin-etfs-13b-biggest-weekly-outflow-late-june?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off",
   "link": "https://cointelegraph.com/markets/bitcoin-hits-new-20-week-low-anthropic-drops-87-tech-sell-off?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-21T03:29:28.473901+05:00",
+  "summary": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
+  "link": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
