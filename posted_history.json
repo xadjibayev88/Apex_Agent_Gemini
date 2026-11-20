@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-08T23:58:52.973788+05:00",
-  "summary": "Apple, Meta reject OKX–ICE tokenized stock plans, leaving crypto firms as the ones to watch",
-  "link": "https://www.coindesk.com/policy/2026/11/06/apple-meta-reject-okx-ice-tokenized-stock-plans-leaving-crypto-firms-as-the-ones-to-watch",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-09T01:07:54.972677+05:00",
   "summary": "This market signal called the tech selloff. Now it’s sending another warning.",
   "link": "https://www.marketwatch.com/story/this-market-signal-called-the-tech-selloff-now-its-sending-another-warning-f7f8eb9b?mod=mw_rss_topstories",
@@ -696,6 +689,13 @@
   "time": "2026-11-21T01:33:42.836693+05:00",
   "summary": "Live news: Bitcoin slips to fresh lows below $60,000 as Anthropic slides after Nasdaq debut",
   "link": "https://www.coindesk.com/tech/2026/11/20/live-news-bitcoin-hovers-just-above-usd61-000-as-anthropic-slides-13-after-nasdaq-debut",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-21T02:34:03.164656+05:00",
+  "summary": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off",
+  "link": "https://cointelegraph.com/markets/bitcoin-hits-new-20-week-low-anthropic-drops-87-tech-sell-off?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
   "tg": true
  }
