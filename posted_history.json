@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-10T02:39:07.087285+05:00",
-  "summary": "Nvidia-led tech selloff weighs on crypto majors",
-  "link": "https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-10T04:11:36.536681+05:00",
   "summary": "Dow sees its third 1,000-point swing in four days. Why the volatility isn’t over yet.",
   "link": "https://www.marketwatch.com/story/dow-sees-its-third-1-000-point-swing-in-four-days-why-volatility-isnt-over-yet-5380567b?mod=mw_rss_topstories",
@@ -697,6 +690,13 @@
   "summary": "Hong Kong pushes to bring crypto custodians, advisers under licensing rules",
   "link": "https://cointelegraph.com/news/hong-kong-crypto-custody-advisory-licensing-bill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-22T01:38:05.863338+05:00",
+  "summary": "Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated",
+  "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
+  "ig": false,
   "tg": true
  }
 ]
