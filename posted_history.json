@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-09T19:21:24.225944+05:00",
-  "summary": "NYSE picks Avalanche to settle tokenized stocks amid Wall Street's blockchain race",
-  "link": "https://www.coindesk.com/business/2026/11/09/nyse-picks-avalanche-to-settle-tokenized-stocks-amid-wall-street-s-blockchain-race",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-09T21:06:51.643403+05:00",
   "summary": "Strategy buys 1,036 Bitcoin as BTC holdings climb to 850,364",
   "link": "https://cointelegraph.com/news/strategy-buy-1036-bitcoin-holdings-850364-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin tanks below $57,000 for the first time in two years, and its not alone",
   "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-tanks-below-usd57-000-for-the-first-time-in-two-years-and-its-not-alone",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-21T18:42:47.193947+05:00",
+  "summary": "Chip stocks see $2.3 trillion weekly wipeout as panic grips the AI trade",
+  "link": "https://www.marketwatch.com/story/chip-stocks-see-2-3-trillion-weekly-wipeout-as-panic-grips-the-ai-trade-371f2f03?mod=mw_rss_topstories",
+  "ig": false,
   "tg": true
  }
 ]
