@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-09T17:46:34.067079+05:00",
-  "summary": "Bitcoin ETFs shed $1.3B in biggest weekly outflow since late June",
-  "link": "https://cointelegraph.com/markets/bitcoin-etfs-13b-biggest-weekly-outflow-late-june?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-09T19:21:24.225944+05:00",
   "summary": "NYSE picks Avalanche to settle tokenized stocks amid Wall Street's blockchain race",
   "link": "https://www.coindesk.com/business/2026/11/09/nyse-picks-avalanche-to-settle-tokenized-stocks-amid-wall-street-s-blockchain-race",
@@ -696,6 +689,13 @@
   "time": "2026-11-21T03:29:28.473901+05:00",
   "summary": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
   "link": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-21T17:34:43.333772+05:00",
+  "summary": "Bitcoin tanks below $57,000 for the first time in two years, and its not alone",
+  "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-tanks-below-usd57-000-for-the-first-time-in-two-years-and-its-not-alone",
   "ig": true,
   "tg": true
  }
