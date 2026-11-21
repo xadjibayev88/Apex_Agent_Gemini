@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-09T22:50:14.446802+05:00",
-  "summary": "Avalanche’s AVAX leads crypto gains following NYSE tokenization deal",
-  "link": "https://cointelegraph.com/news/avalanche-avax-crypto-nyse-tokenization-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-09T23:51:31.829338+05:00",
   "summary": "Bitcoin, tech stocks brush off Nvidia nerves as analyst mulls $68K target",
   "link": "https://cointelegraph.com/markets/bitcoin-stocks-nvidia-analyst-68k-target?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin hits $55,326, lowest since Sept 2024, before rebounding above $60,000",
   "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-crashes-below-56000-as-liquidity-squeeze-deepens-crypto-selloff-5043199",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-21T21:57:20.555919+05:00",
+  "summary": "Tech stock sell-off drags markets down as Anthropic shares slide",
+  "link": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+  "ig": false,
   "tg": true
  }
 ]
