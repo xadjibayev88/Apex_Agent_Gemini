@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-09T21:06:51.643403+05:00",
-  "summary": "Strategy buys 1,036 Bitcoin as BTC holdings climb to 850,364",
-  "link": "https://cointelegraph.com/news/strategy-buy-1036-bitcoin-holdings-850364-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-09T22:50:14.446802+05:00",
   "summary": "Avalanche’s AVAX leads crypto gains following NYSE tokenization deal",
   "link": "https://cointelegraph.com/news/avalanche-avax-crypto-nyse-tokenization-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Chip stocks see $2.3 trillion weekly wipeout as panic grips the AI trade",
   "link": "https://www.marketwatch.com/story/chip-stocks-see-2-3-trillion-weekly-wipeout-as-panic-grips-the-ai-trade-371f2f03?mod=mw_rss_topstories",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-21T20:37:44.757830+05:00",
+  "summary": "Bitcoin hits $55,326, lowest since Sept 2024, before rebounding above $60,000",
+  "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-crashes-below-56000-as-liquidity-squeeze-deepens-crypto-selloff-5043199",
+  "ig": true,
   "tg": true
  }
 ]
