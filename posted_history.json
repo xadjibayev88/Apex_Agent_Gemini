@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-10T17:33:59.574039+05:00",
-  "summary": "Bitcoin price eyes $74K as Fed rate-hike bets hit 96% after Waller speech",
-  "link": "https://cointelegraph.com/markets/bitcoin-price-eyes-74k-fed-rate-hike-expected-after-waller-speech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-10T18:46:58.155174+05:00",
   "summary": "Live news: Bitcoin adds to losses after disappointing inflation data",
   "link": "https://www.coindesk.com/markets/2026/11/10/live-news-traders-price-in-fed-rate-hike-for-december-as-bitcoin-and-gold-retreat",
@@ -697,6 +690,13 @@
   "summary": "The bull market has a new problem. The 'smart money' is selling",
   "link": "https://www.cnbc.com/2026/11/20/equity-issuance-bull-market-problem.html",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-22T18:37:01.162685+05:00",
+  "summary": "ECB seeks industry partners for tokenized deposits, securities experiments",
+  "link": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
