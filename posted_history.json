@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-10T19:46:57.074088+05:00",
-  "summary": "U.S. CPI rose stronger than expected 0.4% in October; core rate rose 0.3%",
-  "link": "https://www.coindesk.com/markets/2026/11/10/u-s-cpi-rose-stronger-than-expected-0-4-in-october-core-rate-rose-0-3",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-10T20:48:21.995625+05:00",
   "summary": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
   "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
   "link": "https://cointelegraph.com/news/bitcoin-17k-kraken-canadian-dollar-market-trades-stand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-22T22:24:04.074188+05:00",
+  "summary": "XRP falls 10% as long bets unwind and ETF assets slip below $1 billion",
+  "link": "https://www.coindesk.com/markets/2026/11/21/xrp-falls-10-as-long-bets-unwind-and-etf-assets-slip-below-usd1-billion",
+  "ig": false,
   "tg": true
  }
 ]
