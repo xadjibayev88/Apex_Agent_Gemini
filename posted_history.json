@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-10T18:46:58.155174+05:00",
-  "summary": "Live news: Bitcoin adds to losses after disappointing inflation data",
-  "link": "https://www.coindesk.com/markets/2026/11/10/live-news-traders-price-in-fed-rate-hike-for-december-as-bitcoin-and-gold-retreat",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-10T19:46:57.074088+05:00",
   "summary": "U.S. CPI rose stronger than expected 0.4% in October; core rate rose 0.3%",
   "link": "https://www.coindesk.com/markets/2026/11/10/u-s-cpi-rose-stronger-than-expected-0-4-in-october-core-rate-rose-0-3",
@@ -697,6 +690,13 @@
   "summary": "ECB seeks industry partners for tokenized deposits, securities experiments",
   "link": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-22T20:41:33.949051+05:00",
+  "summary": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
+  "link": "https://cointelegraph.com/news/bitcoin-17k-kraken-canadian-dollar-market-trades-stand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
