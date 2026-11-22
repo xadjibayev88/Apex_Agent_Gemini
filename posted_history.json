@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-10T22:17:58.594174+05:00",
-  "summary": "Bitcoin nears 11-week low after ‘discouraging’ US CPI inflation beat",
-  "link": "https://cointelegraph.com/markets/bitcoin-11-week-low-discouraging-us-cpi-inflation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-10T23:54:00.877890+05:00",
   "summary": "Hot US inflation raises odds of half-point Fed hike in December",
   "link": "https://cointelegraph.com/news/hot-us-inflation-raises-rate-hike-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Chainflip confirms $12M hack, offers attacker 10% bounty",
   "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-23T00:51:28.704212+05:00",
+  "summary": "Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain",
+  "link": "https://www.coindesk.com/business/2026/11/21/cross-chain-protocol-chainflip-s-flip-tanks-30-after-suspected-usd4-86-million-vault-drain",
+  "ig": false,
   "tg": true
  }
 ]
