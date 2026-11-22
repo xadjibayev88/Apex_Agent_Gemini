@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-10T04:11:36.536681+05:00",
-  "summary": "Dow sees its third 1,000-point swing in four days. Why the volatility isn’t over yet.",
-  "link": "https://www.marketwatch.com/story/dow-sees-its-third-1-000-point-swing-in-four-days-why-volatility-isnt-over-yet-5380567b?mod=mw_rss_topstories",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-10T17:33:59.574039+05:00",
   "summary": "Bitcoin price eyes $74K as Fed rate-hike bets hit 96% after Waller speech",
   "link": "https://cointelegraph.com/markets/bitcoin-price-eyes-74k-fed-rate-hike-expected-after-waller-speech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated",
   "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-22T17:31:15.987890+05:00",
+  "summary": "The bull market has a new problem. The 'smart money' is selling",
+  "link": "https://www.cnbc.com/2026/11/20/equity-issuance-bull-market-problem.html",
+  "ig": true,
   "tg": true
  }
 ]
