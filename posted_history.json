@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-11T16:50:32.404209+05:00",
-  "summary": "Bitcoin short-term holders send 47K BTC to exchanges at a loss",
-  "link": "https://cointelegraph.com/markets/bitcoin-speculators-btc-exchanges-unrealized-loss-727k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-11T17:57:19.683028+05:00",
   "summary": "Barclays boosts BlackRock Bitcoin ETF stake 48% as banks expand holdings",
   "link": "https://cointelegraph.com/news/barclays-blackrock-ibit-boost-key-q3-filings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Nvidia’s stock soars 30%-plus as Jensen Huang returns as CEO",
   "link": "https://www.marketwatch.com/story/nvidia-stock-bounces-as-trump-administration-pushes-for-rehiring-of-jensen-huang-08057c29?mod=mw_rss_topstories",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-23T22:57:35.640930+05:00",
+  "summary": "Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations",
+  "link": "https://cointelegraph.com/markets/bitcoin-rebounds-lows-nvidia-rally-sparks-500m-crypto-liquidations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
