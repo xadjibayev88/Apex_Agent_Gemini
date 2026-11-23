@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-11T01:57:58.140389+05:00",
-  "summary": "October CPI sparks December Fed hike fears as yields surge and tech stocks slide",
-  "link": "https://www.investing.com/news/economy-news/october-cpi-sparks-december-fed-hike-fears-as-yields-surge-and-tech-stocks-slide-93CH-5016723",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-11T16:50:32.404209+05:00",
   "summary": "Bitcoin short-term holders send 47K BTC to exchanges at a loss",
   "link": "https://cointelegraph.com/markets/bitcoin-speculators-btc-exchanges-unrealized-loss-727k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Live updates: Bitcoin climbs back above $61,000 as stocks rebound from AI rout",
   "link": "https://www.coindesk.com/markets/2026/11/23/live-updates-bitcoin-climbs-back-above-usd61-000-as-stocks-rebound-from-ai-rout",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-23T21:28:59.378689+05:00",
+  "summary": "Nvidia’s stock soars 30%-plus as Jensen Huang returns as CEO",
+  "link": "https://www.marketwatch.com/story/nvidia-stock-bounces-as-trump-administration-pushes-for-rehiring-of-jensen-huang-08057c29?mod=mw_rss_topstories",
+  "ig": false,
   "tg": true
  }
 ]
