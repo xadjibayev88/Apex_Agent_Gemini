@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-11T17:57:19.683028+05:00",
-  "summary": "Barclays boosts BlackRock Bitcoin ETF stake 48% as banks expand holdings",
-  "link": "https://cointelegraph.com/news/barclays-blackrock-ibit-boost-key-q3-filings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-11T19:10:54.711140+05:00",
   "summary": "Deutsche Bank launches crypto custody for companies and institutions",
   "link": "https://cointelegraph.com/news/deutsche-bank-debuts-digital-asset-custody-services-eu?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations",
   "link": "https://cointelegraph.com/markets/bitcoin-rebounds-lows-nvidia-rally-sparks-500m-crypto-liquidations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-24T00:29:45.167411+05:00",
+  "summary": "Bitcoin rebound already losing steam as AI trade returns with a bang",
+  "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-rebound-already-losing-steam-as-ai-trade-returns-with-a-bank",
+  "ig": false,
   "tg": true
  }
 ]
