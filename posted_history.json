@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-11T19:10:54.711140+05:00",
-  "summary": "Deutsche Bank launches crypto custody for companies and institutions",
-  "link": "https://cointelegraph.com/news/deutsche-bank-debuts-digital-asset-custody-services-eu?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-11T20:37:43.451457+05:00",
   "summary": "Bitcoin sits out stock rebound as ETF outflows extend to fourth day",
   "link": "https://www.coindesk.com/markets/2026/11/11/bitcoin-sits-out-stock-rebound-as-etf-outflows-extend-to-fourth-day",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin rebound already losing steam as AI trade returns with a bang",
   "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-rebound-already-losing-steam-as-ai-trade-returns-with-a-bank",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-24T02:40:51.861843+05:00",
+  "summary": "Nvidia soars as Jensen Huang returns to lead company",
+  "link": "https://www.coindesk.com/markets/2026/11/23/jensen-huang-returns-as-nvidia-ceo-as-shares-jump-27",
+  "ig": true,
   "tg": true
  }
 ]
