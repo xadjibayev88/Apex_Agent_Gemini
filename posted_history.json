@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-13T00:11:40.385557+05:00",
-  "summary": "DTCC adds Solana to Wall Street tokenization plans, targeting 2027 rollout",
-  "link": "https://www.coindesk.com/business/2026/11/12/dtcc-adds-solana-to-wall-street-tokenization-plans-targeting-2027-rollout",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-13T01:09:17.024488+05:00",
   "summary": "Are Alt-L1s over? Security, costs drive smaller chains to Ethereum",
   "link": "https://cointelegraph.com/magazine/are-alt-l1s-over-security-costs-drive-smaller-chains-to-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -696,6 +689,13 @@
   "time": "2026-11-25T02:33:45.946833+05:00",
   "summary": "BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong",
   "link": "https://cointelegraph.com/news/blackrock-launches-tokenized-money-market-fund-stablecoins-hong-kong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-25T03:37:37.619899+05:00",
+  "summary": "Bitcoin slides amid US tariff nerves as Anthropic falls below IPO price",
+  "link": "https://cointelegraph.com/markets/bitcoin-slides-us-tariff-nerves-anthropic-falls-ipo-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
   "tg": true
  }
