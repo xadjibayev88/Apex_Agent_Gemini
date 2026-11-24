@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-12T20:04:37.131783+05:00",
-  "summary": "Nvidia shares plunge 10% to June 2025 levels as Jensen Huang resigns",
-  "link": "https://www.coindesk.com/markets/2026/11/12/nvidia-shares-plunge-10-as-jensen-huang-resigns",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-12T21:17:48.811091+05:00",
   "summary": "Bitcoin slides toward $71K as Nvidia stock tumbles after Huang steps down",
   "link": "https://cointelegraph.com/markets/bitcoin-price-drops-71k-stocks-nvidia-huang-resignation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin hands back Monday's Nvidia-driven gains, liquidations triple",
   "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-25T00:06:17.997919+05:00",
+  "summary": "Bitcoin’s drop to $55,000 left a record 11.6 million BTC underwater",
+  "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-s-drop-to-usd55-000-left-a-record-11-6-million-btc-underwater",
+  "ig": false,
   "tg": true
  }
 ]
