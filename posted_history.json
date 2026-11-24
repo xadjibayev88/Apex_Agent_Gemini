@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-12T18:58:58.828581+05:00",
-  "summary": "Stablecoin supply falls $14.2B in biggest 30-day drop since June 2022",
-  "link": "https://cointelegraph.com/markets/stablecoin-supply-drops-worst-slump-since-mid-2022?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-12T20:04:37.131783+05:00",
   "summary": "Nvidia shares plunge 10% to June 2025 levels as Jensen Huang resigns",
   "link": "https://www.coindesk.com/markets/2026/11/12/nvidia-shares-plunge-10-as-jensen-huang-resigns",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin drops as November spot ETF outflows increase to record $4.71 billion",
   "link": "https://www.coindesk.com/daybook-us/2026/11/24/bitcoin-drops-as-november-spot-etf-outflows-increase-to-record-usd4-71-billion",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-24T22:35:13.216400+05:00",
+  "summary": "Bitcoin hands back Monday's Nvidia-driven gains, liquidations triple",
+  "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple",
+  "ig": true,
   "tg": true
  }
 ]
