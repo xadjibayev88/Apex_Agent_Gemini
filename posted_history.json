@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-12T03:27:12.990676+05:00",
-  "summary": "Dollar extends surge on raised Fed rate hike expectations, hits over 19-month high",
-  "link": "https://www.investing.com/news/forex-news/asian-fx-steadies-after-falling-on-hot-us-cpi-yen-near-6wk-low-5017608",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-12T17:37:35.821182+05:00",
   "summary": "BlackRock Bitcoin ETF outflows hit $2B over nine sessions",
   "link": "https://cointelegraph.com/markets/blackrock-bitcoin-etf-ibit-outflows-nine-day-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "BTCS offloads $44M in ETH to reduce DeFi debt amid market downturn",
   "link": "https://cointelegraph.com/news/btcs-offloads-44m-eth-reduce-defi-debt-market-downturn?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-24T19:48:27.229345+05:00",
+  "summary": "Live updates: Bitcoin pulls back to $60,000, stock rally fades, as tariffs re-enter the picture",
+  "link": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
+  "ig": true,
   "tg": true
  }
 ]
