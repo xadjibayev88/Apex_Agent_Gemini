@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-11T23:53:16.727308+05:00",
-  "summary": "Bitcoin hovers near $74K as stocks rise despite US bond yield rebound",
-  "link": "https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-12T02:30:08.029744+05:00",
   "summary": "Alibaba announces plans to list T-Head, its Nvidia chip rival",
   "link": "https://www.cnbc.com/2026/11/11/alibaba-pr.html",
@@ -697,6 +690,13 @@
   "summary": "CFTC staff say exchanges can count Bitcoin toward operating reserves",
   "link": "https://cointelegraph.com/news/cftc-staff-say-exchanges-can-count-bitcoin-toward-operating-reserves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-24T06:17:19.525906+05:00",
+  "summary": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
+  "link": "https://www.bbc.co.uk/news/articles/cq62pn6j42jko?at_medium=RSS&at_campaign=rss",
+  "ig": true,
   "tg": true
  }
 ]
