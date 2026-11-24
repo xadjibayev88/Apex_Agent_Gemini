@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-13T01:09:17.024488+05:00",
-  "summary": "Are Alt-L1s over? Security, costs drive smaller chains to Ethereum",
-  "link": "https://cointelegraph.com/magazine/are-alt-l1s-over-security-costs-drive-smaller-chains-to-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-13T02:09:15.340003+05:00",
   "summary": "Jensen Huang has resigned, what's next for Nvidia?",
   "link": "https://www.bbc.co.uk/news/videos/c6wy9l859r94o?at_medium=RSS&at_campaign=rss",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin slides amid US tariff nerves as Anthropic falls below IPO price",
   "link": "https://cointelegraph.com/markets/bitcoin-slides-us-tariff-nerves-anthropic-falls-ipo-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-25T04:36:17.631398+05:00",
+  "summary": "South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment",
+  "link": "https://www.coindesk.com/policy/2026/11/24/south-korea-proposes-ending-2017-ico-ban-to-boost-jobs-and-onshore-crypto-investment",
+  "ig": true,
   "tg": true
  }
 ]
