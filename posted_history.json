@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-12T22:44:32.850412+05:00",
-  "summary": "Jensen Huang resigns as Nvidia CEO, exits board; shares plunge",
-  "link": "https://cointelegraph.com/news/jensen-huang-resigns-nvidia-ceo-board-member?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-13T00:11:40.385557+05:00",
   "summary": "DTCC adds Solana to Wall Street tokenization plans, targeting 2027 rollout",
   "link": "https://www.coindesk.com/business/2026/11/12/dtcc-adds-solana-to-wall-street-tokenization-plans-targeting-2027-rollout",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares",
   "link": "https://cointelegraph.com/news/bitcoin-selloff-weak-demand-forced-liquidations-21shares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-25T02:33:45.946833+05:00",
+  "summary": "BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong",
+  "link": "https://cointelegraph.com/news/blackrock-launches-tokenized-money-market-fund-stablecoins-hong-kong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
