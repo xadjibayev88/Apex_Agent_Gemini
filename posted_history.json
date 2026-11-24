@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-12T02:30:08.029744+05:00",
-  "summary": "Alibaba announces plans to list T-Head, its Nvidia chip rival",
-  "link": "https://www.cnbc.com/2026/11/11/alibaba-pr.html",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-12T03:27:12.990676+05:00",
   "summary": "Dollar extends surge on raised Fed rate hike expectations, hits over 19-month high",
   "link": "https://www.investing.com/news/forex-news/asian-fx-steadies-after-falling-on-hot-us-cpi-yen-near-6wk-low-5017608",
@@ -697,6 +690,13 @@
   "summary": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
   "link": "https://www.bbc.co.uk/news/articles/cq62pn6j42jko?at_medium=RSS&at_campaign=rss",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-24T07:43:52.605262+05:00",
+  "summary": "BTCS offloads $44M in ETH to reduce DeFi debt amid market downturn",
+  "link": "https://cointelegraph.com/news/btcs-offloads-44m-eth-reduce-defi-debt-market-downturn?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
