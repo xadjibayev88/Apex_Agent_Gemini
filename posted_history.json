@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-11T22:28:02.403623+05:00",
-  "summary": "Fed's Goolsbee calls inflation report 'borderline disturbing' as central bank weighs more hikes",
-  "link": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-11T23:53:16.727308+05:00",
   "summary": "Bitcoin hovers near $74K as stocks rise despite US bond yield rebound",
   "link": "https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -696,6 +689,13 @@
   "time": "2026-11-24T03:56:01.611589+05:00",
   "summary": "U.S. stocks see best day in more than a year, as return of Jensen Huang revives AI enthusiasm",
   "link": "https://www.marketwatch.com/story/u-s-stocks-see-best-day-in-more-than-a-year-as-return-of-jensen-huang-revives-ai-enthusiasm-c3b9d274?mod=mw_rss_topstories",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-24T05:05:47.354749+05:00",
+  "summary": "CFTC staff say exchanges can count Bitcoin toward operating reserves",
+  "link": "https://cointelegraph.com/news/cftc-staff-say-exchanges-can-count-bitcoin-toward-operating-reserves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
   "tg": true
  }
