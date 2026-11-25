@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-14T00:53:06.155953+05:00",
-  "summary": "Bitcoin plunges to $68,000 as Anthropic IPO frenzy adds to market jitters",
-  "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-slides-to-usd68k-as-nvidia-turmoil-anthropic-ipo-fuel-broader-market-sell-off",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-14T01:57:26.264715+05:00",
   "summary": "Bitcoin ETFs are now down over $1.5 billion in net outflows for the year",
   "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-etfs-are-now-down-over-usd1-5-billion-in-net-outflows-for-the-year",
@@ -696,6 +689,13 @@
   "time": "2026-11-26T03:50:25.779369+05:00",
   "summary": "Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%",
   "link": "https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-26T04:57:55.050170+05:00",
+  "summary": "Nvidia agrees to $290M settlement over crypto mining revenue disclosures",
+  "link": "https://cointelegraph.com/news/nvidia-agrees-290m-settlement-crypto-mining-revenue-disclosures?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
   "tg": true
  }
