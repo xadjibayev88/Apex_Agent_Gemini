@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-13T18:25:49.467861+05:00",
-  "summary": "Bitcoin hits 12-week low as dollar rallies on interest-rate outlook, liquidations top $1.6 billion",
-  "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-13T19:29:31.178823+05:00",
   "summary": "Bitcoin returns to 200-week trend line as analyst sees risk of $57.7K next",
   "link": "https://cointelegraph.com/markets/bitcoin-returns-200-week-trend-line-analyst-sees-risk-57k-next?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million",
   "link": "https://www.coindesk.com/business/2026/11/25/ukrainian-lawmakers-pass-crypto-tax-and-regulation-bill-expected-to-bring-in-usd330-million",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-25T23:12:06.442105+05:00",
+  "summary": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%",
+  "link": "https://cointelegraph.com/markets/bitcoin-falls-57k-us-tariff-pce-data-nasdaq-drops?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
