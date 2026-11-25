@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-13T20:42:00.073204+05:00",
-  "summary": "Bitcoin dips below $70,000 as Dollar Index hits 19-month high",
-  "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-dips-below-usd70-000-as-selloff-gathers-pace",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-13T22:53:03.716376+05:00",
   "summary": "Bitcoin holds below $70K as stocks slip despite a cooler US PPI print",
   "link": "https://cointelegraph.com/markets/bitcoin-below-70k-stocks-slip-cooler-us-ppi-print?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -696,6 +689,13 @@
   "time": "2026-11-26T00:36:07.217445+05:00",
   "summary": "Japan’s SBI, SMFG launch Solana venture for stablecoins, tokenization",
   "link": "https://cointelegraph.com/news/sbi-smfg-solana-global-stablecoin-tokenization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-26T01:41:31.728390+05:00",
+  "summary": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
+  "link": "https://cointelegraph.com/news/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
   "tg": true
  }
