@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-13T17:08:09.883107+05:00",
-  "summary": "Bitcoin slides below $70K amid thin liquidity, ETF outflows",
-  "link": "https://cointelegraph.com/markets/bitcoin-falls-below-70k-crypto-extreme-fear?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-13T18:25:49.467861+05:00",
   "summary": "Bitcoin hits 12-week low as dollar rallies on interest-rate outlook, liquidations top $1.6 billion",
   "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout",
   "link": "https://cointelegraph.com/markets/bitcoin-etfs-near-record-5-billion-monthly-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-25T21:13:34.265244+05:00",
+  "summary": "Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million",
+  "link": "https://www.coindesk.com/business/2026/11/25/ukrainian-lawmakers-pass-crypto-tax-and-regulation-bill-expected-to-bring-in-usd330-million",
+  "ig": false,
   "tg": true
  }
 ]
