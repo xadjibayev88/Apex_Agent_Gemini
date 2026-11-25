@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-13T19:29:31.178823+05:00",
-  "summary": "Bitcoin returns to 200-week trend line as analyst sees risk of $57.7K next",
-  "link": "https://cointelegraph.com/markets/bitcoin-returns-200-week-trend-line-analyst-sees-risk-57k-next?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-13T20:42:00.073204+05:00",
   "summary": "Bitcoin dips below $70,000 as Dollar Index hits 19-month high",
   "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-dips-below-usd70-000-as-selloff-gathers-pace",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%",
   "link": "https://cointelegraph.com/markets/bitcoin-falls-57k-us-tariff-pce-data-nasdaq-drops?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-26T00:36:07.217445+05:00",
+  "summary": "Japan’s SBI, SMFG launch Solana venture for stablecoins, tokenization",
+  "link": "https://cointelegraph.com/news/sbi-smfg-solana-global-stablecoin-tokenization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
