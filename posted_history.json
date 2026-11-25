@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-13T23:48:55.636022+05:00",
-  "summary": "Jane Street boosts Fidelity Bitcoin ETF holdings nearly 8x, trims IBIT",
-  "link": "https://cointelegraph.com/news/jane-street-add-fidelity-bitcoin-etf-ibit-cut-q3-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-14T00:53:06.155953+05:00",
   "summary": "Bitcoin plunges to $68,000 as Anthropic IPO frenzy adds to market jitters",
   "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-slides-to-usd68k-as-nvidia-turmoil-anthropic-ipo-fuel-broader-market-sell-off",
@@ -697,6 +690,13 @@
   "summary": "'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles",
   "link": "https://www.coindesk.com/markets/2026/11/25/this-time-actually-seems-different-crypto-veterans-brace-for-more-pain-as-bitcoin-tumbles",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-26T03:50:25.779369+05:00",
+  "summary": "Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%",
+  "link": "https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap",
+  "ig": false,
   "tg": true
  }
 ]
