@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-13T22:53:03.716376+05:00",
-  "summary": "Bitcoin holds below $70K as stocks slip despite a cooler US PPI print",
-  "link": "https://cointelegraph.com/markets/bitcoin-below-70k-stocks-slip-cooler-us-ppi-print?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-13T23:48:55.636022+05:00",
   "summary": "Jane Street boosts Fidelity Bitcoin ETF holdings nearly 8x, trims IBIT",
   "link": "https://cointelegraph.com/news/jane-street-add-fidelity-bitcoin-etf-ibit-cut-q3-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -697,6 +690,13 @@
   "summary": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
   "link": "https://cointelegraph.com/news/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-26T02:51:36.028500+05:00",
+  "summary": "'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles",
+  "link": "https://www.coindesk.com/markets/2026/11/25/this-time-actually-seems-different-crypto-veterans-brace-for-more-pain-as-bitcoin-tumbles",
+  "ig": true,
   "tg": true
  }
 ]
