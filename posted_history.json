@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-14T21:07:23.765142+05:00",
-  "summary": "A behind the scenes force may amplify bitcoin and ether price volatility",
-  "link": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-14T22:19:56.571077+05:00",
   "summary": "Bitcoin slides to 3-month low of $65,000 as analyst flags fourth capitulation wave",
   "link": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving",
   "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-little-changed-defi-tokens-lead-the-bounce-as-u-s-marks-thanksgiving",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-27T02:45:11.419138+05:00",
+  "summary": "Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure",
+  "link": "https://www.coindesk.com/markets/2026/11/26/nvidia-shipment-freeze-and-u-s-chip-curbs-put-ai-stocks-under-pressure",
+  "ig": false,
   "tg": true
  }
 ]
