@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-14T14:57:05.528037+05:00",
-  "summary": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
-  "link": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": true,
-  "tg": true
- },
- {
   "time": "2026-11-14T16:25:26.142262+05:00",
   "summary": "Nvidia’s stock is on a losing streak not seen in 14 years. What comes next?",
   "link": "https://www.marketwatch.com/story/nvidias-stock-is-on-a-losing-streak-not-seen-in-14-years-what-comes-next-a07e801e?mod=mw_rss_topstories",
@@ -697,6 +690,13 @@
   "summary": "$7 billion of bitcoin options expire Friday, and the biggest bets look starkly different from October",
   "link": "https://www.coindesk.com/markets/2026/11/26/usd7-billion-of-bitcoin-options-expire-friday-and-the-biggest-bets-look-starkly-different-from-october",
   "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-26T20:47:08.399930+05:00",
+  "summary": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend",
+  "link": "https://cointelegraph.com/markets/morgan-stanley-bitcoin-etf-trend-outflows-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": false,
   "tg": true
  }
 ]
