@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-14T19:31:20.938539+05:00",
-  "summary": "Chicago Fed's Goolsbee says central bank 'has definitely got work to do' on inflation",
-  "link": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-14T21:07:23.765142+05:00",
   "summary": "A behind the scenes force may amplify bitcoin and ether price volatility",
   "link": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases",
   "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-s-dormant-supply-rises-a-behavior-seen-during-previous-bear-market-bottoming-phases",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-27T01:34:19.513646+05:00",
+  "summary": "Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving",
+  "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-little-changed-defi-tokens-lead-the-bounce-as-u-s-marks-thanksgiving",
+  "ig": true,
   "tg": true
  }
 ]
