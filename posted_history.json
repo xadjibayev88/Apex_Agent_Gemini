@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-14T16:25:26.142262+05:00",
-  "summary": "Nvidia’s stock is on a losing streak not seen in 14 years. What comes next?",
-  "link": "https://www.marketwatch.com/story/nvidias-stock-is-on-a-losing-streak-not-seen-in-14-years-what-comes-next-a07e801e?mod=mw_rss_topstories",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-14T17:30:24.603887+05:00",
   "summary": "Bitcoin falls below $68,000 as ETF outflows extend to seventh straight day",
   "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slides-below-68000-as-anthropic-ipo-frenzy-drains-market-liquidity-5027106",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend",
   "link": "https://cointelegraph.com/markets/morgan-stanley-bitcoin-etf-trend-outflows-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-26T21:47:58.816399+05:00",
+  "summary": "Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity",
+  "link": "https://cointelegraph.com/markets/bitcoin-price-talos-warns-thin-thanksgiving-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
