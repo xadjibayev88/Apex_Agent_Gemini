@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-14T23:19:12.198530+05:00",
-  "summary": "OpenAI launches AI payments in ChatGPT with Visa, Mastercard and Amex",
-  "link": "https://cointelegraph.com/news/openai-ai-payments-chatgpt-wallet-visa-mastercard-amex?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-15T00:24:33.500831+05:00",
   "summary": "Bitcoin heads for sixth weekly loss as Anthropic’s blockbuster IPO looms",
   "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-heads-for-sixth-weekly-loss-as-anthropic-s-blockbuster-ipo-looms",
@@ -697,6 +690,13 @@
   "summary": "Bitcoin stays afloat above $60.5k, but rates, regulatory fears persist",
   "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-recovers-to-605k-but-rates-regulatory-fears-persist-5052101",
   "ig": false,
+  "tg": true
+ },
+ {
+  "time": "2026-11-27T05:16:53.031333+05:00",
+  "summary": "BNB Chain details new layer-1 for trading, private finance and AI",
+  "link": "https://cointelegraph.com/news/bnb-chain-details-new-layer-1-trading-private-finance-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
   "tg": true
  }
 ]
