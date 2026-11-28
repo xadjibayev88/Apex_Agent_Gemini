@@ -1,22 +1,22 @@
 name: Post to Telegram
 on:
-  # Jadval o'chirilgan (2026-11-27): Gemini kaliti yaroqsiz (401), har ishga tushish xato berardi.
-  # Yangi GEMINI_API_KEY qo'yilgach, quyidagi qatorlar oldidagi '# ' ni olib tashlang.
-  # schedule:
-  #   # GitHub ko'p qiymatli "7,37 4-15" jadvalni kuniga ~2 marta ishga tushirardi.
-  #   # Har soat alohida qator (Toshkent 09:xx-20:xx), daqiqalar :00 dan uzoq.
-  #   - cron: "11 4 * * *"
-  #   - cron: "41 5 * * *"
-  #   - cron: "13 6 * * *"
-  #   - cron: "43 7 * * *"
-  #   - cron: "17 8 * * *"
-  #   - cron: "47 9 * * *"
-  #   - cron: "19 10 * * *"
-  #   - cron: "49 11 * * *"
-  #   - cron: "23 12 * * *"
-  #   - cron: "53 13 * * *"
-  #   - cron: "29 14 * * *"
-  #   - cron: "59 15 * * *"
+  # 2026-11-28: qayta yoqildi. Gemini kaliti yaroqsiz bo'lsa ham ishlaydi — kod zaxira modellarga o'tadi
+  # (Groq / OpenRouter / Mistral kaliti bo'lsa, aks holda kalitsiz Pollinations).
+  schedule:
+    # GitHub ko'p qiymatli "7,37 4-15" jadvalni kuniga ~2 marta ishga tushirardi.
+    # Har soat alohida qator (Toshkent 09:xx-20:xx), daqiqalar :00 dan uzoq.
+    - cron: "11 4 * * *"
+    - cron: "41 5 * * *"
+    - cron: "13 6 * * *"
+    - cron: "43 7 * * *"
+    - cron: "17 8 * * *"
+    - cron: "47 9 * * *"
+    - cron: "19 10 * * *"
+    - cron: "49 11 * * *"
+    - cron: "23 12 * * *"
+    - cron: "53 13 * * *"
+    - cron: "29 14 * * *"
+    - cron: "59 15 * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -36,6 +36,9 @@ jobs:
       - run: python rss_ig_agent.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}

@@ -36,7 +36,7 @@ from zoneinfo import ZoneInfo
 
 import requests
 
-GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHANNEL = os.environ["TELEGRAM_CHANNEL"]
 TZ = ZoneInfo(os.environ.get("TIMEZONE", "Asia/Tashkent"))
@@ -221,7 +221,45 @@ def call_gemini(prompt):
                 continue
             break
         # shu model ishlamadi, keyingisiga o'tamiz
-    raise RuntimeError("Gemini xatosi: " + last_error)
+        if last_error.startswith(("400", "401", "403")) and "API key" in last_error:
+            break  # kalit yaroqsiz: boshqa Gemini modellarini sinash foydasiz
+    print("Gemini ishlamadi (" + last_error[:120] + "), zaxira modellarga o'tamiz")
+    text = call_fallback(prompt)
+    return {"candidates": [{"content": {"parts": [{"text": text}]}}]}
+
+
+# Gemini ishlamasa (kalit yaroqsiz yoki kvota tugagan): OpenAI-mos zaxira provayderlar.
+# Kaliti bor bo'lsa — Groq / OpenRouter / Mistral; oxirgi chora — kalitsiz Pollinations.
+# Bu yerga faqat ochiq RSS yangiliklari yuboriladi, shaxsiy ma'lumot yo'q.
+FALLBACKS = [
+    ("GROQ_API_KEY", "https://api.groq.com/openai/v1/chat/completions", "openai/gpt-oss-120b"),
+    ("OPENROUTER_API_KEY", "https://openrouter.ai/api/v1/chat/completions", "deepseek/deepseek-chat-v3-0324:free"),
+    ("MISTRAL_API_KEY", "https://api.mistral.ai/v1/chat/completions", "mistral-small-latest"),
+    (None, "https://text.pollinations.ai/openai", "openai"),
+]
+
+
+def call_fallback(prompt):
+    last = "zaxira yo'q"
+    for env_name, url, model in FALLBACKS:
+        key = os.environ.get(env_name, "").strip() if env_name else ""
+        if env_name and not key:
+            continue
+        headers = {"Content-Type": "application/json", **({"Authorization": f"Bearer {key}"} if key else {})}
+        body = {"model": model, "temperature": 0.4, "max_tokens": 4000,
+                "messages": [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": prompt}]}
+        try:
+            r = requests.post(url, headers=headers, json=body, timeout=120)
+            if r.ok:
+                text = ((r.json().get("choices") or [{}])[0].get("message") or {}).get("content") or ""
+                if text.strip():
+                    print("Zaxira model ishlatildi:", model)
+                    return text
+            last = f"{model}: {r.status_code} {r.text[:150]}"
+        except requests.RequestException as e:
+            last = f"{model}: {type(e).__name__}"
+        print("Zaxira ishlamadi —", last)
+    raise RuntimeError("Hech bir model ishlamadi: " + last)
 
 
 def pick_and_write(candidates):
