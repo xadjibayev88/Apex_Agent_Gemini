@@ -1,0 +1,31 @@
+name: Bir martalik - kalitlarni inbox-agent ga ko'chirish
+
+# Faqat shu branchga push qilinganda ishlaydi. Ish tugagach fayl olib tashlanadi.
+on:
+  push:
+    branches: [ccr-fc013c7c-skmvcg]
+    paths: [.github/workflows/copy-to-inbox.yml]
+
+permissions: {}
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Kalitlarni ko'chirish (qiymatlar logga chiqmaydi)
+        env:
+          GH_TOKEN: ${{ secrets.INBOX_COPY_PAT }}
+          SRC_IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          set -u
+          [ -n "$GH_TOKEN" ] || { echo "INBOX_COPY_PAT secret yo'q"; exit 1; }
+          existing=$(gh secret list --repo xadjibayev88/inbox-agent --json name -q '.[].name')
+          copy() {
+            local src=$1 dst=$2 var="SRC_$1"
+            local val="${!var:-}"
+            if [ -z "$val" ]; then echo "- $src: bu repoda yo'q, o'tkazildi"; return; fi
+            if echo "$existing" | grep -qx "$dst"; then echo "- $dst: inbox-agent da allaqachon bor, tegilmadi"; return; fi
+            printf '%s' "$val" | gh secret set "$dst" --repo xadjibayev88/inbox-agent && echo "+ $src -> $dst ko'chirildi"
+          }
+          copy IG_ACCESS_TOKEN IG_TOKEN_APEXTRADER
