@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-15T00:24:33.500831+05:00",
-  "summary": "Bitcoin heads for sixth weekly loss as Anthropic’s blockbuster IPO looms",
-  "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-heads-for-sixth-weekly-loss-as-anthropic-s-blockbuster-ipo-looms",
-  "ig": false,
-  "tg": true
- },
- {
   "time": "2026-11-15T01:21:48.882145+05:00",
   "summary": "Metaplanet swings to $170M loss as Bitcoin sale hits earnings",
   "link": "https://cointelegraph.com/news/metaplanet-swings-170m-loss-bitcoin-sale-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -696,6 +689,13 @@
   "time": "2026-11-27T05:16:53.031333+05:00",
   "summary": "BNB Chain details new layer-1 for trading, private finance and AI",
   "link": "https://cointelegraph.com/news/bnb-chain-details-new-layer-1-trading-private-finance-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "ig": true,
+  "tg": true
+ },
+ {
+  "time": "2026-11-28T17:17:05.479561+05:00",
+  "summary": "Bitcoin price falls below $60,000 as whales buy dip, ETF outflows mount",
+  "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-falls-below-60k-as-whales-buy-dip-etf-outflows-mount-5054180",
   "ig": true,
   "tg": true
  }
